@@ -621,7 +621,7 @@ a:hover { color: var(--color-gold-light); }
 .exp-card {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  min-height: 420px;
+  min-height: 480px;
   background: var(--color-surface);
   overflow: hidden;
   transition: transform var(--transition-base);
@@ -633,6 +633,7 @@ a:hover { color: var(--color-gold-light); }
 .exp-card__image {
   overflow: hidden;
   position: relative;
+  min-height: 480px;
 }
 .exp-card__image img {
   width: 100%;
