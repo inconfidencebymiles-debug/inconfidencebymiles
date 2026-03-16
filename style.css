@@ -568,7 +568,9 @@ a:hover { color: var(--color-gold-light); }
 }
 .about__image-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
   display: block;
   filter: brightness(0.9) contrast(1.05);
 }
