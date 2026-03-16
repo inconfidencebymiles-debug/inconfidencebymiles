@@ -666,6 +666,11 @@ a:hover { color: var(--color-gold-light); }
   margin-bottom: var(--space-4);
 }
 
+.exp-card__title--ic {
+  text-align: center;
+  line-height: 1.15;
+}
+
 .exp-card__desc {
   color: var(--color-text-muted);
   line-height: 1.7;
