@@ -1393,3 +1393,19 @@ a:hover { color: var(--color-gold-light); }
   .hero__bg-img { transform: none; }
   .ambiance__strip { animation: none; }
 }
+
+/* Anti-copy protection */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
