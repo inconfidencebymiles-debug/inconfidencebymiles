@@ -557,7 +557,7 @@ a:hover { color: var(--color-gold-light); }
 /* --- About --- */
 .about__grid {
   display: grid;
-  grid-template-columns: 5fr 5fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: clamp(var(--space-8), 5vw, var(--space-16));
   align-items: center;
 }
@@ -565,6 +565,7 @@ a:hover { color: var(--color-gold-light); }
 .about__image-wrapper {
   position: relative;
   overflow: hidden;
+  min-height: 480px;
 }
 .about__image-wrapper img {
   width: 100%;
