@@ -892,8 +892,11 @@ a:hover { color: var(--color-gold-light); }
 }
 .tapas__images {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
+}
+.tapas__images img:first-child {
+  grid-column: 1 / -1;
 }
 .tapas__images img {
   width: 100%;
