@@ -31,6 +31,7 @@
 
 <!-- Fonts -->
 <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -110,15 +111,28 @@
   padding: var(--space-6);
 }
 .ic-hero__title {
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 12vw, 8rem);
-  font-weight: 700;
-  line-height: 0.9;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 400;
+  line-height: 1;
   color: var(--color-gold);
-  letter-spacing: 0.04em;
-  margin-bottom: var(--space-4);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
   opacity: 0;
   animation: fadeUp 1s var(--ease-out) 0.3s forwards;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.ic-hero__title-sub {
+  font-family: var(--font-display);
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+  font-weight: 500;
+  color: var(--color-gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+  opacity: 0;
+  animation: fadeUp 1s var(--ease-out) 0.4s forwards;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 .ic-hero__subtitle {
   font-family: var(--font-display);
@@ -331,12 +345,7 @@
     gap: var(--space-4);
   }
 }
-.ic-hero__logo {
-  max-width: 500px;
-  width: 80vw;
-  height: auto;
-  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.5));
-}
+
 </style>
 </head>
 <body>
@@ -375,7 +384,8 @@
     <div class="ic-hero__overlay"></div>
   </div>
   <div class="ic-hero__content">
-    <h1 class="ic-hero__title"><img src="./assets/photos/logo-ic-transparent.png" alt="In Confidence by Miles — Secret Speakeasy" class="ic-hero__logo"></h1>
+    <h1 class="ic-hero__title">In Confidence</h1>
+      <p class="ic-hero__title-sub">by Miles — Secret Speakeasy</p>
     <p class="ic-hero__subtitle">Barcelona's worst-kept secret</p>
     <p class="ic-hero__tagline">Your next event, in a place nobody will forget.</p>
     <div class="ic-hero__actions">
