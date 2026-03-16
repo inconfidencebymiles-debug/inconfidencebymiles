@@ -6,6 +6,7 @@
 <title>In Confidence — Signature Cocktails</title>
 <meta name="description" content="Signature cocktails at In Confidence speakeasy. 12€ per cocktail. Barcelona.">
 <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   :root {
     --color-bg: #0C0A08;
@@ -55,12 +56,23 @@
     margin-bottom: 1.5rem;
   }
 
-  .carta__logo {
-    width: 200px;
-    height: auto;
-    margin: 0 auto 1.5rem;
-    display: block;
+  .carta__logo-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--color-gold);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
 
+  .carta__logo-sub {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--color-gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
   }
 
   .carta__title {
@@ -226,7 +238,8 @@
 <div class="carta">
   <header class="carta__header">
     <p class="carta__subtitle">a secret worth keeping</p>
-    <img src="./assets/photos/logo-ic-transparent.png" alt="In Confidence by Miles" class="carta__logo">
+    <p class="carta__logo-text">In Confidence</p>
+    <p class="carta__logo-sub">by Miles — Secret Speakeasy</p>
     <h1 class="carta__title">Signature Cocktails</h1>
     <p class="carta__price-all">12 €</p>
     <p class="carta__tagline">Behind this door, stories are whispered<br>and every glass keeps its secret.</p>
