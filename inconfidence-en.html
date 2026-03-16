@@ -197,12 +197,19 @@
 /* Photo gallery grid */
 .ic-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: var(--space-4);
 }
 .ic-gallery__item {
+  grid-column: span 2;
   overflow: hidden;
   border-radius: var(--radius-sm);
+}
+.ic-gallery__item:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+.ic-gallery__item:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 .ic-gallery__item img {
   width: 100%;
@@ -293,6 +300,11 @@
   .ic-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+  .ic-gallery__item,
+  .ic-gallery__item:nth-child(4),
+  .ic-gallery__item:nth-child(5) {
+    grid-column: span 1;
+  }
   .ic-steps {
     grid-template-columns: 1fr;
     gap: var(--space-4);
@@ -301,6 +313,11 @@
 @media (max-width: 600px) {
   .ic-gallery {
     grid-template-columns: 1fr;
+  }
+  .ic-gallery__item,
+  .ic-gallery__item:nth-child(4),
+  .ic-gallery__item:nth-child(5) {
+    grid-column: span 1;
   }
   .ic-hero__proof {
     flex-direction: column;
@@ -313,6 +330,12 @@
     flex-direction: column;
     gap: var(--space-4);
   }
+}
+.ic-hero__logo {
+  max-width: 500px;
+  width: 80vw;
+  height: auto;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.5));
 }
 </style>
 </head>
@@ -333,9 +356,10 @@
       <span class="nav__toggle-bar"></span>
     </button>
     <ul class="nav__links" id="navLinks" role="list">
+      <li><a href="https://linktr.ee/miles.lounge.barcelona" target="_blank" rel="noopener noreferrer">Menu</a></li>
       <li><a href="./#about">About Us</a></li>
       <li><a href="./#experience">The Experience</a></li>
-      <li><a href="./inconfidence-en">In Confidence</a></li>
+      <li><a href="./inconfidence-en">Speakeasy</a></li>
       <li><a href="./inconfidence-en#espacios">Events</a></li>
       <li><a href="./#contact">Contact</a></li>
       <li class="nav__lang"><a href="./inconfidence" title="Español">ES</a> <a href="./inconfidence-ca" title="Català">CA</a> <a href="./inconfidence-fr" title="Français">FR</a></li>
@@ -347,11 +371,11 @@
 <!-- Hero -->
 <section class="ic-hero" id="hero">
   <div class="ic-hero__bg">
-    <img src="./assets/photos/in-confidence-hero-sala.jpg" alt="In Confidence — Speakeasy Barcelona" decoding="async">
+    <img src="./assets/photos/ic-hero-148.jpg" alt="In Confidence — Speakeasy Barcelona" decoding="async">
     <div class="ic-hero__overlay"></div>
   </div>
   <div class="ic-hero__content">
-    <h1 class="ic-hero__title">In Confidence</h1>
+    <h1 class="ic-hero__title"><img src="./assets/photos/logo-ic-transparent.png" alt="In Confidence by Miles — Secret Speakeasy" class="ic-hero__logo"></h1>
     <p class="ic-hero__subtitle">Barcelona's worst-kept secret</p>
     <p class="ic-hero__tagline">Your next event, in a place nobody will forget.</p>
     <div class="ic-hero__actions">
@@ -418,22 +442,19 @@
     <span class="section__label reveal-el" style="padding-inline: var(--space-6);">The Universe</span>
     <div class="ic-gallery reveal-el">
       <div class="ic-gallery__item">
-        <img src="./assets/photos/in-confidence-bar-doberman.jpg" alt="In Confidence — bar with doberman painting" loading="lazy" decoding="async">
+        <img src="./assets/photos/ic-gallery-239.jpg" alt="In Confidence — live DJ" loading="lazy" decoding="async">
       </div>
       <div class="ic-gallery__item">
-        <img src="./assets/photos/in-confidence-lounge.jpg" alt="In Confidence — lounge area" loading="lazy" decoding="async">
+        <img src="./assets/photos/ic-gallery-065.jpg" alt="In Confidence — craft cocktail at the bar" loading="lazy" decoding="async">
+      </div>
+      <div class="ic-gallery__item ic-gallery__item--center">
+        <img src="./assets/photos/ic-gallery-123.jpg" alt="In Confidence — espresso martini" loading="lazy" decoding="async">
       </div>
       <div class="ic-gallery__item">
-        <img src="./assets/photos/in-confidence-empty-1.jpg" alt="In Confidence — empty space" loading="lazy" decoding="async">
+        <img src="./assets/photos/ic-gallery-009.jpg" alt="In Confidence — private lounge" loading="lazy" decoding="async">
       </div>
       <div class="ic-gallery__item">
-        <img src="./assets/photos/in-confidence-roses.jpg" alt="In Confidence — roses and decor" loading="lazy" decoding="async">
-      </div>
-      <div class="ic-gallery__item">
-        <img src="./assets/photos/in-confidence-wide.jpg" alt="In Confidence — panoramic view" loading="lazy" decoding="async">
-      </div>
-      <div class="ic-gallery__item">
-        <img src="./assets/photos/in-confidence-detail.jpg" alt="In Confidence — detail" loading="lazy" decoding="async">
+        <img src="./assets/photos/ic-gallery-121.jpg" alt="In Confidence — cocktail preparation" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -453,7 +474,7 @@
         <span class="events__micro">40 to 80 guests · Bespoke proposal in under 1 hour</span>
       </div>
       <div class="events__option">
-        <h3>Sala Salvaje — Your private corner in Miles</h3>
+        <h3>Sala Salvaje, your private corner in Miles</h3>
         <p>An intimate space within the Espacio Miles with its own personality. Perfect for birthdays, corporate dinners and gatherings with friends without missing the bar's energy.</p>
         <span class="events__price">From €17 to €33/person</span>
         <span class="events__micro">15 to 30 guests · Tapas & drinks or drinks only</span>
@@ -538,8 +559,7 @@
         <div class="footer__col">
           <h4>Social</h4>
           <a href="https://www.instagram.com/miles.cocktail.lounge/" target="_blank" rel="noopener noreferrer">Instagram Miles</a>
-          <a href="https://linktr.ee/miles.lounge.barcelona" target="_blank" rel="noopener noreferrer">Linktree</a>
-          <a href="mailto:events@inconfidencebymiles.com">Email</a>
+<a href="mailto:events@inconfidencebymiles.com">Email</a>
         </div>
       </div>
     </div>
