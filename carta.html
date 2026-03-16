@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>In Confidence — Signature Cocktails</title>
+<meta name="description" content="Signature cocktails at In Confidence speakeasy. 12€ per cocktail. Barcelona.">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #0C0A08;
+    --color-gold: #D4A85A;
+    --color-gold-light: #E7BE78;
+    --color-gold-dim: #9E7B3A;
+    --color-cream: #E8E0D0;
+    --color-text-muted: #9E9688;
+    --color-text-faint: #6A6358;
+    --color-border: rgba(212, 168, 90, 0.15);
+    --font-display: 'Zodiak', 'Georgia', serif;
+    --font-body: 'General Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .carta {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  /* Cover / Header */
+  .carta__header {
+    text-align: center;
+    padding: 2rem 0 3rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 2.5rem;
+  }
+
+  .carta__subtitle {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+    text-transform: lowercase;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .carta__logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+
+  .carta__title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .carta__price-all {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-gold);
+    font-style: italic;
+  }
+
+  .carta__tagline {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-text-faint);
+    font-style: italic;
+    margin-top: 2rem;
+    line-height: 1.5;
+  }
+
+  /* Section headings */
+  .section__heading {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    position: relative;
+  }
+
+  .section__heading::before,
+  .section__heading::after {
+    content: '—';
+    margin: 0 0.5em;
+    color: var(--color-gold-dim);
+  }
+
+  /* Cocktail items */
+  .cocktail {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .cocktail:last-child {
+    border-bottom: none;
+  }
+
+  .cocktail__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+  }
+
+  .cocktail__name {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-cream);
+  }
+
+  .cocktail__type {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--color-gold);
+    font-style: italic;
+    white-space: nowrap;
+    margin-left: 0.75rem;
+  }
+
+  .cocktail__spirits {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 0.15rem;
+  }
+
+  .cocktail__extras {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .cocktail__notes {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--color-gold-dim);
+    font-style: italic;
+  }
+
+  /* Classic section */
+  .classics {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .classics__desc {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-cream);
+    margin-bottom: 0.75rem;
+  }
+
+  .classics__price {
+    font-size: 0.8rem;
+    color: var(--color-gold);
+    font-style: italic;
+  }
+
+  /* Footer notice */
+  .carta__footer {
+    text-align: center;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .carta__footer p {
+    font-size: 0.7rem;
+    color: var(--color-text-faint);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .carta__diamond {
+    display: block;
+    text-align: center;
+    color: var(--color-gold-dim);
+    font-size: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  /* Back link */
+  .carta__back {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    color: var(--color-gold);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .carta__back:hover {
+    color: var(--color-gold-light);
+  }
+</style>
+</head>
+<body>
+
+<div class="carta">
+  <header class="carta__header">
+    <p class="carta__subtitle">a secret worth keeping</p>
+    <img src="./assets/photos/logo-ic-transparent.png" alt="In Confidence by Miles" class="carta__logo">
+    <h1 class="carta__title">Signature Cocktails</h1>
+    <p class="carta__price-all">12 €</p>
+    <p class="carta__tagline">Behind this door, stories are whispered<br>and every glass keeps its secret.</p>
+  </header>
+
+  <div class="section__heading">Signature Cocktails</div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Velvet Confession</span>
+      <span class="cocktail__type">Sour</span>
+    </div>
+    <p class="cocktail__spirits">Eristoff Vodka · Japanese Toasted Sesame · Ramazzotti Limoncello</p>
+    <p class="cocktail__extras">Lemon · Vanilla · Egg White</p>
+    <p class="cocktail__notes">Silky · Bright · Nutty</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Hidden Oasis</span>
+      <span class="cocktail__type">Negroni</span>
+    </div>
+    <p class="cocktail__spirits">Metuzalem 15 Rum · Martini Rosso · Campari</p>
+    <p class="cocktail__extras">Coffee Bean · Coconut</p>
+    <p class="cocktail__notes">Bittersweet · Tropical · Aromatic</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Smoke and Mirrors</span>
+      <span class="cocktail__type">Paloma</span>
+    </div>
+    <p class="cocktail__spirits">Mezcal Artesanal Encantado · Palo Santo</p>
+    <p class="cocktail__extras">Lime · Grapefruit Soda</p>
+    <p class="cocktail__notes">Smoky · Fresh · Citrus</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Spiced Affair</span>
+      <span class="cocktail__type">Margarita</span>
+    </div>
+    <p class="cocktail__spirits">Teremana Blanco Tequila · Ginger</p>
+    <p class="cocktail__extras">Lime · Orange Bitters</p>
+    <p class="cocktail__notes">Spicy · Zesty · Vibrant</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Blushed Silence</span>
+      <span class="cocktail__type">Sour</span>
+    </div>
+    <p class="cocktail__spirits">Raval Gin · Martini Dry Vermouth · Beetroot</p>
+    <p class="cocktail__extras">Pepper · Balsamic · Lemon · Egg White</p>
+    <p class="cocktail__notes">Earthy · Elegant · Velvety</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Tropic Confidential</span>
+      <span class="cocktail__type">Margarita</span>
+    </div>
+    <p class="cocktail__spirits">Rooster Rojo Pineapple Tequila · Coconut Liqueur</p>
+    <p class="cocktail__extras">Lime · Agave</p>
+    <p class="cocktail__notes">Tropical · Juicy · Smooth</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Midnight Rendezvous</span>
+      <span class="cocktail__type">Modern Classic</span>
+    </div>
+    <p class="cocktail__spirits">Johnnie Walker Black · Mezcal Del Maguey Vida</p>
+    <p class="cocktail__extras">Amaretto Disaronno · Orgeat · Lime · House Bitters</p>
+    <p class="cocktail__notes">Smoky · Nutty · Complex</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Café Noir</span>
+      <span class="cocktail__type">Espresso Martini</span>
+    </div>
+    <p class="cocktail__spirits">Jameson Whiskey · Baileys Irish Cream</p>
+    <p class="cocktail__extras">Broghetti Coffee Liqueur · Espresso · Cacao</p>
+    <p class="cocktail__notes">Rich · Bold · Indulgent</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Dirty Little Secret</span>
+      <span class="cocktail__type">Martini</span>
+    </div>
+    <p class="cocktail__spirits">Bombay Sapphire Gin · Noilly Prat Dry Vermouth</p>
+    <p class="cocktail__extras">Jalapeño &amp; Olive Brine · Orange Bitters</p>
+    <p class="cocktail__notes">Salty · Spicy · Savory</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Silent Bloom</span>
+      <span class="cocktail__type">Martini</span>
+    </div>
+    <p class="cocktail__spirits">Eristoff Vodka · St. Germain · Lychee</p>
+    <p class="cocktail__extras">Lime · House Bitters</p>
+    <p class="cocktail__notes">Floral · Velvety · Romantic</p>
+  </div>
+
+  <div class="section__heading">House Specials</div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Cocktail of the Week</span>
+      <span class="cocktail__type">Chef's Choice</span>
+    </div>
+    <p class="cocktail__spirits">Ask your bartender for this week's hidden gem</p>
+    <p class="cocktail__notes">Intriguing · Seasonal · Surprising</p>
+  </div>
+
+  <div class="cocktail">
+    <div class="cocktail__header">
+      <span class="cocktail__name">Surprise Me</span>
+      <span class="cocktail__type">Speakeasy Special</span>
+    </div>
+    <p class="cocktail__spirits">No hints, no recipes — only a drink made for you</p>
+    <p class="cocktail__notes">Mysterious · Unique · Personal</p>
+  </div>
+
+  <div class="section__heading">Classic Cocktails</div>
+
+  <div class="classics">
+    <p class="classics__desc">A curated selection of timeless favorites, expertly crafted.</p>
+    <p class="classics__price">All cocktails — 12 € · Long drinks starting at 12 €</p>
+  </div>
+
+  <footer class="carta__footer">
+    <p>Amb la finalitat d'oferir un millor servei,<br>
+    els pagaments es limiten a un màxim de 2 per grup.<br>
+    Gràcies per la vostra comprensió.</p>
+    <p>In order to provide better service,<br>
+    payments are limited to a maximum of 2 per group.<br>
+    Thank you for your understanding.</p>
+    <span class="carta__diamond">◆</span>
+  </footer>
+
+  <a href="./" class="carta__back">← Volver al sitio</a>
+</div>
+
+</body>
+</html>
