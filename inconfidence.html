@@ -209,31 +209,22 @@
   margin-bottom: var(--space-8);
 }
 
-/* Photo gallery grid */
+/* Photo gallery */
 .ic-gallery {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: var(--space-4);
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--space-6);
 }
 .ic-gallery__item {
-  grid-column: span 2;
+  max-width: 700px;
+  width: 100%;
   overflow: hidden;
   border-radius: var(--radius-sm);
-}
-.ic-gallery__item:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-.ic-gallery__item:nth-child(5) {
-  grid-column: 4 / span 2;
 }
 .ic-gallery__item img {
   width: 100%;
   height: auto;
   display: block;
-  transition: filter var(--transition-base);
-}
-.ic-gallery__item:hover img {
-  filter: brightness(1.15);
 }
 
 /* Steps section */
@@ -312,28 +303,14 @@
   .ic-experience__grid {
     grid-template-columns: 1fr;
   }
-  .ic-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .ic-gallery__item,
-  .ic-gallery__item:nth-child(4),
-  .ic-gallery__item:nth-child(5) {
-    grid-column: span 1;
-  }
+
   .ic-steps {
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }
 }
 @media (max-width: 600px) {
-  .ic-gallery {
-    grid-template-columns: 1fr;
-  }
-  .ic-gallery__item,
-  .ic-gallery__item:nth-child(4),
-  .ic-gallery__item:nth-child(5) {
-    grid-column: span 1;
-  }
+
   .ic-hero__proof {
     flex-direction: column;
     gap: var(--space-2);
@@ -453,19 +430,7 @@
     <span class="section__label reveal-el" style="padding-inline: var(--space-6);">El Universo</span>
     <div class="ic-gallery reveal-el">
       <div class="ic-gallery__item">
-        <img src="./assets/photos/ic-gallery-239.jpg" alt="In Confidence — DJ en vivo" loading="lazy" decoding="async">
-      </div>
-      <div class="ic-gallery__item">
-        <img src="./assets/photos/ic-gallery-065.jpg" alt="In Confidence — cocktail artesanal en la barra" loading="lazy" decoding="async">
-      </div>
-      <div class="ic-gallery__item ic-gallery__item--center">
-        <img src="./assets/photos/ic-gallery-123.jpg" alt="In Confidence — espresso martini" loading="lazy" decoding="async">
-      </div>
-      <div class="ic-gallery__item">
-        <img src="./assets/photos/ic-gallery-009.jpg" alt="In Confidence — salón privado" loading="lazy" decoding="async">
-      </div>
-      <div class="ic-gallery__item">
-        <img src="./assets/photos/ic-gallery-121.jpg" alt="In Confidence — preparación de cóctel" loading="lazy" decoding="async">
+        <img src="./assets/photos/ic-universo-bar.jpg" alt="Miles Lounge Bar — Gastro Cocktails Lounge Barcelona" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
