@@ -211,10 +211,12 @@
 
 /* Photo gallery */
 .ic-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-4);
   padding: 0 var(--space-6);
+  max-width: 800px;
+  margin: 0 auto;
 }
 .ic-gallery__item {
   overflow: hidden;
@@ -222,14 +224,8 @@
 }
 .ic-gallery__item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
-}
-@media (max-width: 600px) {
-  .ic-gallery {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Steps section */
