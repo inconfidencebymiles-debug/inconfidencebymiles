@@ -1409,3 +1409,40 @@ img {
   user-drag: none;
   pointer-events: none;
 }
+
+/* Steps section (Tres pasos) */
+.ic-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+.ic-step {
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+}
+.ic-step__number {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+}
+.ic-step__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-cream);
+  margin-bottom: var(--space-3);
+}
+.ic-step__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .ic-steps {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
