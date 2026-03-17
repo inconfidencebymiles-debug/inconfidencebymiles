@@ -1348,7 +1348,7 @@ a:hover { color: var(--color-gold-light); }
   }
   .exp-card--reverse .exp-card__image { order: 0; }
   .exp-card--reverse .exp-card__content { order: 0; }
-  .exp-card__image { aspect-ratio: 16/9; }
+  .exp-card__image { aspect-ratio: 4/3; }
   .exp-card__image img { height: 100%; }
 
   .tapas__grid { grid-template-columns: 1fr; }
