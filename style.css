@@ -1008,6 +1008,16 @@ a:hover { color: var(--color-gold-light); }
   object-fit: cover;
   filter: brightness(0.7) saturate(0.8);
 }
+.ambiance__img--avis {
+  width: 280px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px;
+}
+.ambiance__img--avis img {
+  object-fit: contain;
+  filter: none;
+}
 
 @keyframes scrollStrip {
   0% { transform: translateX(0); }
@@ -1364,6 +1374,9 @@ a:hover { color: var(--color-gold-light); }
   .ambiance__img {
     width: 150px;
     height: 200px;
+  }
+  .ambiance__img--avis {
+    width: 220px;
   }
 
   .confidence__gallery-side {
