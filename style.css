@@ -992,7 +992,7 @@ a:hover { color: var(--color-gold-light); }
 .ambiance__strip {
   display: flex;
   gap: var(--space-2);
-  animation: scrollStrip 30s linear infinite;
+  animation: scrollStrip 60s linear infinite;
   width: max-content;
 }
 
