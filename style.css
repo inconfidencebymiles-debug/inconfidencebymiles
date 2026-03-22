@@ -1410,6 +1410,43 @@ img {
   pointer-events: none;
 }
 
+/* Events categories */
+.events__category {
+  margin-bottom: var(--space-16);
+}
+.events__category:last-child {
+  margin-bottom: 0;
+}
+.events__category-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.02em;
+}
+.events__category-intro {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  max-width: 65ch;
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+}
+.events__category .events__options {
+  margin-bottom: var(--space-8);
+}
+.events__category .btn {
+  margin-top: var(--space-4);
+}
+.events__agency-note {
+  font-size: var(--text-sm);
+  color: var(--color-cream-dim);
+  font-style: italic;
+  max-width: 60ch;
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
 /* Steps section (Tres pasos) */
 .ic-steps {
   display: grid;
