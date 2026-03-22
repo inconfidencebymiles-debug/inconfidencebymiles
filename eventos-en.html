@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private events — Miles & In Confidence — Barcelona</title>
+<meta name="description" content="Birthdays, hen & stag parties, anniversaries, celebrations with friends… Choose the space that best fits your plan. We take care of the rest.">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,300&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<nav class="nav" id="nav" role="navigation">
+  <div class="nav__inner container--wide">
+    <a href="./en" class="nav__logo"><img src="./assets/photos/logo-simple-nav.png" alt="Miles" class="nav__logo-img" width="120" height="39"></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span></button>
+    <ul class="nav__links" id="navLinks" role="list">
+      <li><a href="https://linktr.ee/miles.lounge.barcelona" target="_blank" rel="noopener noreferrer">Menu</a></li>
+      <li><a href="./en#about">About</a></li>
+      <li><a href="./en#experience">The Experience</a></li>
+      <li><a href="./inconfidence-en">Speakeasy</a></li>
+      <li><a href="./eventos-en" class="active">Private Events</a></li>
+      <li><a href="./agencias-en">Agencies</a></li>
+      <li><a href="./en#contact">Contact</a></li>
+      <li class="nav__lang"><a href="./eventos" title="Español">ES</a> <a href="./eventos-ca" title="Català">CA</a> <a href="./eventos-fr" title="Français">FR</a></li>
+      <li class="nav__cta"><a href="https://wa.me/34932472654" target="_blank" rel="noopener noreferrer">Book</a></li>
+    </ul>
+  </div>
+</nav>
+<main id="main">
+<section class="section section--events" style="padding-top: clamp(10rem, 18vw, 16rem);">
+  <div class="container">
+    <span class="section__label reveal-el">Private events</span>
+    <h1 class="section__title reveal-el" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">Your night. Your stage.</h1>
+    <p class="section__subtitle reveal-el">Birthdays, hen & stag parties, anniversaries, celebrations with friends… Choose the space that best fits your plan. We take care of the rest.</p>
+  </div>
+  <div class="events__gallery container--wide">
+    <div class="events__montage reveal-el">
+      <img src="./assets/photos/eventos-dj.jpg" alt="DJ at Miles Cocktail Lounge" loading="lazy" decoding="async" width="1080" height="1620">
+    </div>
+  </div>
+</section>
+<section class="section" id="espacios">
+  <div class="container">
+    <span class="section__label reveal-el">Choose your space</span>
+    <h2 class="section__title reveal-el">Three options. One promise: unforgettable.</h2>
+    <div class="events__options reveal-el">
+      <div class="events__option">
+        <h3>Sala Salvaje</h3>
+        <p>Your private corner inside Miles. Intimate atmosphere without giving up the bar's energy. Perfect for birthdays, dinners with friends and gatherings that deserve a special place.</p>
+        <span class="events__price">From €17 to €33/person · 15 to 30 guests</span>
+        <span class="events__micro">Tapas & drinks or drinks only</span>
+      </div>
+      <div class="events__option">
+        <h3>In Confidence</h3>
+        <p>A completely autonomous and isolated space: its own bar, DJ booth, and private bathrooms. Independent access through two doors. Total privatisation — the speakeasy experience just for you and yours.</p>
+        <span class="events__price">From €19 to €38/person · 40 to 80 guests</span>
+        <span class="events__micro">Signature cocktails · Proposal in under 1 hour</span>
+      </div>
+      <div class="events__option">
+        <h3>All of Miles</h3>
+        <p>The entire bar for you. Main bar + Sala Salvaje + In Confidence. DJ, custom decoration, bespoke catering. For the nights when you don't want to share the stage with anyone.</p>
+        <span class="events__price">Tailored budget</span>
+        <span class="events__micro">Tell us your idea — no commitment</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container" style="text-align: center;">
+    <p class="reveal-el" style="font-size: var(--text-lg); color: var(--color-text-muted); max-width: 55ch; margin-inline: auto; line-height: 1.6;">540 event enquiries in three years. We could only accept 253. If you already have a date in mind — is it still available?</p>
+  </div>
+</section>
+<section class="section" id="proceso">
+  <div class="container">
+    <span class="section__label reveal-el">How It Works</span>
+    <h2 class="section__title reveal-el">Three steps. Zero hassle.</h2>
+    <div class="ic-steps reveal-el">
+      <div class="ic-step"><div class="ic-step__number">1</div><h3 class="ic-step__title">Tell us your idea</h3><p class="ic-step__desc">Via WhatsApp or email, in 2 minutes. Date, number of guests, type of event.</p></div>
+      <div class="ic-step"><div class="ic-step__number">2</div><h3 class="ic-step__title">Receive your proposal</h3><p class="ic-step__desc">Personalised, with menu options and budget. In under 1 hour.</p></div>
+      <div class="ic-step"><div class="ic-step__number">3</div><h3 class="ic-step__title">Enjoy</h3><p class="ic-step__desc">We take care of everything. You just need to arrive and have a great time.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container" style="text-align: center;">
+    <div class="reveal-el">
+      <img src="./assets/photos/eventos-couple.jpg" alt="Couple enjoying cocktails at Miles" loading="lazy" decoding="async" style="max-width: 800px; width: 100%; border-radius: 8px;">
+    </div>
+  </div>
+</section>
+<section class="section" style="text-align: center; padding-bottom: clamp(var(--space-16), 8vw, var(--space-32));">
+  <div class="container">
+    <h2 class="section__title reveal-el">Have a date in mind?</h2>
+    <p class="reveal-el" style="font-size: var(--text-lg); color: var(--color-text-muted); max-width: 50ch; margin-inline: auto; margin-bottom: var(--space-10); line-height: 1.6;">Check if your date is available. Instant reply.</p>
+    <div class="reveal-el">
+      <a href="https://wa.me/34932472654?text=Hi%2C%20I%20want%20to%20organise%20a%20private%20event%20at%20Miles%20%2F%20In%20Confidence%20(date%2C%20number%20of%20guests%2C%20type%20of%20event)." class="btn btn--primary" target="_blank" rel="noopener noreferrer">Request a quote on WhatsApp</a>
+      <div style="margin-top: var(--space-8); display: flex; align-items: center; justify-content: center; gap: var(--space-8); flex-wrap: wrap;">
+        <a href="mailto:events@inconfidencebymiles.com" style="display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); color: var(--color-cream-dim);"><i data-lucide="mail"></i><span>events@inconfidencebymiles.com</span></a>
+        <a href="tel:+34932472654" style="display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); color: var(--color-cream-dim);"><i data-lucide="phone"></i><span>+34 932 472 654</span></a>
+      </div>
+      <p class="cta__micro" style="text-align:center; margin-top: var(--space-4);">Instant reply · No commitment · Personalised proposal</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="./assets/photos/logo-devanture-transparent.png" alt="Miles Cocktail Lounge" class="footer__logo-img" width="280" height="122">
+        <p class="footer__tagline">& In Confidence Speakeasy</p>
+        <p class="footer__address">Diputació 215, Barcelona</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col"><h4>Navigate</h4><a href="./en#about">About Us</a><a href="./en#experience">The Experience</a><a href="./inconfidence-en">In Confidence</a><a href="./en#tapas">Gastronomy</a></div>
+        <div class="footer__col"><h4>Info</h4><a href="./eventos-en">Private Events</a><a href="./agencias-en">Agencies</a><a href="./en#ubicacion">Location</a><a href="./en#contact">Contact</a></div>
+        <div class="footer__col"><h4>Social</h4><a href="https://www.instagram.com/miles.cocktail.lounge/" target="_blank" rel="noopener noreferrer">Instagram Miles</a><a href="mailto:events@inconfidencebymiles.com">Email</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom"><p>&copy; 2026 Miles Cocktail Lounge</p></div>
+  </div>
+</footer>
+<script src="./app.js" defer></script>
+<script>
+document.addEventListener("contextmenu",function(e){e.preventDefault()});
+document.addEventListener("selectstart",function(e){e.preventDefault()});
+document.addEventListener("dragstart",function(e){e.preventDefault()});
+document.addEventListener("keydown",function(e){if((e.ctrlKey||e.metaKey)&&(e.key==="c"||e.key==="u"||e.key==="s"||e.key==="a"||e.key==="p")){e.preventDefault()}});
+</script>
+</body>
+</html>
