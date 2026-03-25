@@ -1009,14 +1009,45 @@ a:hover { color: var(--color-gold-light); }
   filter: brightness(0.7) saturate(0.8);
 }
 .ambiance__img--avis {
-  width: 280px;
-  background: #fff;
-  border-radius: 6px;
-  padding: 4px;
+  width: 320px;
+  background: #0C0A08;
+  border: 1px solid rgba(196,167,118,0.25);
+  border-radius: 8px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 .ambiance__img--avis img {
-  object-fit: contain;
-  filter: none;
+  display: none;
+}
+.avis__stars {
+  color: #c4a776;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.avis__text {
+  font-size: 12px;
+  color: #e8dcc8;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.avis__name {
+  font-size: 11px;
+  color: #c4a776;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.avis__meta {
+  font-size: 10px;
+  color: #8a7d6b;
+  margin-top: 2px;
 }
 
 @keyframes scrollStrip {
@@ -1376,7 +1407,12 @@ a:hover { color: var(--color-gold-light); }
     height: 200px;
   }
   .ambiance__img--avis {
-    width: 220px;
+    width: 260px;
+    padding: 14px 12px;
+  }
+  .avis__text {
+    font-size: 11px;
+    -webkit-line-clamp: 4;
   }
 
   .confidence__gallery-side {
