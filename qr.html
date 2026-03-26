@@ -74,7 +74,7 @@
     width: 100%;
     text-align: center;
     background: transparent;
-    border: 1px solid var(--color-border);
+    border: none;
     padding: 1rem 1.5rem;
     font-family: var(--font-body);
     font-size: 0.85rem;
@@ -87,8 +87,7 @@
   }
 
   .hub__link:hover {
-    border-color: var(--color-gold);
-    box-shadow: 0 0 15px rgba(212, 168, 90, 0.15);
+    color: var(--color-gold-light);
   }
 
   .hub__footer {
@@ -117,11 +116,12 @@
   <header class="hub__header">
     <img src="./assets/photos/logo-devanture-hero-clean.png" alt="Miles Cocktail Lounge" translate="no" class="notranslate" style="max-width:200px; margin:0 auto; display:block;">
     <p class="hub__intro">Todo lo que necesitas, a un toque.</p>
+    <a href="./" style="display:inline-block; margin-top:1rem; font-size:0.8rem; color:#D4A85A; text-decoration:none; letter-spacing:0.05em;">Visitar el sitio web →</a>
   </header>
 
   <nav class="hub__links">
-    <a href="./carta-miles" class="hub__link">Ver el menú — Zona Miles</a>
-    <a href="./carta" class="hub__link">Ver el menú — In Confidence</a>
+    <a href="./carta-miles" class="hub__link">Menú — Zona Miles</a>
+    <a href="./carta" class="hub__link">Menú — Zona Speakeasy</a>
     <a href="./carta-tapas" class="hub__link">Tapas &amp; Platos</a>
     <a href="https://search.google.com/local/writereview?placeid=ChIJ18SDyIqjpBIRGCBIBQ6MrV8" target="_blank" rel="noopener noreferrer" class="hub__link">Dejar una reseña en Google ⭐</a>
   </nav>
