@@ -3,20 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Menu — In Confidence by Miles</title>
+<title>In Confidence by Miles — Menú & Info</title>
 <meta name="description" content="Menu de In Confidence Speakeasy — Cócteles de autor y tapas para compartir. Barcelona.">
 <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
 <style>
   :root {
     --color-bg: #0C0A08;
     --color-gold: #D4A85A;
+    --color-gold-light: #E7BE78;
+    --color-gold-dim: #9E7B3A;
     --color-cream: #E8E0D0;
     --color-text-muted: #9E9688;
+    --color-text-faint: #6A6358;
     --color-border: rgba(212, 168, 90, 0.15);
     --font-display: 'Zodiak', 'Georgia', serif;
     --font-body: 'General Sans', 'Helvetica Neue', sans-serif;
   }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
     background: var(--color-bg);
     color: var(--color-cream);
@@ -24,81 +29,93 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .menu-hub {
-    max-width: 420px;
-    width: 100%;
+
+  .hub {
+    max-width: 540px;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .hub__header {
     text-align: center;
+    padding: 2rem 0 2.5rem;
   }
-  .menu-hub__logo {
-    width: 180px;
-    height: auto;
-    margin: 0 auto 1.5rem;
-    display: block;
-  }
-  .menu-hub__tagline {
+
+  .hub__intro {
     font-family: var(--font-body);
     font-size: 0.85rem;
     color: var(--color-text-muted);
     font-style: italic;
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
   }
-  .menu-hub__visit {
-    display: inline-block;
-    font-size: 0.85rem;
-    color: var(--color-cream);
-    text-decoration: underline;
-    margin-bottom: 2.5rem;
+
+  .hub__links {
+    margin-top: 2rem;
   }
-  .menu-hub__links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .menu-hub__link {
+
+  .hub__link {
     display: block;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: none;
     padding: 1rem 1.5rem;
-    background: rgba(255,255,255,0.08);
-    border-radius: 8px;
-    color: var(--color-cream);
-    text-decoration: none;
     font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    transition: all 0.3s ease;
-  }
-  .menu-hub__link:hover {
-    background: rgba(212, 168, 90, 0.15);
+    letter-spacing: 0.1em;
     color: var(--color-gold);
+    margin-bottom: 0.75rem;
+    text-decoration: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
   }
-  .menu-hub__footer {
+
+  .hub__link:hover {
+    color: var(--color-gold-light);
+  }
+
+  .hub__footer {
+    text-align: center;
     margin-top: 3rem;
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
   }
-  body { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
-  img { -webkit-user-drag: none; pointer-events: none; }
+
+  .hub__diamond {
+    display: block;
+    text-align: center;
+    color: var(--color-gold-dim);
+    font-size: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hub__copy {
+    font-size: 0.7rem;
+    color: var(--color-text-faint);
+    font-style: italic;
+  }
 </style>
 </head>
 <body>
-<div class="menu-hub">
-  <img src="./assets/photos/logo-devanture-transparent.png" alt="Miles Gastro Cocktails Lounge" class="menu-hub__logo">
-  <p class="menu-hub__tagline">Todo lo que necesitas, a un toque.</p>
-  <a href="./inconfidence" class="menu-hub__visit">Visitar el sitio web →</a>
-  <div class="menu-hub__links">
-    <a href="./carta" class="menu-hub__link">Menú — Zona Speakeasy</a>
-    <a href="./carta-tapas" class="menu-hub__link">Tapas & Platos</a>
-    <a href="https://g.page/r/CQQz9jHMwS0iEB0/review" class="menu-hub__link">Dejar una reseña en Google ⭐</a>
-  </div>
-  <div class="menu-hub__footer">© 2026 Miles Cocktail Lounge</div>
+
+<div class="hub">
+  <header class="hub__header">
+    <img src="./assets/photos/logo-devanture-hero-clean.png" alt="Miles Cocktail Lounge" translate="no" class="notranslate" style="max-width:200px; margin:0 auto; display:block;">
+    <p class="hub__intro">Todo lo que necesitas, a un toque.</p>
+    <a href="./inconfidence" style="display:inline-block; margin-top:1rem; font-size:0.8rem; color:#D4A85A; text-decoration:none; letter-spacing:0.05em;">Visitar el sitio web →</a>
+  </header>
+
+  <nav class="hub__links">
+    <a href="./carta" class="hub__link">Menú — Zona Speakeasy</a>
+    <a href="./carta-tapas" class="hub__link">Tapas & Platos</a>
+    <a href="https://search.google.com/local/writereview?placeid=ChIJ18SDyIqjpBIRGCBIBQ6MrV8" target="_blank" rel="noopener noreferrer" class="hub__link">Dejar una reseña en Google ⭐</a>
+  </nav>
+
+  <footer class="hub__footer">
+    <span class="hub__diamond">◆</span>
+    <p class="hub__copy">&copy; 2026 Miles Cocktail Lounge</p>
+  </footer>
 </div>
+
 <script>
 document.addEventListener("contextmenu",function(e){e.preventDefault()});
 document.addEventListener("selectstart",function(e){e.preventDefault()});
