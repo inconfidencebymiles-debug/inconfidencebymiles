@@ -129,11 +129,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section section--about" id="about">
   <div class="container">
     <div class="about__grid">
-      <div class="about__image-col">
-        <div class="about__image-wrapper reveal-el">
-          <img src="./assets/photos/sala-salvaje-500.jpg" alt="Sala Salvaje — racó íntim de Miles amb sofàs Chesterfield" loading="lazy" decoding="async" width="1620" height="1080">
-        </div>
-      </div>
       <div class="about__text-col">
         <span class="section__label reveal-el">Sobre Nosaltres</span>
         <h2 class="section__title reveal-el">Un lloc que no existeix a cap mapa</h2>
@@ -144,6 +139,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="about__signature reveal-el">
           <span class="about__signature-text">Miles</span>
           <span class="about__signature-role">Amfitrió</span>
+        </div>
+      </div>
+      <div class="about__image-col">
+        <div class="about__image-wrapper reveal-el">
+          <img src="./assets/photos/sala-salvaje-500.jpg" alt="Sala Salvaje — racó íntim de Miles amb sofàs Chesterfield" loading="lazy" decoding="async" width="1620" height="1080">
         </div>
       </div>
     </div>
@@ -195,20 +195,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Experience Card: In Confidence -->
 <section class="section section--experience" id="exp-confidence-section">
-  <div class="experience__cards container--wide">
-    <article class="exp-card exp-card--reverse reveal-el" id="exp-confidence">
-      <div class="exp-card__image">
-        <img src="./assets/photos/MILES-21bis.jpg" alt="In Confidence — barra del speakeasy amb quadre de dòberman" loading="lazy" decoding="async" width="1620" height="1080">
-      </div>
-      <div class="exp-card__content">
+  <div class="container--wide">
+    <article class="reveal-el" id="exp-confidence" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <div style="max-width: 700px; padding: clamp(2rem, 4vw, 3rem);">
         <h3 class="exp-card__title exp-card__title--ic">Espacio<br>In<br>Confidence</h3>
         <p class="exp-card__desc">El secret pitjor guardat de Barcelona. Un speakeasy amagat on els còctels s'eleven a la categoria de ritual. Només 50 places assegudes per nit. Privatitzable per a esdeveniments de 40 a 80 persones.</p>
-        <div class="exp-card__detail">
+        <div class="exp-card__detail" style="justify-content: center;">
           <span>50 places assegudes</span>
           <span>Speakeasy</span>
           <span>Dij, Div & Dis</span>
         </div>
-        <a href="./inconfidence-ca" class="exp-card__link">Descobrir In Confidence <i data-lucide="arrow-right"></i></a>
+        <a href="./inconfidence-ca" class="exp-card__link" style="justify-content: center;">Descobrir In Confidence <i data-lucide="arrow-down"></i></a>
+      </div>
+      <div style="width: 100%;">
+        <img src="./assets/photos/MILES-21bis.jpg" alt="In Confidence — barra del speakeasy amb quadre de dòberman" loading="lazy" decoding="async" width="1620" height="1080" style="width: 100%; height: auto; display: block;">
       </div>
     </article>
   </div>

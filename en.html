@@ -129,16 +129,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section section--about" id="about">
   <div class="container">
     <div class="about__grid">
-      <div class="about__image-col">
-        <div class="about__image-wrapper reveal-el">
-          <img src="./assets/photos/sala-salvaje-500.jpg" alt="Sala Salvaje — intimate corner at Miles with Chesterfield sofas" loading="lazy" decoding="async" width="1620" height="1080">
-        </div>
-      </div>
       <div class="about__text-col">
         <span class="section__label reveal-el">About Us</span>
         <h2 class="section__title reveal-el">A place that exists on no map</h2>
         <div class="about__text reveal-el">
           <p>A cocktail lounge with a hidden speakeasy in Barcelona's Eixample. 253 private events, 4.9/5, and an obsession: making every night unrepeatable.</p>
+        </div>
+      </div>
+      <div class="about__image-col">
+        <div class="about__image-wrapper reveal-el">
+          <img src="./assets/photos/sala-salvaje-500.jpg" alt="Sala Salvaje — intimate corner at Miles with Chesterfield sofas" loading="lazy" decoding="async" width="1620" height="1080">
         </div>
       </div>
     </div>
@@ -190,20 +190,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Experience Card: In Confidence -->
 <section class="section section--experience" id="exp-confidence-section">
-  <div class="experience__cards container--wide">
-    <article class="exp-card exp-card--reverse reveal-el" id="exp-confidence">
-      <div class="exp-card__image">
-        <img src="./assets/photos/MILES-21bis.jpg" alt="In Confidence — speakeasy bar with doberman painting" loading="lazy" decoding="async" width="1620" height="1080">
-      </div>
-      <div class="exp-card__content">
+  <div class="container--wide">
+    <article class="reveal-el" id="exp-confidence" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <div style="max-width: 700px; padding: clamp(2rem, 4vw, 3rem);">
         <h3 class="exp-card__title exp-card__title--ic">Espacio<br>In<br>Confidence</h3>
         <p class="exp-card__desc">A hidden speakeasy where every cocktail is a ritual and every night is unrepeatable. 50 seated places, Thursday, Friday and Saturday. Available for private events from 40 to 80 guests.</p>
-        <div class="exp-card__detail">
+        <div class="exp-card__detail" style="justify-content: center;">
           <span>50 seated places</span>
           <span>Speakeasy</span>
           <span>Thu, Fri & Sat</span>
         </div>
-        <a href="./inconfidence-en" class="exp-card__link">Discover In Confidence <i data-lucide="arrow-right"></i></a>
+        <a href="./inconfidence-en" class="exp-card__link" style="justify-content: center;">Discover In Confidence <i data-lucide="arrow-down"></i></a>
+      </div>
+      <div style="width: 100%;">
+        <img src="./assets/photos/MILES-21bis.jpg" alt="In Confidence — speakeasy bar with doberman painting" loading="lazy" decoding="async" width="1620" height="1080" style="width: 100%; height: auto; display: block;">
       </div>
     </article>
   </div>
