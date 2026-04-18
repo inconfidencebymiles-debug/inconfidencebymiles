@@ -56,6 +56,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 }
 </script>
+<style>
+.header-logo-video {
+  display: block;
+  object-fit: contain;
+  background: transparent;
+}
+.header-logo-video::-webkit-media-controls {
+  display: none !important;
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -67,7 +77,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
   <div class="nav__inner container--wide">
     <a href="./" class="nav__logo" aria-label="Miles Cocktail Lounge — Inicio">
-      <img src="./assets/photos/logo-simple-nav.png" alt="Miles" class="nav__logo-img" width="120" height="39">
+      <video class="header-logo-video nav__logo-img" muted playsinline preload="auto" poster="./assets/logo/logo-3d-static.png" width="120" height="56">
+        <source src="./assets/logo/logo-3d.webm" type="video/webm">
+        <source src="./assets/logo/logo-3d.mp4" type="video/mp4">
+        <img src="./assets/logo/logo-3d-static.png" alt="MILES Gastro Cocktails Lounge" class="header-logo-fallback">
+      </video>
     </a>
     <button class="nav__toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
       <span class="nav__toggle-bar"></span>
@@ -257,6 +271,38 @@ document.addEventListener("keydown",function(e){
 <script>
 function setCookieConsent(v){document.cookie="cookie_consent="+v+";path=/;max-age=31536000;SameSite=Lax";document.getElementById("cookieBanner").style.display="none"}
 if(!document.cookie.includes("cookie_consent=")){document.getElementById("cookieBanner").style.display="block"}
+</script>
+<script>
+(function() {
+  var video = document.querySelector('.header-logo-video');
+  if (!video) return;
+  var isPlaying = false;
+  var scrollTimeout = null;
+  video.pause();
+  video.currentTime = 0;
+  function playOneRotation() {
+    if (isPlaying) return;
+    isPlaying = true;
+    video.currentTime = 0;
+    video.play().catch(function() {});
+  }
+  video.addEventListener('ended', function() {
+    isPlaying = false;
+    video.currentTime = 0;
+    video.pause();
+  });
+  var lastScrollY = window.scrollY;
+  window.addEventListener('scroll', function() {
+    var currentScrollY = window.scrollY;
+    var scrollDelta = Math.abs(currentScrollY - lastScrollY);
+    if (scrollDelta > 10 && !isPlaying) {
+      playOneRotation();
+    }
+    lastScrollY = currentScrollY;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function() {}, 150);
+  }, { passive: true });
+})();
 </script>
 </body>
 </html>
