@@ -204,11 +204,12 @@ a:hover { color: var(--color-gold-light); }
   left: 0;
   right: 0;
   z-index: 100;
+  background: #020202;
   padding: var(--space-4) 0;
   transition: background var(--transition-base), padding var(--transition-base);
 }
 .nav--scrolled {
-  background: rgba(12, 10, 8, 0.92);
+  background: rgba(2, 2, 2, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: var(--space-3) 0;
