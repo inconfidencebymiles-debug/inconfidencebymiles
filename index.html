@@ -146,25 +146,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 }
 
-/* --- WhatsApp CTA Button (nav) --- */
+/* --- WhatsApp CTA Button (nav) — oro/negro --- */
 .nav__cta--whatsapp a {
-  background: #25D366 !important;
-  color: #fff !important;
+  background: var(--color-gold) !important;
+  color: var(--color-bg) !important;
 }
 .nav__cta--whatsapp a:hover {
-  background: #20bd5a !important;
-  box-shadow: 0 0 20px rgba(37,211,102,0.25);
+  background: var(--color-gold-light) !important;
+  box-shadow: var(--shadow-gold);
 }
 
-/* --- Hero WhatsApp Button --- */
+/* --- WhatsApp Buttons — oro/negro --- */
 .btn--whatsapp {
-  background: #25D366;
-  color: #fff;
+  background: var(--color-gold);
+  color: var(--color-bg);
 }
 .btn--whatsapp:hover {
-  background: #20bd5a;
-  color: #fff;
-  box-shadow: 0 0 24px rgba(37,211,102,0.25);
+  background: var(--color-gold-light);
+  color: var(--color-bg);
+  box-shadow: var(--shadow-gold);
 }
 
 /* --- Eventos Cards --- */
@@ -409,7 +409,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 class="hero__title">
       <img src="./assets/photos/logo-devanture-hero-clean.png" alt="MILES Gastro Cocktails Lounge — Barcelona Eixample" class="hero__logo-img">
     </h1>
-    <p class="hero__tagline">Dos bares. Una direcci&oacute;n. Barcelona Eixample.</p>
     <div class="hero__scroll" aria-hidden="true">
       <div class="hero__scroll-line"></div>
     </div>
@@ -512,6 +511,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- In Confidence — Galería atmósfera -->
+<section class="section section--confidence" aria-label="In Confidence — atmósfera">
+  <div class="confidence__content container">
+    <div class="confidence__gallery reveal-el">
+      <div class="confidence__gallery-main">
+        <img src="./assets/photos/confidence-bar-155.jpg" alt="In Confidence — mesas con velas" loading="lazy" decoding="async" width="1620" height="1080">
+      </div>
+      <div class="confidence__gallery-side">
+        <img src="./assets/photos/cocktails-four-aligned.jpg" alt="Cócteles de autor alineados" loading="lazy" decoding="async" width="1080" height="1620">
+        <img src="./assets/photos/cocktail-blue-closeup.jpg" alt="Cóctel azul con flor" loading="lazy" decoding="async" width="1080" height="1620">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Eventos privados -->
 <section class="section" id="eventos">
   <div class="container">
@@ -523,29 +537,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="eventos__grid">
       <!-- Particulares -->
       <div class="evento-card reveal-el">
-        <div class="evento-card__emoji">&#127874;</div>
         <h3>Particulares</h3>
-        <p>Cumplea&ntilde;os, despedidas, celebraciones, fiestas privadas.</p>
-        <span class="evento-card__badge">Desde 15 personas</span>
-        <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quiero%20organizar%20un%20cumplea%C3%B1os%2Ffiesta%20privada.%20Fecha%20aproximada%3A%20___%20%C2%B7%20Personas%3A%20___%20%C2%B7%20%C2%BFSala%20Salvaje%20o%20In%20Confidence%20completo%3F" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">Pedir presupuesto cumplea&ntilde;os</a>
+        <p>Cumplea&ntilde;os, despedidas, celebraciones, fiestas privadas. Desde 15 personas.</p>
+        <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quiero%20organizar%20un%20cumplea%C3%B1os%2Ffiesta%20privada.%20Fecha%20aproximada%3A%20___%20%C2%B7%20Personas%3A%20___%20%C2%B7%20%C2%BFSala%20Salvaje%20o%20In%20Confidence%20completo%3F" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Pedir presupuesto cumplea&ntilde;os</a>
       </div>
 
       <!-- Empresas -->
       <div class="evento-card reveal-el">
-        <div class="evento-card__emoji">&#127970;</div>
         <h3>Empresas</h3>
-        <p>Afterworks, team buildings, presentaciones, comidas de equipo.</p>
-        <span class="evento-card__badge">Espacio completo o privatizado</span>
-        <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20soy%20de%20%5Bempresa%5D.%20Quer%C3%ADa%20info%20para%20un%20evento%20de%20empresa%3A%20afterwork%20%2F%20team%20building%20%2F%20presentaci%C3%B3n.%20Fecha%3A%20___%20%C2%B7%20Personas%3A%20___" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">Pedir presupuesto empresa</a>
+        <p>Afterworks, team buildings, presentaciones, comidas de equipo. Espacio completo o privatizado.</p>
+        <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20soy%20de%20%5Bempresa%5D.%20Quer%C3%ADa%20info%20para%20un%20evento%20de%20empresa%3A%20afterwork%20%2F%20team%20building%20%2F%20presentaci%C3%B3n.%20Fecha%3A%20___%20%C2%B7%20Personas%3A%20___" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Pedir presupuesto empresa</a>
       </div>
 
       <!-- Agencias -->
       <div class="evento-card reveal-el">
-        <div class="evento-card__emoji">&#127916;</div>
         <h3>Agencias</h3>
-        <p>Activaciones, lanzamientos, producciones, eventos B2B.</p>
-        <span class="evento-card__badge">Espacio neutro, t&eacute;cnico y flexible</span>
-        <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20soy%20de%20%5Bagencia%5D.%20Estamos%20buscando%20espacio%20para%20una%20activaci%C3%B3n%20%2F%20producci%C3%B3n%20%2F%20evento%20B2B.%20Fecha%3A%20___%20%C2%B7%20Personas%3A%20___%20%C2%B7%20Necesidades%20t%C3%A9cnicas%3A%20___" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">Pedir presupuesto agencia</a>
+        <p>Activaciones, lanzamientos, producciones, eventos B2B. Espacio neutro, t&eacute;cnico y flexible.</p>
+        <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20soy%20de%20%5Bagencia%5D.%20Estamos%20buscando%20espacio%20para%20una%20activaci%C3%B3n%20%2F%20producci%C3%B3n%20%2F%20evento%20B2B.%20Fecha%3A%20___%20%C2%B7%20Personas%3A%20___%20%C2%B7%20Necesidades%20t%C3%A9cnicas%3A%20___" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Pedir presupuesto agencia</a>
       </div>
     </div>
 
@@ -563,11 +571,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Carta de c&oacute;cteles de autor, cl&aacute;sicos reinterpretados, cervezas seleccionadas y referencias de vino.</p>
     </div>
 
-    <div class="carta__callout reveal-el">
-      <h3>&#127869; &iquest;Y la comida?</h3>
-      <p>La cocina del local se reserva exclusivamente para eventos privados organizados con antelaci&oacute;n. Para celebraciones, podemos coordinar un chef invitado que cocina in situ y compone un men&uacute; a medida.</p>
-      <p>No servimos comida en el d&iacute;a a d&iacute;a — preferimos centrarnos en lo que hacemos mejor: c&oacute;cteles, ambiente y experiencias a medida.</p>
-    </div>
+    <p class="reveal-el" style="color: var(--color-text-muted); line-height: 1.7; margin-top: var(--space-4);">La cocina est&aacute; disponible exclusivamente para eventos privados reservados con antelaci&oacute;n.</p>
 
     <div class="carta__actions reveal-el">
       <a href="./carta-miles.html" class="btn btn--primary">Ver carta de c&oacute;cteles</a>
@@ -613,7 +617,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Prueba Social -->
 <section class="prueba-social" id="prueba-social">
-  <h2 class="prueba-social__title reveal-el">La gente vuelve.</h2>
+  <h2 class="prueba-social__title reveal-el">Nuestra experiencia, en cifras.</h2>
   <div class="prueba-social__grid">
     <div class="reveal-el">
       <div class="prueba-social__stat-number">253</div>
@@ -716,17 +720,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p><i data-lucide="car" class="icon--sm"></i> Parking Aribau, a 2 minutos</p>
         </div>
       </div>
-      <div class="location__map-col reveal-el">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.5!2d2.15948!3d41.38834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f9f4b5e8c7%3A0x5c6b0f7b2e8a4d0e!2sDiputaci%C3%B3%20215%2C%2008011%20Barcelona!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses"
-          class="location__map"
-          style="border:0; width:100%; height:100%; min-height:400px;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Mapa de ubicación de Miles Cocktail Lounge en Barcelona">
-        </iframe>
-
+      <div class="location__map-col reveal-el" style="display: flex; align-items: center; justify-content: center;">
+        <a href="https://www.google.com/maps/search/?api=1&query=Miles+Cocktail+Lounge+Diputaci%C3%B3+215+Barcelona" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
       </div>
     </div>
   </div>
