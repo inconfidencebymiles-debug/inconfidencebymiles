@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="manifest" href="/site.webmanifest">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MILES Gastro Cocktails Lounge</title>
-<meta name="description" content="Cocktails d'auteur, événements privés et nuits inoubliables au cœur de Barcelone. Diputació 215.">
+<meta name="description" content="Cocktails d'auteur, &eacute;v&eacute;nements priv&eacute;s et nuits inoubliables au c&oelig;ur de Barcelone. Diputaci&oacute; 215.">
 <link rel="canonical" href="https://inconfidencebymiles.com/fr.html">
 
 <!-- Open Graph -->
@@ -100,6 +100,274 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .header-logo-video::-webkit-media-controls {
   display: none !important;
 }
+
+/* --- Concept Strip --- */
+.concept-strip {
+  padding: var(--space-16) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.concept-strip__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-gold);
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-12);
+}
+.concept-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  max-width: var(--content-default);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+.concept-strip__col {
+  text-align: center;
+}
+.concept-strip__col h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-cream);
+  margin-bottom: var(--space-3);
+}
+.concept-strip__col p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .concept-strip__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* --- WhatsApp CTA Button (nav) — oro/negro --- */
+.nav__cta--whatsapp a {
+  background: var(--color-gold) !important;
+  color: var(--color-bg) !important;
+}
+.nav__cta--whatsapp a:hover {
+  background: var(--color-gold-light) !important;
+  box-shadow: var(--shadow-gold);
+}
+
+/* --- WhatsApp Buttons — oro/negro --- */
+.btn--whatsapp {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+.btn--whatsapp:hover {
+  background: var(--color-gold-light);
+  color: var(--color-bg);
+  box-shadow: var(--shadow-gold);
+}
+
+/* --- Eventos Cards --- */
+.eventos__intro {
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+  text-align: center;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+.eventos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+.evento-card {
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+.evento-card:hover {
+  border-color: var(--color-gold-muted);
+  box-shadow: var(--shadow-gold);
+}
+.evento-card__emoji {
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+}
+.evento-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-cream);
+  margin-bottom: var(--space-3);
+}
+.evento-card p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+.evento-card__badge {
+  display: inline-block;
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold-muted);
+  padding: var(--space-1) var(--space-3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+}
+.evento-card .btn {
+  margin-top: auto;
+}
+.eventos__footer {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-faint);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .eventos__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Carta Section --- */
+.carta__callout {
+  max-width: 700px;
+  margin: var(--space-8) auto;
+  padding: var(--space-6);
+  border: 1px solid var(--color-gold-muted);
+  background: var(--color-surface);
+}
+.carta__callout h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-cream);
+  margin-bottom: var(--space-3);
+}
+.carta__callout p {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-3);
+}
+.carta__callout p:last-child {
+  margin-bottom: 0;
+}
+.carta__actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+
+/* --- Prueba Social --- */
+.prueba-social {
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.prueba-social__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-cream);
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+.prueba-social__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.prueba-social__stat-number {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+.prueba-social__stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+@media (max-width: 768px) {
+  .prueba-social__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* --- Reservar Buttons --- */
+.reservar__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+.reservar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+  color: inherit;
+}
+.reservar-btn:hover {
+  border-color: var(--color-gold-muted);
+  box-shadow: var(--shadow-gold);
+  color: inherit;
+}
+.reservar-btn__emoji {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+}
+.reservar-btn__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-cream);
+  margin-bottom: var(--space-2);
+}
+.reservar-btn__sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+@media (max-width: 1024px) {
+  .reservar__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Espacio Miles title --- */
+.exp-card__title--miles {
+  text-align: center;
+  line-height: 1.15;
+}
+
+/* --- In Confidence tagline --- */
+.ic-tagline {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-text-faint);
+  margin-top: var(--space-4);
+}
 </style>
 </head>
 <body>
@@ -127,14 +395,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="nav__toggle-bar"></span>
     </button>
     <ul class="nav__links" id="navLinks" role="list">
-      <li><a href="./qr" target="_blank" rel="noopener noreferrer">Menu</a></li>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="./inconfidence-fr">Speakeasy</a></li>
-      <li><a href="./eventos-fr">Particuliers</a></li>
+      <li><a href="#espacios">Espaces</a></li>
+      <li><a href="#eventos">&Eacute;v&eacute;nements</a></li>
       <li><a href="./agencias-fr">Agences</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li class="nav__lang"><a href="./" title="Español">ES</a> <a href="./en" title="English">EN</a> <a href="./ca" title="Català">CA</a></li>
-      <li class="nav__cta"><a href="https://wa.me/34932472654" target="_blank" rel="noopener noreferrer">Réserver</a></li>
+      <li><a href="./qr" target="_blank" rel="noopener noreferrer">Menu</a></li>
+      <li><a href="#contacto">Contact</a></li>
+      <li class="nav__lang"><a href="./" title="Espa&ntilde;ol">ES</a> <a href="./en" title="English">EN</a> <a href="./ca" title="Catal&agrave;">CA</a></li>
+      <li class="nav__cta nav__cta--whatsapp"><a href="https://wa.me/34932472654?text=Bonjour%20Miles%2C%20je%20voulais%20r%C3%A9server%20une%20table.%20Date%20%3A%20___%20%C2%B7%20Heure%20%3A%20___%20%C2%B7%20Personnes%20%3A%20___" target="_blank" rel="noopener noreferrer">R&eacute;server par WhatsApp</a></li>
     </ul>
   </div>
 </nav>
@@ -148,14 +415,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 class="hero__title">
       <img src="./assets/photos/logo-devanture-hero-clean.png" alt="MILES Gastro Cocktails Lounge — Barcelona Eixample" class="hero__logo-img">
     </h1>
-    <p class="hero__tagline">C'était quand, la dernière fois qu'une soirée t'a vraiment surpris ?</p>
     <div class="hero__actions">
-      <a href="https://wa.me/34932472654" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Réserver une table</a>
-      <a href="#experience" class="btn btn--ghost">Découvrir</a>
+      <a href="https://wa.me/34932472654?text=Bonjour%20Miles%2C%20je%20voulais%20r%C3%A9server%20une%20table.%20Date%20%3A%20___%20%C2%B7%20Heure%20%3A%20___%20%C2%B7%20Personnes%20%3A%20___" class="btn btn--primary" target="_blank" rel="noopener noreferrer">R&eacute;server par WhatsApp</a>
+      <a href="#eventos" class="btn btn--ghost">Organiser un &eacute;v&eacute;nement</a>
     </div>
     <div class="hero__proof">
-      <span class="hero__proof-stars">★★★★★</span>
-      <span class="hero__proof-text">4.9/5 · 75 avis · 253 événements privés</span>
+      <span class="hero__proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="hero__proof-text">4,9/5 &middot; 81 avis &middot; 259 &eacute;v&eacute;nements</span>
     </div>
   </div>
   <div class="hero__scroll" aria-hidden="true">
@@ -166,98 +432,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Main Content -->
 <main id="main">
 
-<!-- About Section -->
-<section class="section section--about" id="about" style="overflow-x: hidden;">
-  <div class="container">
-    <div class="about__grid">
-      <div class="about__text-col">
-        <span class="section__label reveal-el">À propos</span>
-        <h2 class="section__title reveal-el">Un lieu qui n'existe sur aucune carte</h2>
-        <div class="about__text reveal-el">
-          <p>Il y a des endroits que l'on découvre. Et il y a des endroits qui vous choisissent. Miles, c'est le deuxième type — un cocktail lounge dans l'Eixample barcelonais où la lumière tamisée, la musique enveloppante et les cocktails d'auteur créent quelque chose qui ne s'explique pas sans l'avoir vécu.</p>
-          <p>253 événements privés organisés. Plus de 500 demandes reçues. Et une note de 4.9 sur 5 sur Privateaser. Derrière ces chiffres, une obsession : que chaque soirée soit unique. Ce qui se passe à l'intérieur de Miles ne se raconte pas — ça se vit.</p>
-        </div>
-        <div class="about__signature reveal-el">
-          <span class="about__signature-text">Miles</span>
-          <span class="about__signature-role">Hôte</span>
-        </div>
-      </div>
-      <div class="about__image-col">
-        <div class="about__image-wrapper reveal-el">
-        </div>
-      </div>
+<!-- Concept Strip -->
+<section class="concept-strip" id="concept-strip">
+  <h2 class="concept-strip__title reveal-el">Un lieu, trois moments.</h2>
+  <div class="concept-strip__grid">
+    <div class="concept-strip__col reveal-el">
+      <h3>Boire un verre</h3>
+      <p>Bar ouvert du mardi au dimanche, sans r&eacute;servation. Bi&egrave;res, vins, cocktails, billard.</p>
     </div>
-  </div>
-  <div style="width: 100vw; margin-left: calc(-50vw + 50%); overflow-x: hidden;">
-    <img src="./assets/photos/MILES-12bis-2.jpg?v=2" alt="Intérieur de Miles Cocktail Lounge Barcelona" loading="lazy" decoding="async" width="1620" height="1080" style="width: 100%; height: auto; display: block;">
+    <div class="concept-strip__col reveal-el">
+      <h3>F&ecirc;ter avec les tiens</h3>
+      <p>Anniversaires, enterrements de vie, f&ecirc;tes priv&eacute;es. Espaces privatisables d&egrave;s 15 personnes.</p>
+    </div>
+    <div class="concept-strip__col reveal-el">
+      <h3>Organiser ton &eacute;v&eacute;nement</h3>
+      <p>Entreprises et agences : afterworks, team buildings, pr&eacute;sentations, B2B.</p>
+    </div>
   </div>
 </section>
 
-<!-- Experience Section -->
-<section class="section section--experience" id="experience">
+<!-- Foto Miles bar -->
+<div style="width: 100vw; margin-left: calc(-50vw + 50%); overflow-x: hidden;">
+  <img src="./assets/photos/MILES-12bis-2.jpg?v=2" alt="Int&eacute;rieur de Miles Cocktail Lounge Barcelone" loading="lazy" decoding="async" width="1620" height="1080" style="width: 100%; height: auto; display: block;">
+</div>
+
+<!-- Espacios Section -->
+<section class="section section--experience" id="espacios">
   <div class="container">
-    <span class="section__label reveal-el">L'Expérience</span>
-    <h2 class="section__title reveal-el">Deux espaces, une seule adresse</h2>
-    <p class="section__subtitle reveal-el">Chaque espace de Miles a sa propre personnalité, sa propre histoire. Choisis ton aventure.</p>
+    <span class="section__label reveal-el">Les deux espaces</span>
+    <h2 class="section__title reveal-el">Deux bars, une seule adresse</h2>
+    <p class="section__subtitle reveal-el">M&ecirc;me lieu, deux ambiances. &Agrave; toi de choisir.</p>
   </div>
+
+  <!-- Espacio Miles -->
   <div class="experience__cards container--wide">
     <article class="exp-card reveal-el" id="exp-zona">
       <div class="exp-card__image">
-        <img src="./assets/photos/zona-miles-billar-new.jpg" alt="Espacio Miles — billard, canapés et mur de photos iconiques" loading="lazy" decoding="async" width="1600" height="1066" style="object-position: right;">
+        <img src="./assets/photos/zona-miles-billar-new.jpg" alt="Espace Miles — billard, canap&eacute;s et mur de photos iconiques" loading="lazy" decoding="async" width="1600" height="1066" style="object-position: right;">
       </div>
       <div class="exp-card__content">
-        <h3 class="exp-card__title">Espacio Miles</h3>
-        <p class="exp-card__desc">Le cœur de l'espace. Bar principal avec billard, recoins intimistes et cocktails d'auteur. Inclut la Sala Salvaje — un coin privé pour des groupes de 15 à 30 personnes.</p>
+        <h3 class="exp-card__title exp-card__title--miles">Espace<br>Miles</h3>
+        <p class="exp-card__desc">Ouvert &agrave; tous. Cocktails, bi&egrave;res, vins et un billard. Pour venir apr&egrave;s le travail, avant de sortir, ou simplement pour passer un bon moment sans r&eacute;server.</p>
+        <p class="exp-card__desc">Inclut la Sala Salvaje, un coin privatisable pour des groupes de 15 &agrave; 30 personnes — id&eacute;al pour les anniversaires ou les afterworks.</p>
         <div class="exp-card__detail">
-          <span>Bar & Billard</span>
+          <span>Sans r&eacute;servation</span>
+          <span>Mar—Dim</span>
+          <span>Billard</span>
           <span>Sala Salvaje (15—30 pers.)</span>
-          <span>Mar — Dim</span>
         </div>
+        <a href="https://wa.me/34932472654?text=Bonjour%20Miles%2C%20je%20voulais%20r%C3%A9server%20une%20table.%20Date%20%3A%20___%20%C2%B7%20Heure%20%3A%20___%20%C2%B7%20Personnes%20%3A%20___" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">R&eacute;server une table par WhatsApp</a>
       </div>
     </article>
   </div>
-</section>
 
-<!-- Tapas Section -->
+<!-- Tapas / Gastronomía Section -->
 <section class="section section--tapas" id="tapas">
   <div class="container">
     <div class="tapas__grid">
       <div class="tapas__text reveal-el">
         <span class="section__label">Gastronomie</span>
-        <h2 class="section__title">Tapas à partager</h2>
-        <p>De bons cocktails méritent une bonne compagnie gastronomique. Notre carte de tapas est pensée pour picorer, partager et continuer à profiter. Des bravas aux options plus élaborées, chaque plat complète l'expérience.</p>
+        <h2 class="section__title">Une cuisine pour tes &eacute;v&eacute;nements</h2>
+        <p>La cuisine du local est disponible pour des &eacute;v&eacute;nements priv&eacute;s ou des grandes r&eacute;servations, avec un chef invit&eacute; pour chaque occasion. Une proposition personnalis&eacute;e pour accompagner ta soir&eacute;e — des tapas &agrave; partager aux menus plus &eacute;labor&eacute;s.</p>
       </div>
       <div class="tapas__images reveal-el">
-        <img src="./assets/photos/sala-salvaje-table.jpg" alt="Sala Salvaje — banquettes et table dressée" loading="lazy" decoding="async" width="1620" height="1080">
-        <img src="./assets/photos/event-ambiance-235.jpg" alt="Ambiance événement chez Miles — cocktails et tapas" loading="lazy" decoding="async" width="1620" height="1080">
-        <img src="./assets/photos/event-tapas-237.jpg" alt="Tapas et soirée intime au Miles" loading="lazy" decoding="async" width="900" height="600">
+        <img src="./assets/photos/sala-salvaje-table.jpg" alt="Sala Salvaje — banquettes et table dress&eacute;e" loading="lazy" decoding="async" width="1620" height="1080">
+        <img src="./assets/photos/event-ambiance-235.jpg" alt="Ambiance &eacute;v&eacute;nement chez Miles — cocktails et tapas" loading="lazy" decoding="async" width="1620" height="1080">
+        <img src="./assets/photos/event-tapas-237.jpg" alt="Tapas et soir&eacute;e intime au Miles" loading="lazy" decoding="async" width="900" height="600">
       </div>
     </div>
   </div>
 </section>
 
-<!-- Experience Card: In Confidence -->
-<section class="section section--experience" id="exp-confidence-section">
-  <div class="container--wide">
+  <!-- Espacio In Confidence -->
+  <div class="container--wide" style="margin-top: var(--space-2);">
     <article class="reveal-el" id="exp-confidence" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
       <div style="max-width: 700px; padding: clamp(2rem, 4vw, 3rem);">
-        <h3 class="exp-card__title exp-card__title--ic">Espacio<br>In<br>Confidence</h3>
-        <p class="exp-card__desc">Le secret le plus mal gardé de Barcelone. Un speakeasy caché où les cocktails s'élèvent au rang de rituel. Seulement 50 places assises. Privatisable pour des événements de 40 à 80 personnes.</p>
+        <h3 class="exp-card__title exp-card__title--ic">Espace<br>In<br>Confidence</h3>
+        <p class="exp-card__desc">Plus intime, plus soign&eacute;. Cocktails d'auteur, DJ, musique s&eacute;lectionn&eacute;e. Ce n'est pas une discoth&egrave;que : c'est un second bar pens&eacute; pour une exp&eacute;rience plus immersive.</p>
+        <p class="exp-card__desc">Ouvert jeudi, vendredi et samedi. Privatisable pour des &eacute;v&eacute;nements de 40 &agrave; 80 personnes.</p>
         <div class="exp-card__detail" style="justify-content: center;">
-          <span>50 places assises</span>
-          <span>Speakeasy</span>
-          <span>Jeu, Ven & Sam</span>
+          <span>50 places</span>
+          <span>Jeu—Sam</span>
+          <span>DJ</span>
+          <span>Privatisable 40—80 pers.</span>
         </div>
-        <a href="./inconfidence-fr" class="exp-card__link" style="justify-content: center;">Découvrir In Confidence <i data-lucide="arrow-down"></i></a>
+        <a href="https://wa.me/34932472654?text=Bonjour%20Miles%2C%20je%20voudrais%20privatiser%20In%20Confidence.%20Date%20%3A%20___%20%C2%B7%20Personnes%20%3A%20___" class="btn btn--whatsapp" style="margin-top: var(--space-4);" target="_blank" rel="noopener noreferrer">Privatiser In Confidence</a>
+        <p class="ic-tagline">Plus intime. Plus soign&eacute;. Mieux quand on r&eacute;serve.</p>
       </div>
     </article>
   </div>
   <div style="width: 100vw; margin-left: calc(-50vw + 50%); overflow-x: hidden;">
-    <img src="./assets/photos/MILES-21bis.jpg?v=2" alt="In Confidence — bar du speakeasy avec tableau de doberman" loading="lazy" decoding="async" width="1620" height="1080" style="width: 100%; height: auto; display: block;">
+    <img src="./assets/photos/MILES-21bis.jpg?v=2" alt="In Confidence — barre du bar intime avec tableau de doberman" loading="lazy" decoding="async" width="1620" height="1080" style="width: 100%; height: auto; display: block;">
   </div>
 </section>
 
-<!-- In Confidence Section -->
+<!-- In Confidence — Tagline -->
 <section class="section section--confidence" id="in-confidence">
   <div class="confidence__hero">
     <div class="confidence__hero-bg">
@@ -265,81 +534,160 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="confidence__hero-content container">
       <span class="section__label section__label--light reveal-el">In Confidence by Miles</span>
-      <h2 class="confidence__title reveal-el">Ce qui se passe ici,<br>reste ici</h2>
-      <p class="confidence__intro reveal-el">Si tu lis ces lignes, tu fais déjà partie des rares qui savent que cet endroit existe. Pas d'enseigne, pas de signal, aucune trace. Seulement 50 places assises. Seulement le jeudi, le jeudi, le vendredi et le samedi. Seuls les initiés entrent — et ceux qui entrent, reviennent.</p>
+      <h2 class="confidence__title reveal-el">Ce qui se passe ici,<br>reste ici.</h2>
     </div>
   </div>
+</section>
+
+<!-- In Confidence — Galerie atmosphère -->
+<section class="section section--confidence" aria-label="In Confidence — atmosph&egrave;re">
   <div class="confidence__content container">
-    <div class="confidence__grid">
-      <div class="confidence__gallery reveal-el">
-        <div class="confidence__gallery-main">
-          <img src="./assets/photos/confidence-bar-155.jpg" alt="Tables avec bougies et roses au Miles Cocktail Lounge" loading="lazy" decoding="async" width="1620" height="1080">
-        </div>
-        <div class="confidence__gallery-side">
-          <img src="./assets/photos/cocktails-four-aligned.jpg" alt="Quatre cocktails d'auteur alignés au bar" loading="lazy" decoding="async" width="1080" height="1620">
-          <img src="./assets/photos/cocktail-blue-closeup.jpg" alt="Cocktail bleu avec fleur — détail" loading="lazy" decoding="async" width="1080" height="1620">
-        </div>
+    <div class="confidence__gallery reveal-el">
+      <div class="confidence__gallery-main">
+        <img src="./assets/photos/confidence-bar-155.jpg" alt="In Confidence — tables avec bougies" loading="lazy" decoding="async" width="1620" height="1080">
       </div>
-      <div class="confidence__info reveal-el">
-        <h3>Speakeasy</h3>
-        <p>Imagine un endroit où le temps s'arrête. Où chaque cocktail arrive avec la cérémonie d'un rituel. Où chaque lampe, chaque canapé, chaque note de musique a été choisie pour toi. C'est ça, In Confidence — et les 50 places assises sont complètes chaque semaine. Ceux qui réservent, entrent. Les autres, attendent.</p>
-        <div class="confidence__details">
-          <div class="confidence__detail-item">
-            <span class="confidence__detail-label">Ouverture</span>
-            <span class="confidence__detail-value">Jeudi, Vendredi & Samedi</span>
-          </div>
-          <div class="confidence__detail-item">
-            <span class="confidence__detail-label">Capacité</span>
-            <span class="confidence__detail-value">50 places assises</span>
-          </div>
-          <div class="confidence__detail-item">
-            <span class="confidence__detail-label">Cocktails à partir de</span>
-            <span class="confidence__detail-value">12€</span>
-          </div>
-          <div class="confidence__detail-item">
-            <span class="confidence__detail-label">Privatisation</span>
-            <span class="confidence__detail-value">De 19€ à 38€/pers.</span>
-          </div>
-        </div>
-        <a href="https://wa.me/34932472654?text=Bonjour%2C%20je%20souhaiterais%20r%C3%A9server%20au%20In%20Confidence" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Réserver In Confidence</a>
-        <p class="cta__micro">Réponse immédiate par WhatsApp · Sans engagement</p>
+      <div class="confidence__gallery-side">
+        <img src="./assets/photos/cocktails-four-aligned.jpg" alt="Cocktails d'auteur align&eacute;s" loading="lazy" decoding="async" width="1080" height="1620">
+        <img src="./assets/photos/cocktail-blue-closeup.jpg" alt="Cocktail bleu avec fleur" loading="lazy" decoding="async" width="1080" height="1620">
       </div>
     </div>
   </div>
 </section>
+
+<!-- Événements privés -->
+<section class="section" id="eventos">
+  <div class="container">
+    <span class="section__label reveal-el">&Eacute;v&eacute;nements priv&eacute;s</span>
+    <h2 class="section__title reveal-el" style="max-width: 20ch;">&Eacute;v&eacute;nements priv&eacute;s</h2>
+    <p class="section__subtitle reveal-el" style="max-width: none;">+253 &eacute;v&eacute;nements organis&eacute;s &middot; 4,9/5 de moyenne &middot; R&eacute;ponse en moins d'1h par WhatsApp</p>
+    <p class="eventos__intro reveal-el">Chez Miles, nous organisons l'&eacute;v&eacute;nement que tu imagines, pas un package ferm&eacute;. On t'envoie une proposition personnalis&eacute;e avec menu, d&eacute;coration et budget en moins d'1 heure — sans engagement.</p>
+
+    <div class="eventos__grid">
+      <!-- Particuliers -->
+      <div class="evento-card reveal-el">
+        <h3>Particuliers</h3>
+        <p>Anniversaires, enterrements de vie, c&eacute;l&eacute;brations, f&ecirc;tes priv&eacute;es. D&egrave;s 15 personnes.</p>
+        <a href="https://wa.me/34932472654?text=Bonjour%20Miles%2C%20je%20voudrais%20organiser%20un%20anniversaire%2Fune%20f%C3%AAte%20priv%C3%A9e.%20Date%20approximative%20%3A%20___%20%C2%B7%20Personnes%20%3A%20___%20%C2%B7%20Sala%20Salvaje%20ou%20In%20Confidence%20complet%20%3F" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Demander un devis anniversaire</a>
+      </div>
+
+      <!-- Entreprises -->
+      <div class="evento-card reveal-el">
+        <h3>Entreprises</h3>
+        <p>Afterworks, team buildings, pr&eacute;sentations, d&eacute;jeuners d'&eacute;quipe. Espace complet ou privatis&eacute;.</p>
+        <a href="https://wa.me/34932472654?text=Bonjour%20Miles%2C%20je%20suis%20de%20%5Bentreprise%5D.%20Je%20voudrais%20des%20infos%20pour%20un%20%C3%A9v%C3%A9nement%20d'entreprise%20%3A%20afterwork%20%2F%20team%20building%20%2F%20pr%C3%A9sentation.%20Date%20%3A%20___%20%C2%B7%20Personnes%20%3A%20___" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Demander un devis entreprise</a>
+      </div>
+
+      <!-- Agences -->
+      <div class="evento-card reveal-el">
+        <h3>Agences</h3>
+        <p>Activations, lancements, productions, &eacute;v&eacute;nements B2B. Espace neutre, technique et flexible.</p>
+        <a href="https://wa.me/34932472654?text=Bonjour%20Miles%2C%20je%20suis%20de%20%5Bagence%5D.%20Nous%20cherchons%20un%20espace%20pour%20une%20activation%20%2F%20production%20%2F%20%C3%A9v%C3%A9nement%20B2B.%20Date%20%3A%20___%20%C2%B7%20Personnes%20%3A%20___%20%C2%B7%20Besoins%20techniques%20%3A%20___" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Demander un devis agence</a>
+      </div>
+    </div>
+
+    <p class="eventos__footer reveal-el">Cuisine disponible uniquement sur r&eacute;servation &middot; Chef invit&eacute; sur demande &middot; Espaces de 15 &agrave; 130 personnes &middot; Privatisation In Confidence : 19&euro;—38&euro; / pers.</p>
+  </div>
+</section>
+
 
 <!-- Ambiance / Deco Band -->
 <section class="section section--ambiance" aria-hidden="true">
   <div class="ambiance__strip">
     <div class="ambiance__img"><img src="./assets/photos/barman-shaker-pour.jpg" alt="" loading="lazy" decoding="async" width="1080" height="1620"></div>
     <div class="ambiance__img ambiance__img--avis">
-      <div class="avis__stars">★★★★★</div>
-      <p class="avis__text">Fantastic experience from start to finish! We hosted a Valentine’s event here and it was a total success thanks to the staff and the adaptability of the space.</p>
+      <div class="avis__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="avis__text">Fantastic experience from start to finish! We hosted a Valentine's event here and it was a total success thanks to the staff and the adaptability of the space.</p>
       <div class="avis__name">Kim M.</div>
-      <div class="avis__meta">Evento profesional · 80 pers. · Febrero 2026</div>
+      <div class="avis__meta">Evento profesional &middot; 80 pers. &middot; Febrero 2026</div>
     </div>
     <div class="ambiance__img"><img src="./assets/photos/facade-nuit.jpg" alt="" loading="lazy" decoding="async" width="1080" height="1620"></div>
     <div class="ambiance__img ambiance__img--avis">
-      <div class="avis__stars">★★★★★</div>
-      <p class="avis__text">Podía festejar mi cumpleaños en Miles y todo fue un éxito. Muchísimas gracias a todos los que lo hicieron posible. El ambiente fue buenísimo, los cócteles súper ricos y el servicio excelente.</p>
+      <div class="avis__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="avis__text">Pod&iacute;a festejar mi cumplea&ntilde;os en Miles y todo fue un &eacute;xito. Much&iacute;simas gracias a todos los que lo hicieron posible. El ambiente fue buen&iacute;simo, los c&oacute;cteles s&uacute;per ricos y el servicio excelente.</p>
       <div class="avis__name">Samuel R.</div>
-      <div class="avis__meta">Cumpleaños · 45 pers. · Febrero 2026</div>
+      <div class="avis__meta">Cumplea&ntilde;os &middot; 45 pers. &middot; Febrero 2026</div>
     </div>
     <div class="ambiance__img"><img src="./assets/photos/pulp-fiction-poster.jpg" alt="" loading="lazy" decoding="async" width="1080" height="1620"></div>
     <div class="ambiance__img ambiance__img--avis">
-      <div class="avis__stars">★★★★★</div>
+      <div class="avis__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="avis__text">Selim es un gran profesional, te ayuda a gestionar todo genial y la experiencia para mi cliente fue estupenda.</p>
-      <div class="avis__name">Sofía K.</div>
-      <div class="avis__meta">Afterwork · 8 pers. · Marzo 2026</div>
+      <div class="avis__name">Sof&iacute;a K.</div>
+      <div class="avis__meta">Afterwork &middot; 8 pers. &middot; Marzo 2026</div>
     </div>
     <div class="ambiance__img"><img src="./assets/photos/table-photos-vintage.jpg" alt="" loading="lazy" decoding="async" width="1200" height="800"></div>
     <div class="ambiance__img ambiance__img--avis">
-      <div class="avis__stars">★★★★★</div>
-      <p class="avis__text">Alquilamos el lugar para celebrar nuestro matrimonio y la verdad que lo pasamos de maravilla. El dueño, Selim, siempre estuvo a disposición de nosotros y fue muy flexible.</p>
+      <div class="avis__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="avis__text">Alquilamos el lugar para celebrar nuestro matrimonio y la verdad que lo pasamos de maravilla. El due&ntilde;o, Selim, siempre estuvo a disposici&oacute;n de nosotros y fue muy flexible.</p>
       <div class="avis__name">Daniel S.</div>
-      <div class="avis__meta">Fiesta familiar · 100 pers. · Mayo 2025</div>
+      <div class="avis__meta">Fiesta familiar &middot; 100 pers. &middot; Mayo 2025</div>
     </div>
     <div class="ambiance__img"><img src="./assets/photos/marilyn-wall.jpg" alt="" loading="lazy" decoding="async" width="1080" height="1620"></div>
+  </div>
+</section>
+
+
+
+<!-- Contacto -->
+<section class="section section--contact" id="contacto">
+  <div class="container">
+    <div class="contact__grid">
+      <div class="contact__info reveal-el">
+        <span class="section__label">Contact</span>
+        <h2 class="section__title">Nous contacter</h2>
+        <p class="section__subtitle">WhatsApp est la voie la plus rapide. Mais si tu pr&eacute;f&egrave;res, laisse-nous tes coordonn&eacute;es ici.</p>
+        <div class="contact__channels">
+          <a href="https://wa.me/34932472654" class="contact__channel" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="message-circle"></i>
+            <span>+34 932 472 654 — WhatsApp</span>
+          </a>
+          <a href="mailto:events@inconfidencebymiles.com" class="contact__channel" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="mail"></i>
+            <span>events@inconfidencebymiles.com</span>
+          </a>
+          <a href="https://www.instagram.com/miles.cocktail.lounge/" class="contact__channel" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            <span>@miles.cocktail.lounge</span>
+          </a>
+        </div>
+      </div>
+      <form class="contact__form reveal-el" id="contactForm" name="contact-fr" method="POST" data-netlify="true" novalidate>
+        <div class="form__group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Ton nom">
+        </div>
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="ton@email.com">
+        </div>
+        <div class="form__group">
+          <label for="type">Type de demande</label>
+          <select id="type" name="type">
+            <option value="reserva">R&eacute;servation de table</option>
+            <option value="evento">&Eacute;v&eacute;nement priv&eacute;</option>
+            <option value="in-confidence">In Confidence — Privatisation</option>
+            <option value="corporativo">&Eacute;v&eacute;nement corporate</option>
+            <option value="otro">Autre</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="date">Date souhait&eacute;e</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div class="form__group">
+          <label for="guests">Nombre d'invit&eacute;s</label>
+          <input type="number" id="guests" name="guests" min="1" max="200" placeholder="Ex : 20">
+        </div>
+        <div class="form__group form__group--full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Raconte-nous ton id&eacute;e..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Demander une proposition gratuite</button>
+        <p class="cta__micro cta__micro--form">Sans engagement &middot; Sans spam &middot; R&eacute;ponse personnalis&eacute;e en moins d'1h</p>
+        <div class="form__success" id="formSuccess" hidden>
+          Message envoy&eacute;. On te recontacte tr&egrave;s vite.
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -351,7 +699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="section__label">Emplacement</span>
         <h2 class="section__title">Nous trouver</h2>
         <address class="location__address">
-          Carrer de la Diputació, 215<br>
+          Carrer de la Diputaci&oacute;, 215<br>
           08011 Barcelona
         </address>
         <div class="location__hours">
@@ -362,7 +710,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span>18h00 — 02h30</span>
             </div>
             <div class="location__day">
-              <span>Vendredi & Samedi</span>
+              <span>Vendredi &amp; Samedi</span>
               <span>18h00 — 03h00</span>
             </div>
             <div class="location__day">
@@ -371,94 +719,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="location__day location__day--closed">
               <span>Lundi</span>
-              <span>Fermé</span>
+              <span>Ferm&eacute;</span>
             </div>
           </div>
-          <p class="location__note">In Confidence Speakeasy : Jeudi, Vendredi & Samedi, ou sur réservation privée.</p>
+          <p class="location__note">In Confidence : Jeudi, Vendredi &amp; Samedi, ou sur r&eacute;servation priv&eacute;e.</p>
         </div>
         <div class="location__transport">
           <h3>Comment venir</h3>
-          <p><i data-lucide="train-front" class="icon--sm"></i> Métro : Universitat (L1, L2)</p>
-          <p><i data-lucide="car" class="icon--sm"></i> Parking Aribau, à 2 minutes</p>
+          <p><i data-lucide="train-front" class="icon--sm"></i> M&eacute;tro : Universitat (L1, L2)</p>
+          <p><i data-lucide="car" class="icon--sm"></i> Parking Aribau, &agrave; 2 minutes</p>
         </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Miles+Cocktail+Lounge+Diputaci%C3%B3+215+Barcelona" class="btn btn--primary" style="margin-top: var(--space-6);" target="_blank" rel="noopener noreferrer">Voir sur Google Maps</a>
       </div>
       <div class="location__map-col reveal-el">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.5!2d2.15948!3d41.38834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f9f4b5e8c7%3A0x5c6b0f7b2e8a4d0e!2sDiputaci%C3%B3%20215%2C%2008011%20Barcelona!5e0!3m2!1sfr!2ses!4v1710000000000!5m2!1sfr!2ses"
           class="location__map"
-          style="border:0; width:100%; height:100%; min-height:400px;"
+          src="https://www.google.com/maps?q=MILES+Gastro-Cocktail-Lounge,+Carrer+de+la+Diputaci%C3%B3+215,+08011+Barcelona&output=embed"
+          width="100%"
+          height="450"
+          style="border:0;"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="Plan d'accès au Miles Cocktail Lounge à Barcelone">
+          title="MILES Gastro-Cocktail-Lounge sur Google Maps">
         </iframe>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact / Réserver Section -->
-<section class="section section--contact" id="contact">
-  <div class="container" id="reservar">
-    <div class="contact__grid">
-      <div class="contact__info reveal-el">
-        <span class="section__label">Contact</span>
-        <h2 class="section__title">Parlons-en</h2>
-        <p>Avant même que tu nous racontes quoi que ce soit, voici ce qu'on fait pour toi : une proposition détaillée et personnalisée, avec options de menu, décoration et budget — le tout sans engagement et en moins d'1 heure par WhatsApp.</p>
-        <div class="contact__channels">
-          <a href="mailto:events@inconfidencebymiles.com" class="contact__channel" target="_blank" rel="noopener noreferrer">
-            <i data-lucide="mail"></i>
-            <span>events@inconfidencebymiles.com</span>
-          </a>
-          <a href="https://www.instagram.com/miles.cocktail.lounge/" class="contact__channel" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-            <span>@miles.cocktail.lounge</span>
-          </a>
-          <a href="https://wa.me/34932472654" class="contact__channel" target="_blank" rel="noopener noreferrer">
-            <i data-lucide="message-circle"></i>
-            <span>+34 932 472 654 — WhatsApp</span>
-          </a>
-        </div>
-      </div>
-      <div class="contact__form-col reveal-el">
-        <form class="contact__form" id="contactForm" name="contact-fr" method="POST" data-netlify="true" novalidate>
-          <div class="form__group">
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Ton nom">
-          </div>
-          <div class="form__group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="ton@email.com">
-          </div>
-          <div class="form__group">
-            <label for="type">Type de demande</label>
-            <select id="type" name="type">
-              <option value="reserva">Réservation de table</option>
-              <option value="evento">Événement privé</option>
-              <option value="in-confidence">In Confidence — Privatisation</option>
-              <option value="corporativo">Événement corporate</option>
-              <option value="otro">Autre</option>
-            </select>
-          </div>
-          <div class="form__group">
-            <label for="date">Date souhaitée</label>
-            <input type="date" id="date" name="date">
-          </div>
-          <div class="form__group">
-            <label for="guests">Nombre de personnes</label>
-            <input type="number" id="guests" name="guests" min="1" max="200" placeholder="Ex : 20">
-          </div>
-          <div class="form__group form__group--full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Raconte-nous ton idée..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Recevoir ma proposition gratuite</button>
-          <p class="cta__micro cta__micro--form">Sans engagement · Sans spam · Réponse personnalisée en moins d'1h</p>
-          <div class="form__success" id="formSuccess" hidden>
-            Message envoyé. On te recontacte très vite.
-          </div>
-        </form>
       </div>
     </div>
   </div>
@@ -472,29 +756,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer__inner">
       <div class="footer__brand">
         <img src="./assets/photos/logo-devanture-transparent.png" alt="Miles Cocktail Lounge — Gastro-Cocktails-Lounge" class="footer__logo-img" width="280" height="122">
-        <p class="footer__tagline">& In Confidence Speakeasy</p>
-        <p class="footer__address">Diputació 215, Barcelona</p>
+        <p class="footer__tagline">& In Confidence</p>
+        <p class="footer__address">Diputaci&oacute; 215, Barcelona</p>
       </div>
       <div class="footer__links">
         <div class="footer__col">
-          <h4>Navigation</h4>
-          <a href="#about">À propos</a>
-          <a href="#experience">L'Expérience</a>
-          <a href="./inconfidence-fr">In Confidence</a>
-          <a href="#tapas">Gastronomie</a>
+          <h4>Naviguer</h4>
+          <a href="#espacios">Espaces</a>
+          <a href="#eventos">&Eacute;v&eacute;nements</a>
+          <a href="./agencias-fr">Agences</a>
+          <a href="./qr" target="_blank" rel="noopener noreferrer">Menu</a>
         </div>
         <div class="footer__col">
           <h4>Info</h4>
-          <a href="./eventos-fr">Particuliers</a>
-          <a href="./agencias-fr">Agences</a>
+          <a href="#contacto">Contact</a>
           <a href="#ubicacion">Emplacement</a>
-          <a href="#contact">Contact</a>
-          <a href="https://wa.me/34932472654" target="_blank" rel="noopener noreferrer">Réserver</a>
+          <a href="./inconfidence">In Confidence</a>
+          <a href="https://wa.me/34932472654" target="_blank" rel="noopener noreferrer">R&eacute;server</a>
         </div>
         <div class="footer__col">
           <h4>Social</h4>
           <a href="https://www.instagram.com/miles.cocktail.lounge/" target="_blank" rel="noopener noreferrer">Instagram Miles</a>
 <a href="mailto:events@inconfidencebymiles.com">Email</a>
+        </div>
+        <div class="footer__col">
+          <h4>Plus</h4>
+          <a href="./bar-barcelone" style="opacity: 0.7;">Bar &agrave; Barcelone — privatisation</a>
         </div>
       </div>
     </div>
@@ -517,10 +804,10 @@ document.addEventListener("keydown",function(e){
 <!-- Cookie Consent Banner -->
 <div id="cookieBanner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:rgba(12,10,8,0.97); border-top:1px solid rgba(196,167,118,0.2); padding:16px 24px; backdrop-filter:blur(10px);">
   <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-    <p style="font-size:13px; color:#b8a88a; margin:0; flex:1; min-width:200px; line-height:1.5;">Este sitio utiliza cookies para mejorar tu experiencia y analizar el tráfico. <a href="https://inconfidencebymiles.com" style="color:#c4a776; text-decoration:underline;">Más info</a></p>
+    <p style="font-size:13px; color:#b8a88a; margin:0; flex:1; min-width:200px; line-height:1.5;">Ce site utilise des cookies pour am&eacute;liorer ton exp&eacute;rience et analyser le trafic. <a href="https://inconfidencebymiles.com" style="color:#c4a776; text-decoration:underline;">Plus d'infos</a></p>
     <div style="display:flex; gap:10px; flex-shrink:0;">
-      <button onclick="setCookieConsent('rejected')" style="background:transparent; border:1px solid rgba(196,167,118,0.4); color:#b8a88a; padding:8px 20px; font-size:13px; cursor:pointer; font-family:inherit; letter-spacing:0.05em;">RECHAZAR</button>
-      <button onclick="setCookieConsent('accepted')" style="background:#c4a776; border:none; color:#0C0A08; padding:8px 20px; font-size:13px; cursor:pointer; font-weight:600; font-family:inherit; letter-spacing:0.05em;">ACEPTAR</button>
+      <button onclick="setCookieConsent('rejected')" style="background:transparent; border:1px solid rgba(196,167,118,0.4); color:#b8a88a; padding:8px 20px; font-size:13px; cursor:pointer; font-family:inherit; letter-spacing:0.05em;">REFUSER</button>
+      <button onclick="setCookieConsent('accepted')" style="background:#c4a776; border:none; color:#0C0A08; padding:8px 20px; font-size:13px; cursor:pointer; font-weight:600; font-family:inherit; letter-spacing:0.05em;">ACCEPTER</button>
     </div>
   </div>
 </div>
