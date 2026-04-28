@@ -354,6 +354,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 }
 
+/* --- Espacio Miles title --- */
+.exp-card__title--miles {
+  text-align: center;
+  line-height: 1.15;
+}
+
 /* --- In Confidence tagline --- */
 .ic-tagline {
   font-family: var(--font-display);
@@ -391,7 +397,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul class="nav__links" id="navLinks" role="list">
       <li><a href="#espacios">Espacios</a></li>
       <li><a href="#eventos">Eventos</a></li>
-      <li><a href="./qr" target="_blank" rel="noopener noreferrer">Carta</a></li>
+      <li><a href="./agencias">Agencias</a></li>
+      <li><a href="./qr" target="_blank" rel="noopener noreferrer">Menu</a></li>
       <li><a href="#contacto">Contacto</a></li>
       <li class="nav__lang"><a href="./en" title="English">EN</a> <a href="./ca" title="Català">CA</a> <a href="./fr" title="Français">FR</a></li>
       <li class="nav__cta nav__cta--whatsapp"><a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quer%C3%ADa%20reservar%20mesa.%20D%C3%ADa%3A%20___%20%C2%B7%20Hora%3A%20___%20%C2%B7%20Personas%3A%20___" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a></li>
@@ -444,6 +451,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- Foto Miles bar -->
+<div style="width: 100vw; margin-left: calc(-50vw + 50%); overflow-x: hidden;">
+  <img src="./assets/photos/MILES-12bis-2.jpg?v=2" alt="Interior de Miles Cocktail Lounge Barcelona" loading="lazy" decoding="async" width="1620" height="1080" style="width: 100%; height: auto; display: block;">
+</div>
 
 <!-- Espacios Section -->
 <section class="section section--experience" id="espacios">
@@ -460,7 +471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="./assets/photos/zona-miles-billar-new.jpg" alt="Espacio Miles — billar, sofás y muro de fotos icónicas" loading="lazy" decoding="async" width="1600" height="1066" style="object-position: right;">
       </div>
       <div class="exp-card__content">
-        <h3 class="exp-card__title">Miles &middot; El bar de delante</h3>
+        <h3 class="exp-card__title exp-card__title--miles">Espacio<br>Miles</h3>
         <p class="exp-card__desc">Abierto a todos. C&oacute;cteles, cervezas, vinos y un billar. Para venir despu&eacute;s del trabajo, antes de salir, o simplemente para pasar un buen rato sin reservar.</p>
         <p class="exp-card__desc">Incluye Sala Salvaje, un rinc&oacute;n privatizable para grupos de 15 a 30 personas — ideal para cumplea&ntilde;os o afterworks.</p>
         <div class="exp-card__detail">
@@ -474,11 +485,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </article>
   </div>
 
+<!-- Tapas / Gastronomía Section -->
+<section class="section section--tapas" id="tapas">
+  <div class="container">
+    <div class="tapas__grid">
+      <div class="tapas__text reveal-el">
+        <span class="section__label">Gastronom&iacute;a</span>
+        <h2 class="section__title">Cocina para tus eventos</h2>
+        <p>La cocina del local est&aacute; disponible para eventos privados o grandes reservas, con un chef invitado para cada ocasi&oacute;n. Una propuesta personalizada para acompa&ntilde;ar tu velada — desde tapas para compartir hasta men&uacute;s m&aacute;s elaborados.</p>
+      </div>
+      <div class="tapas__images reveal-el">
+        <img src="./assets/photos/sala-salvaje-table.jpg" alt="Sala Salvaje — banquetas y mesa preparada" loading="lazy" decoding="async" width="1620" height="1080">
+        <img src="./assets/photos/event-ambiance-235.jpg" alt="Ambiente evento en Miles — cócteles y tapas" loading="lazy" decoding="async" width="1620" height="1080">
+        <img src="./assets/photos/event-tapas-237.jpg" alt="Tapas y velada íntima en Miles" loading="lazy" decoding="async" width="900" height="600">
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Espacio In Confidence -->
   <div class="container--wide" style="margin-top: var(--space-2);">
     <article class="reveal-el" id="exp-confidence" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
       <div style="max-width: 700px; padding: clamp(2rem, 4vw, 3rem);">
-        <h3 class="exp-card__title exp-card__title--ic">In Confidence &middot; El bar del fondo</h3>
+        <h3 class="exp-card__title exp-card__title--ic">Espacio<br>In<br>Confidence</h3>
         <p class="exp-card__desc">M&aacute;s &iacute;ntimo, m&aacute;s trabajado. C&oacute;cteles de autor, DJ y m&uacute;sica seleccionada. No es una discoteca: es un segundo bar pensado para una experiencia m&aacute;s inmersiva.</p>
         <p class="exp-card__desc">Abierto jueves, viernes y s&aacute;bado. Privatizable para eventos de 40 a 80 personas.</p>
         <div class="exp-card__detail" style="justify-content: center;">
@@ -735,7 +764,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h4>Navegar</h4>
           <a href="#espacios">Espacios</a>
           <a href="#eventos">Eventos</a>
-          <a href="./qr" target="_blank" rel="noopener noreferrer">Carta</a>
+          <a href="./agencias">Agencias</a>
+          <a href="./qr" target="_blank" rel="noopener noreferrer">Menu</a>
         </div>
         <div class="footer__col">
           <h4>Info</h4>
