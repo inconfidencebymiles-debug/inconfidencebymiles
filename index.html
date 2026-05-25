@@ -381,23 +381,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 /* --- WhatsApp CTA Button (nav) — oro/negro --- */
-.nav__cta--whatsapp a {
-  background: var(--color-gold) !important;
-  color: var(--color-bg) !important;
+.nav__cta--whatsapp a,
+.nav__cta--whatsapp a:link,
+.nav__cta--whatsapp a:visited,
+.nav__cta--whatsapp a:active,
+.nav__cta--whatsapp a:focus {
+  background: #d4af7a !important;
+  color: #020202 !important;
 }
 .nav__cta--whatsapp a:hover {
-  background: var(--color-gold-light) !important;
+  background: #e0bc8a !important;
+  color: #020202 !important;
   box-shadow: var(--shadow-gold);
 }
 
+/* --- Hero WhatsApp CTA — oro/negro --- */
+.hero__actions .btn--primary,
+.hero__actions .btn--primary:link,
+.hero__actions .btn--primary:visited,
+.hero__actions .btn--primary:active,
+.hero__actions .btn--primary:focus {
+  background: #d4af7a !important;
+  color: #020202 !important;
+  border-color: #d4af7a !important;
+}
+.hero__actions .btn--primary:hover {
+  background: #e0bc8a !important;
+  color: #020202 !important;
+}
+
 /* --- WhatsApp Buttons — oro/negro --- */
-.btn--whatsapp {
-  background: var(--color-gold);
-  color: var(--color-bg);
+.btn--whatsapp,
+.btn--whatsapp:link,
+.btn--whatsapp:visited,
+.btn--whatsapp:active,
+.btn--whatsapp:focus {
+  background: #d4af7a;
+  color: #020202 !important;
 }
 .btn--whatsapp:hover {
-  background: var(--color-gold-light);
-  color: var(--color-bg);
+  background: #e0bc8a;
+  color: #020202 !important;
   box-shadow: var(--shadow-gold);
 }
 
@@ -666,6 +690,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Main Content -->
 <main id="main">
+
+<!-- Bloc Coupe latéral subtle -->
+<section style="background:#020202; padding:40px 20px; text-align:center;">
+  <div style="display:flex; align-items:center; justify-content:center; gap:32px; max-width:900px; margin:0 auto; flex-wrap:wrap;">
+    <img src="mundial-trophy-glow.jpg"
+         alt="Copa Mundial FIFA — vive el Mundial 2026 en Miles Barcelona"
+         style="height:120px; width:auto; opacity:0.85; object-fit:contain;"
+         loading="lazy" decoding="async" width="90" height="120">
+    <div style="color:#d4af7a; font-size:0.95rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:300; line-height:1.6; max-width:300px;">
+      Mundial 2026<br>
+      <span style="color:#cccccc; font-size:0.85rem; text-transform:none; letter-spacing:0.03em;">Todos los d&iacute;as desde las 17h &middot; <a href="/futbol-barcelona" style="color:#d4af7a; text-decoration:underline;">M&aacute;s info</a></span>
+    </div>
+    <img src="mundial-trophy-glow.jpg"
+         alt="Copa Mundial FIFA — vive el Mundial 2026 en Miles Barcelona"
+         style="height:120px; width:auto; opacity:0.85; object-fit:contain;"
+         loading="lazy" decoding="async" width="90" height="120">
+  </div>
+</section>
 
 <!-- Concept Strip -->
 <section class="concept-strip" id="concept-strip">
