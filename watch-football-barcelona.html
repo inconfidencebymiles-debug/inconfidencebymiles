@@ -267,6 +267,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 a.cta-gold-link:visited, a.cta-gold-link:hover, a.cta-gold-link:active, a.cta-gold-link:link {
   color: #020202 !important;
 }
+/* === Mobile fixes V7 === */
+html, body { overflow-x: hidden; max-width: 100vw; }
+img { max-width: 100%; height: auto; }
+@media (max-width: 768px) {
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+  .foot-hero-h1 { font-size: 2rem !important; line-height: 1.15 !important; padding: 0 20px !important; }
+  .foot-hero-subtitle { font-size: 0.95rem !important; padding: 0 20px !important; }
+  .in-confidence-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+  .sticky-whatsapp-banner { font-size: 0.88rem !important; padding: 12px 14px !important; line-height: 1.4 !important; }
+  .sticky-whatsapp-banner a { display: inline-block; margin-top: 4px; }
+  .cta-gold-button { padding: 14px 24px !important; font-size: 0.95rem !important; width: 100% !important; max-width: 320px !important; box-sizing: border-box; display: block; margin: 0 auto !important; text-align: center; }
+}
 </style>
 </head>
 <body>
@@ -306,7 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="main">
 
 <!-- WhatsApp sticky banner -->
-<div class="cta-gold" style="background:#d4af7a; color:#020202; padding:14px 20px; text-align:center; font-size:1rem; font-weight:600; letter-spacing:0.03em;">
+<div class="cta-gold sticky-whatsapp-banner" style="background:#d4af7a; color:#020202; padding:14px 20px; text-align:center; font-size:1rem; font-weight:600; letter-spacing:0.03em;">
   📞 Book your table or private room — <a href="https://wa.me/34932472654?text=Hi%20Miles%2C%20I%20want%20to%20book%20to%20watch%20a%20match" class="cta-gold-link" style="color:#020202 !important; text-decoration:underline; font-weight:700;">WhatsApp +34 932 472 654</a>
 </div>
 
@@ -316,8 +328,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="futbol-hero__overlay"></div>
   </div>
   <div class="futbol-hero__content">
-    <h1 class="futbol-hero__title">Watch Football in Barcelona, with Style</h1>
-    <p class="futbol-hero__subtitle">Champions League final and FIFA World Cup 2026 — bar 2 min from Universitat metro. 4 screens, billiards, private room up to 60 people. Book on WhatsApp.</p>
+    <h1 class="futbol-hero__title foot-hero-h1">Watch Football in Barcelona, with Style</h1>
+    <p class="futbol-hero__subtitle foot-hero-subtitle">Champions League final and FIFA World Cup 2026 — bar 2 min from Universitat metro. 4 screens, billiards, private room up to 60 people. Book on WhatsApp.</p>
   </div>
 </section>
 
@@ -332,7 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Section 2 — In Confidence -->
 <section style="padding:80px 20px; background:#0a0a0a;">
-  <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+  <div class="in-confidence-grid" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
     <div>
       <h2 style="color:#d4af7a; font-size:1.8rem; font-weight:300; letter-spacing:0.05em; margin-bottom:24px;">In Confidence: book your own private box</h2>
       <p style="color:#cccccc; line-height:1.7; margin-bottom:18px;">For the matches that really matter — a Champions League final, a World Cup game, a key derby — we offer something different from any sports bar in Barcelona: the <strong>In Confidence</strong> room at the back of the venue, with its <strong>2 dedicated screens</strong>, independent bar, signature cocktails from €10 and optional DJ.</p>
@@ -356,7 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div style="background:#0a0a0a; padding:30px 20px; text-align:center; border-top:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a;">
   <p style="color:#cccccc; font-size:1.05rem; margin-bottom:16px;">Champions League final or World Cup match with your crew? Book In Confidence — message us on WhatsApp.</p>
   <a href="https://wa.me/34932472654?text=Hi%20Miles%2C%20I%20want%20to%20book%20In%20Confidence%20to%20watch%20a%20match"
-     class="cta-gold-link"
+     class="cta-gold-link cta-gold-button"
      style="display:inline-block; background:#d4af7a; color:#020202 !important; padding:14px 36px; font-size:1rem; font-weight:600; text-decoration:none; border-radius:4px; letter-spacing:0.05em;">
     📞 WhatsApp +34 932 472 654
   </a>
@@ -375,7 +387,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p style="line-height:1.7; margin-bottom:20px;">Coming with your crew, your office team or your expat community? <strong>Book the In Confidence room (up to 60) or the Salvaje room (up to 30)</strong>. We tailor the night for you: dedicated screen, bar, cocktails and optional DJ before or after the match.</p>
     <div style="text-align:center; margin-top:40px;">
       <a href="https://wa.me/34932472654?text=Hi%20Miles%2C%20I%20want%20to%20book%20for%20the%20Champions%20League%20final%20or%20a%20World%20Cup%20match"
-         class="cta-gold-link"
+         class="cta-gold-link cta-gold-button"
          style="display:inline-block; background:#d4af7a; color:#020202 !important; padding:16px 40px; font-size:1.05rem; font-weight:600; text-decoration:none; border-radius:4px; letter-spacing:0.05em;">
         📞 Book now · WhatsApp
       </a>
@@ -397,7 +409,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="reveal-el" style="text-align: center; margin-top: var(--space-10);">
       <a href="https://wa.me/34932472654?text=Hi%20Miles%2C%20I%20want%20to%20book%20to%20watch%20a%20match"
-         class="cta-gold-link"
+         class="cta-gold-link cta-gold-button"
          style="display:inline-block; background:#d4af7a; color:#020202 !important; padding:18px 48px; font-size:1.15rem; font-weight:700; text-decoration:none; border-radius:4px; letter-spacing:0.05em;"
          target="_blank" rel="noopener noreferrer">
         📞 Book now · WhatsApp +34 932 472 654

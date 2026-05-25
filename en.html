@@ -614,6 +614,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   color: var(--color-text-faint);
   margin-top: var(--space-4);
 }
+/* === Mobile fixes V7 === */
+html, body { overflow-x: hidden; max-width: 100vw; }
+img { max-width: 100%; height: auto; }
+@media (max-width: 768px) {
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+  .trophy-block-container { flex-direction: column !important; gap: 16px !important; }
+  .trophy-right { display: none !important; }
+  .trophy-left { height: 140px !important; margin: 0 auto !important; display: block !important; }
+  .trophy-text { text-align: center !important; margin-top: 20px !important; max-width: 100% !important; }
+  .champions-encart h2 { font-size: 1.3rem !important; line-height: 1.3 !important; padding: 0 10px !important; }
+  .champions-encart p { font-size: 0.92rem !important; padding: 0 10px !important; }
+  .champions-encart { background-position: center top !important; padding: 50px 16px !important; min-height: 280px !important; }
+}
 </style>
 </head>
 <body>
@@ -681,16 +694,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- World Cup trophy side imagery -->
 <section style="background:#020202; padding:40px 20px; text-align:center;">
-  <div style="display:flex; align-items:center; justify-content:center; gap:32px; max-width:900px; margin:0 auto; flex-wrap:wrap;">
-    <img src="mundial-trophy-glow.jpg"
+  <div class="trophy-block-container" style="display:flex; align-items:center; justify-content:center; gap:32px; max-width:900px; margin:0 auto; flex-wrap:wrap;">
+    <img src="mundial-trophy-glow.jpg" class="trophy-left"
          alt="FIFA World Cup — watch the 2026 World Cup at Miles Barcelona"
          style="height:120px; width:auto; opacity:0.85; object-fit:contain;"
          loading="lazy" decoding="async" width="90" height="120">
-    <div style="color:#d4af7a; font-size:0.95rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:300; line-height:1.6; max-width:300px;">
+    <div class="trophy-text" style="color:#d4af7a; font-size:0.95rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:300; line-height:1.6; max-width:300px;">
       World Cup 2026<br>
       <span style="color:#cccccc; font-size:0.85rem; text-transform:none; letter-spacing:0.03em;">Every day from 5pm &middot; <a href="/watch-football-barcelona" style="color:#d4af7a; text-decoration:underline;">Learn more</a></span>
     </div>
-    <img src="mundial-trophy-glow.jpg"
+    <img src="mundial-trophy-glow.jpg" class="trophy-right"
          alt="FIFA World Cup — watch the 2026 World Cup at Miles Barcelona"
          style="height:120px; width:auto; opacity:0.85; object-fit:contain;"
          loading="lazy" decoding="async" width="90" height="120">
@@ -820,7 +833,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- Football at Miles — Champions + World Cup banner -->
-<section style="position:relative; padding:80px 20px; text-align:center; border-top:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; background-image:linear-gradient(rgba(2,2,2,0.78), rgba(2,2,2,0.85)), url('futbol-mundial-trophy.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat; min-height:340px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+<section class="champions-encart" style="position:relative; padding:80px 20px; text-align:center; border-top:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; background-image:linear-gradient(rgba(2,2,2,0.78), rgba(2,2,2,0.85)), url('futbol-mundial-trophy.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat; min-height:340px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
   <h2 style="color:#d4af7a; font-size:1.6rem; margin-bottom:16px; font-weight:300; letter-spacing:0.05em;">Champions Final and World Cup 2026 at Miles</h2>
   <p style="color:#e8e8e8; max-width:640px; margin:0 auto 24px; font-size:1rem; line-height:1.6;">4 screens, pool table and private room for up to 60 people. During the World Cup, open every day from 5pm. Book your table or privatise In Confidence.</p>
   <a href="/watch-football-barcelona" style="display:inline-block; background:#d4af7a; color:#020202; padding:12px 32px; font-size:0.95rem; font-weight:600; text-decoration:none; border-radius:4px; letter-spacing:0.05em;">See details and book &rarr;</a>
