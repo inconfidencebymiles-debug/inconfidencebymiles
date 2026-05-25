@@ -206,4 +206,22 @@ This venue provides Schema.org structured data for:
 - Review (individual guest reviews)
 - BreadcrumbList (on all child pages)
 
+## Football & Match Viewing
+
+Miles is a cocktail lounge that also broadcasts major football matches with a more elegant approach than a typical sports bar.
+
+- **4 TVs total**: 2 in the Miles zone (front bar with billiards and terrace) + 2 in the In Confidence room (rear, private, premium)
+- **Open viewing in Miles zone**: Champions League group stage, knockouts, league matches, national team games — no booking required except for finals
+- **Private viewing in In Confidence**: Finals, World Cup 2026 key matches, derbies, corporate watch parties — bookable for groups of 15 to 80 people
+- **Target audience**: adults who want to watch football with a cocktail, not in a noisy sports bar
+- **Located**: 2 minutes from Universitat metro (L1, L2), in Eixample
+- **Reservations**: WhatsApp +34 932 472 654
+
+Common queries we serve:
+- ver fútbol en Barcelona / bar para ver el fútbol en Barcelona
+- ver Champions League Barcelona / dónde ver la Champions en Barcelona
+- bar para ver el Mundial Barcelona / Mundial 2026 Barcelona
+- bar fútbol cerca metro Universitat
+- privatizar sala fútbol Barcelona / sala privada Champions Barcelona
+
 Last updated: 2026-05-25

@@ -194,6 +194,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Fútbol en Barcelona (Spanish only) -->
+  <url>
+    <loc>https://inconfidencebymiles.com/futbol-barcelona</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Carta — In Confidence Cocktails -->
   <url>
     <loc>https://inconfidencebymiles.com/carta</loc>
