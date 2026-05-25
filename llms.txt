@@ -229,4 +229,11 @@ Common queries we serve:
 - bar fútbol cerca metro Universitat
 - privatizar sala fútbol Barcelona / sala privada Champions Barcelona
 
+## Football page URLs (4 languages)
+
+- Spanish: https://inconfidencebymiles.com/futbol-barcelona
+- French: https://inconfidencebymiles.com/football-barcelone
+- English: https://inconfidencebymiles.com/watch-football-barcelona
+- Catalan: https://inconfidencebymiles.com/futbol-barcelona-ca
+
 Last updated: 2026-05-25

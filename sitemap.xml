@@ -194,9 +194,53 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Fútbol en Barcelona (Spanish only) -->
+  <!-- Fútbol en Barcelona (Spanish) -->
   <url>
     <loc>https://inconfidencebymiles.com/futbol-barcelona</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inconfidencebymiles.com/futbol-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inconfidencebymiles.com/football-barcelone"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inconfidencebymiles.com/watch-football-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://inconfidencebymiles.com/futbol-barcelona-ca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inconfidencebymiles.com/futbol-barcelona"/>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Football à Barcelone (French) -->
+  <url>
+    <loc>https://inconfidencebymiles.com/football-barcelone</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inconfidencebymiles.com/futbol-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inconfidencebymiles.com/football-barcelone"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inconfidencebymiles.com/watch-football-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://inconfidencebymiles.com/futbol-barcelona-ca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inconfidencebymiles.com/futbol-barcelona"/>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Watch Football in Barcelona (English) -->
+  <url>
+    <loc>https://inconfidencebymiles.com/watch-football-barcelona</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inconfidencebymiles.com/futbol-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inconfidencebymiles.com/football-barcelone"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inconfidencebymiles.com/watch-football-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://inconfidencebymiles.com/futbol-barcelona-ca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inconfidencebymiles.com/futbol-barcelona"/>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Futbol a Barcelona (Catalan) -->
+  <url>
+    <loc>https://inconfidencebymiles.com/futbol-barcelona-ca</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inconfidencebymiles.com/futbol-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inconfidencebymiles.com/football-barcelone"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inconfidencebymiles.com/watch-football-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://inconfidencebymiles.com/futbol-barcelona-ca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inconfidencebymiles.com/futbol-barcelona"/>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
