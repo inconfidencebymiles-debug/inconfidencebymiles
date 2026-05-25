@@ -17,6 +17,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="manifest" href="/site.webmanifest">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#020202">
+<meta name="format-detection" content="telephone=no">
 <title>Ver fútbol en Barcelona | Miles — Champions, Mundial</title>
 <meta name="description" content="Ver fútbol en Barcelona junto al metro Universitat. 4 pantallas, billar, sala privada hasta 60 personas. Final Champions y Mundial 2026 todos los días desde 17h.">
 <meta name="keywords" content="ver futbol barcelona, bar futbol barcelona, bar champions league barcelona, bar mundial barcelona, ver champions barcelona universitat, bar partidos barcelona eixample, sala privada futbol barcelona, privatizar bar futbol, miles cocktail lounge futbol">
@@ -257,6 +258,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @media (max-width: 768px) {
   .futbol-hero { min-height: 60vh; }
 }
+/* Force dark link color on gold CTA areas — fix iOS/Android pink override */
+.cta-gold a, a.cta-gold-link {
+  color: #020202 !important;
+  -webkit-tap-highlight-color: rgba(212, 175, 122, 0.3);
+}
+.cta-gold a:visited, .cta-gold a:hover, .cta-gold a:active, .cta-gold a:link,
+a.cta-gold-link:visited, a.cta-gold-link:hover, a.cta-gold-link:active, a.cta-gold-link:link {
+  color: #020202 !important;
+}
 </style>
 </head>
 <body>
@@ -296,8 +306,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="main">
 
 <!-- WhatsApp sticky banner -->
-<div style="background:#d4af7a; color:#020202; padding:14px 20px; text-align:center; font-size:1rem; font-weight:600; letter-spacing:0.03em;">
-  📞 Reserva tu mesa o sala privada — <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quiero%20reservar%20para%20ver%20un%20partido" style="color:#020202; text-decoration:underline;">WhatsApp +34 932 472 654</a>
+<div class="cta-gold" style="background:#d4af7a; color:#020202; padding:14px 20px; text-align:center; font-size:1rem; font-weight:600; letter-spacing:0.03em;">
+  📞 Reserva tu mesa o sala privada — <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quiero%20reservar%20para%20ver%20un%20partido" class="cta-gold-link" style="color:#020202 !important; text-decoration:underline; font-weight:700;">WhatsApp +34 932 472 654</a>
 </div>
 
 <!-- Hero -->
@@ -306,7 +316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="futbol-hero__overlay"></div>
   </div>
   <div class="futbol-hero__content">
-    <h1 class="futbol-hero__title">Ver fútbol en Barcelona, pero con estilo</h1>
+    <h1 class="futbol-hero__title">Ver fútbol en Barcelona, y con estilo</h1>
     <p class="futbol-hero__subtitle">Final de Champions League y Mundial 2026 — bar a 2 minutos del metro Universitat. 4 pantallas, billar, sala privada hasta 60 personas. Reserva por WhatsApp.</p>
   </div>
 </section>
@@ -346,7 +356,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div style="background:#0a0a0a; padding:30px 20px; text-align:center; border-top:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a;">
   <p style="color:#cccccc; font-size:1.05rem; margin-bottom:16px;">¿Final de Champions o partido del Mundial con tu grupo? Privatiza In Confidence — escríbenos por WhatsApp.</p>
   <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quiero%20privatizar%20In%20Confidence%20para%20ver%20un%20partido"
-     style="display:inline-block; background:#d4af7a; color:#020202; padding:14px 36px; font-size:1rem; font-weight:600; text-decoration:none; border-radius:4px; letter-spacing:0.05em;">
+     class="cta-gold-link"
+     style="display:inline-block; background:#d4af7a; color:#020202 !important; padding:14px 36px; font-size:1rem; font-weight:600; text-decoration:none; border-radius:4px; letter-spacing:0.05em;">
     📞 WhatsApp +34 932 472 654
   </a>
 </div>
@@ -364,7 +375,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p style="line-height:1.7; margin-bottom:20px;">Si vienes con tu grupo, tu peña internacional o tu equipo de la oficina, <strong>privatiza la sala In Confidence (hasta 60 personas) o la sala Salvaje (hasta 30 personas)</strong>. Te montamos la velada a medida: pantalla dedicada, barra, cócteles y opción de DJ antes o después del partido.</p>
     <div style="text-align:center; margin-top:40px;">
       <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quiero%20reservar%20para%20ver%20la%20final%20de%20Champions%20o%20un%20partido%20del%20Mundial"
-         style="display:inline-block; background:#d4af7a; color:#020202; padding:16px 40px; font-size:1.05rem; font-weight:600; text-decoration:none; border-radius:4px; letter-spacing:0.05em;">
+         class="cta-gold-link"
+         style="display:inline-block; background:#d4af7a; color:#020202 !important; padding:16px 40px; font-size:1.05rem; font-weight:600; text-decoration:none; border-radius:4px; letter-spacing:0.05em;">
         📞 Reservar ahora · WhatsApp
       </a>
     </div>
@@ -385,7 +397,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="reveal-el" style="text-align: center; margin-top: var(--space-10);">
       <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quiero%20reservar%20para%20ver%20un%20partido"
-         style="display:inline-block; background:#d4af7a; color:#020202; padding:18px 48px; font-size:1.15rem; font-weight:700; text-decoration:none; border-radius:4px; letter-spacing:0.05em;"
+         class="cta-gold-link"
+         style="display:inline-block; background:#d4af7a; color:#020202 !important; padding:18px 48px; font-size:1.15rem; font-weight:700; text-decoration:none; border-radius:4px; letter-spacing:0.05em;"
          target="_blank" rel="noopener noreferrer">
         📞 Reservar ahora · WhatsApp +34 932 472 654
       </a>
