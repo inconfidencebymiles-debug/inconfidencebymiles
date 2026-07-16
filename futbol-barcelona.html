@@ -77,24 +77,13 @@ body{
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
   text-align:center;
-  padding:clamp(3rem,8vw,6rem) 1.5rem clamp(2.5rem,6vw,4rem);
+  padding:clamp(1.5rem,5vw,2.5rem) 1.5rem clamp(2.5rem,6vw,4rem);
   isolation:isolate;
   background:
     radial-gradient(ellipse 80% 60% at 50% 45%, rgba(212,168,90,.18) 0%, transparent 65%),
     radial-gradient(ellipse 100% 80% at 50% 100%, rgba(12,10,8,1) 30%, transparent 100%),
     linear-gradient(180deg, #0C0A08 0%, #17130E 50%, #0C0A08 100%);
-}
-.m-hero::before{
-  content:"";
-  position:absolute;inset:0;
-  background:url("./mundial-trophy-glow.jpg") center 35%/contain no-repeat;
-  opacity:.55;
-  filter:brightness(.95) contrast(1.05) saturate(1.1);
-  z-index:-2;
-  mask-image:radial-gradient(ellipse 55% 65% at 50% 45%, #000 0%, #000 40%, transparent 78%);
-  -webkit-mask-image:radial-gradient(ellipse 55% 65% at 50% 45%, #000 0%, #000 40%, transparent 78%);
 }
 .m-hero::after{
   content:"";
@@ -105,9 +94,11 @@ body{
 
 /* Top row: logo brand tag + date */
 .m-hero__top{
-  position:absolute;top:clamp(1.5rem,4vw,2.5rem);left:0;right:0;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:0 clamp(1.5rem,4vw,3rem);
+  position:relative;width:100%;
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;
+  gap:.6rem 1rem;
+  padding:0 clamp(.5rem,4vw,3rem);
+  margin-bottom:clamp(1.75rem,5vw,2.5rem);
   z-index:2;
 }
 .m-brand{
@@ -136,9 +127,11 @@ body{
 .m-hero__inner{
   max-width:820px;
   width:100%;
+  flex:1;
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:center;
   gap:clamp(1.25rem,3vw,1.75rem);
   position:relative;
 }
@@ -225,6 +218,43 @@ body{
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
   display:inline-block;
+}
+
+/* Trophy photo — clean, no text overlay */
+.m-hero__trophy{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin:.25rem 0;
+}
+.m-hero__trophy img{
+  width:100%;
+  max-width:min(260px,58vw);
+  height:auto;
+  filter:brightness(.97) contrast(1.05) saturate(1.1) drop-shadow(0 15px 45px rgba(212,168,90,.28));
+}
+
+/* New Spanish title below the trophy image */
+.m-hero__title-final{
+  font-family:var(--font-display);
+  font-size:clamp(2.25rem,6.5vw,3.75rem);
+  font-weight:600;
+  line-height:1.05;
+  letter-spacing:-.01em;
+  color:var(--color-cream);
+  margin:0;
+  text-shadow:0 4px 40px rgba(0,0,0,.5);
+}
+
+/* Scarcity / limited-seats notice */
+.m-hero__scarcity{
+  font-family:var(--font-body);
+  font-size:clamp(.95rem,2.3vw,1.05rem);
+  line-height:1.6;
+  color:var(--color-gold-light);
+  max-width:34rem;
+  margin:0 auto;
+  font-weight:500;
 }
 
 /* Lead paragraph */
@@ -703,7 +733,15 @@ body{
       <span class="m-vs__team">Argentina<span class="m-vs__flag m-vs__flag--arg" aria-hidden="true"></span></span>
     </div>
 
-    <h1>Europa contra América.<br>Una noche que <em>no se repetirá</em>.</h1>
+    <div class="m-hero__trophy">
+      <img src="./mundial-trophy-glow.jpg" alt="Trofeo de la Copa del Mundo" loading="eager">
+    </div>
+
+    <h1 class="m-hero__title-final">Una final histórica</h1>
+
+    <p class="m-hero__scarcity">
+      Plazas muy limitadas. La demanda de reservas es excepcional y, lamentablemente, no podremos acoger a todo el mundo.
+    </p>
 
     <p class="m-hero__lead">
       Desde aquel primer título en 2010, España espera. Argentina llega a defender su leyenda. Un solo partido decide quién será rey del mundo — y tú eliges dónde vivirlo.
