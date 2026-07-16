@@ -10,12 +10,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
-<meta name="theme-color" content="#0b0d14">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0C0A08">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<title>Final del Mundial en Miles · Reserva tu mesa · Barcelona</title>
-<meta name="description" content="Vive la Final del Mundial 2026 en Miles Cocktail Lounge, Eixample Barcelona. Mesa reservada · 19,99 € por persona · 3 tickets de consumición. Reserva por WhatsApp.">
+<link rel="preload" as="image" href="./mundial-trophy-glow.jpg" fetchpriority="high">
+
+<title>Final Copa del Mundo 2026 · España vs Argentina · Miles Barcelona</title>
+<meta name="description" content="La final de la Copa del Mundo 2026 en Miles Cocktail Lounge, Eixample Barcelona. Reserva tu mesa: 19,99 € por persona, 3 tickets de consumición incluidos. Domingo 19 de julio.">
 <link rel="canonical" href="https://inconfidencebymiles.com/futbol-barcelona">
 <link rel="alternate" hreflang="es" href="https://inconfidencebymiles.com/futbol-barcelona">
 <link rel="alternate" hreflang="fr" href="https://inconfidencebymiles.com/football-barcelone">
@@ -25,570 +28,960 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://inconfidencebymiles.com/futbol-barcelona">
-<meta property="og:title" content="Final del Mundial en Miles · Barcelona">
-<meta property="og:description" content="La final de la Copa del Mundo 2026 en Miles Cocktail Lounge. Mesa reservada · 19,99 € por persona · 3 consumiciones incluidas.">
+<meta property="og:title" content="Final Copa del Mundo 2026 · España vs Argentina · Miles Barcelona">
+<meta property="og:description" content="Vive la final en Miles. Mesa reservada · 19,99 € por persona · 3 consumiciones incluidas. Reserva por WhatsApp.">
 <meta property="og:image" content="https://inconfidencebymiles.com/mundial-trophy-glow.jpg">
 <meta property="og:locale" content="es_ES">
 
-<!-- Preload hero -->
-<link rel="preload" as="image" href="/mundial-trophy-glow.jpg" fetchpriority="high">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Final Copa del Mundo 2026 · España vs Argentina · Miles Barcelona">
+<meta name="twitter:description" content="La final en Miles Cocktail Lounge. 19,99 € · 3 consumiciones · Reserva por WhatsApp.">
+<meta name="twitter:image" content="https://inconfidencebymiles.com/mundial-trophy-glow.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://wa.me">
+
+<!-- Fonts (aligned with main site) -->
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+
+<!-- Site stylesheet -->
+<link rel="stylesheet" href="./style.css">
 
 <style>
-:root{
-  --bg:#0b0d14;
-  --bg-2:#131624;
-  --ink:#f4ecdc;
-  --ink-2:#c9c0ad;
-  --muted:#8a8578;
-  --red:#a0151c;
-  --red-glow:#c8202a;
-  --gold:#d4af7a;
-  --gold-2:#e8c88f;
-  --line:rgba(212,175,122,.22);
-  --card:rgba(255,255,255,.03);
-  --shadow:0 20px 60px -20px rgba(0,0,0,.6);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+/* ==========================================================
+   FINAL MUNDIAL LANDING — layered on top of site's design system
+   ========================================================== */
+
+/* Page-level */
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.55;
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:var(--font-body);
   overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
 }
-img{max-width:100%;display:block;height:auto}
-a{color:inherit;text-decoration:none}
-.serif{font-family:"Playfair Display",Georgia,"Times New Roman",serif;letter-spacing:-.01em}
-h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;letter-spacing:-.015em;line-height:1.15}
 
-/* Playfair Display */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+.mundial{overflow-x:hidden}
+.mundial *{box-sizing:border-box}
+.mundial a{color:inherit;text-decoration:none}
+.mundial img{max-width:100%;display:block;height:auto}
 
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-
-/* === HERO === */
-.hero{
+/* ==========================================================
+   HERO — full-viewport, trophy-centered
+   ========================================================== */
+.m-hero{
   position:relative;
   min-height:100svh;
-  padding:32px 20px 40px;
+  min-height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  overflow:hidden;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:clamp(3rem,8vw,6rem) 1.5rem clamp(2.5rem,6vw,4rem);
   isolation:isolate;
   background:
-    radial-gradient(120% 80% at 50% 0%, rgba(200,32,42,.28), transparent 55%),
-    radial-gradient(80% 60% at 50% 100%, rgba(212,175,122,.18), transparent 60%),
-    linear-gradient(180deg, #0b0d14 0%, #131624 55%, #0b0d14 100%);
+    radial-gradient(ellipse 80% 60% at 50% 45%, rgba(212,168,90,.18) 0%, transparent 65%),
+    radial-gradient(ellipse 100% 80% at 50% 100%, rgba(12,10,8,1) 30%, transparent 100%),
+    linear-gradient(180deg, #0C0A08 0%, #17130E 50%, #0C0A08 100%);
 }
-.hero::before{
+.m-hero::before{
   content:"";
   position:absolute;inset:0;
-  background:
-    url("/mundial-trophy-glow.jpg") center/cover no-repeat;
-  opacity:.35;
-  filter:contrast(1.05) saturate(1.05) brightness(.85);
+  background:url("./mundial-trophy-glow.jpg") center 35%/contain no-repeat;
+  opacity:.55;
+  filter:brightness(.95) contrast(1.05) saturate(1.1);
   z-index:-2;
+  mask-image:radial-gradient(ellipse 55% 65% at 50% 45%, #000 0%, #000 40%, transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 55% 65% at 50% 45%, #000 0%, #000 40%, transparent 78%);
 }
-.hero::after{
+.m-hero::after{
   content:"";
   position:absolute;inset:0;
-  background:
-    linear-gradient(180deg, rgba(11,13,20,.5) 0%, rgba(11,13,20,.75) 40%, rgba(11,13,20,.95) 100%);
+  background:linear-gradient(180deg, rgba(12,10,8,.35) 0%, rgba(12,10,8,.55) 45%, rgba(12,10,8,.95) 100%);
   z-index:-1;
 }
-.hero__top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.brand{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
-.hero__date{
-  font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);
-  border:1px solid var(--line);border-radius:100px;padding:8px 14px;background:rgba(0,0,0,.35);
-  backdrop-filter:blur(6px);
+
+/* Top row: logo brand tag + date */
+.m-hero__top{
+  position:absolute;top:clamp(1.5rem,4vw,2.5rem);left:0;right:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 clamp(1.5rem,4vw,3rem);
+  z-index:2;
 }
-.hero__center{flex:1;display:flex;flex-direction:column;justify-content:center;padding:24px 0}
-.eyebrow{
+.m-brand{
+  font-family:var(--font-body);
+  font-size:.7rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--color-gold);
+  font-weight:500;
+}
+.m-date-chip{
+  font-family:var(--font-body);
+  font-size:.7rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--color-cream-dim);
+  padding:.6rem 1rem;
+  border:1px solid var(--color-border);
+  border-radius:999px;
+  background:rgba(26,23,20,.6);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+
+/* Centered stack */
+.m-hero__inner{
+  max-width:820px;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:clamp(1.25rem,3vw,1.75rem);
+  position:relative;
+}
+
+.m-hero__eyebrow{
+  font-family:var(--font-body);
+  font-size:.72rem;
+  letter-spacing:.36em;
+  text-transform:uppercase;
+  color:var(--color-gold-light);
+  padding-bottom:.75rem;
+  border-bottom:1px solid rgba(212,168,90,.3);
+  padding-inline:2rem;
+}
+
+/* Vs banner: ESP vs ARG */
+.m-vs{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(1rem,3vw,2rem);
+  font-family:var(--font-display);
+  color:var(--color-cream);
+  font-size:clamp(1.5rem,4vw,2.25rem);
+  font-weight:500;
+  letter-spacing:.02em;
+}
+.m-vs__team{
+  display:flex;align-items:center;gap:.65rem;
+}
+.m-vs__flag{
+  width:clamp(2.25rem,5vw,2.75rem);
+  height:clamp(1.5rem,3.3vw,1.85rem);
+  border-radius:3px;
+  box-shadow:0 4px 20px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.08);
   display:inline-block;
-  font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-2);
-  margin-bottom:20px;
-  padding-bottom:8px;
-  border-bottom:1px solid var(--line);
+  flex-shrink:0;
 }
-.hero h1{
-  font-size:clamp(38px,9vw,72px);
-  line-height:1.02;
-  margin-bottom:20px;
-  text-shadow:0 2px 30px rgba(0,0,0,.5);
+.m-vs__flag--esp{
+  background:
+    linear-gradient(180deg,
+      #AA151B 0%, #AA151B 25%,
+      #F1BF00 25%, #F1BF00 75%,
+      #AA151B 75%, #AA151B 100%);
 }
-.hero h1 em{
+.m-vs__flag--arg{
+  background:
+    linear-gradient(180deg,
+      #6CACE4 0%, #6CACE4 33.3%,
+      #FFFFFF 33.3%, #FFFFFF 66.6%,
+      #6CACE4 66.6%, #6CACE4 100%);
+  position:relative;
+}
+.m-vs__flag--arg::after{
+  content:"";
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:.7rem;height:.7rem;border-radius:50%;
+  background:radial-gradient(circle,#F6B40E 0%, #E5A209 70%);
+  box-shadow:0 0 0 1px rgba(0,0,0,.15);
+}
+.m-vs__dash{
+  color:var(--color-gold);
   font-style:italic;
-  background:linear-gradient(180deg,var(--gold-2) 0%,var(--gold) 60%,#a88555 100%);
+  font-weight:400;
+  opacity:.85;
+  font-size:.85em;
+}
+
+/* Main title */
+.m-hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(2.75rem,8.5vw,5.5rem);
+  font-weight:600;
+  line-height:.98;
+  letter-spacing:-.02em;
+  color:var(--color-cream);
+  margin:0;
+  text-shadow:0 4px 40px rgba(0,0,0,.5);
+}
+.m-hero h1 em{
+  font-style:italic;
+  font-weight:500;
+  background:linear-gradient(180deg,#E7BE78 0%,#D4A85A 55%,#9E7B3A 100%);
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
   display:inline-block;
 }
-.hero__lead{
-  font-size:clamp(15px,4vw,18px);
-  color:var(--ink-2);
-  max-width:600px;
-  line-height:1.6;
-  margin-bottom:28px;
-}
-.price-badge{
-  display:inline-flex;align-items:baseline;gap:8px;
-  background:linear-gradient(135deg,rgba(212,175,122,.14),rgba(212,175,122,.04));
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:14px 22px;
-  margin-bottom:24px;
-  box-shadow:var(--shadow);
-}
-.price-badge__amount{
-  font-family:"Playfair Display",Georgia,serif;
-  font-size:32px;font-weight:600;color:var(--gold-2);letter-spacing:-.01em;
-}
-.price-badge__unit{font-size:13px;color:var(--muted);letter-spacing:.05em}
 
-/* === CTA === */
-.cta{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  width:100%;max-width:420px;
-  background:linear-gradient(180deg,#25D366 0%,#128C7E 100%);
-  color:#fff;
+/* Lead paragraph */
+.m-hero__lead{
+  font-family:var(--font-body);
+  font-size:clamp(1rem,2.2vw,1.15rem);
+  line-height:1.65;
+  color:var(--color-cream-dim);
+  max-width:38rem;
+  margin:0 auto;
+  font-weight:400;
+}
+
+/* Price stripe */
+.m-hero__price{
+  display:inline-flex;
+  align-items:baseline;
+  gap:.75rem;
+  padding:1.1rem 1.75rem;
+  border:1px solid rgba(212,168,90,.35);
+  border-radius:12px;
+  background:
+    linear-gradient(180deg, rgba(212,168,90,.1) 0%, rgba(212,168,90,.03) 100%),
+    rgba(12,10,8,.5);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 20px 60px -20px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.05);
+  margin-top:.5rem;
+}
+.m-hero__price-amount{
+  font-family:var(--font-display);
+  font-size:clamp(1.8rem,4.5vw,2.4rem);
   font-weight:600;
-  font-size:16px;
-  letter-spacing:.02em;
-  padding:18px 24px;
+  color:var(--color-gold-light);
+  letter-spacing:-.01em;
+  line-height:1;
+}
+.m-hero__price-unit{
+  font-family:var(--font-body);
+  font-size:.75rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--color-cream-dim);
+}
+
+/* CTA */
+.m-cta-wrap{
+  display:flex;flex-direction:column;align-items:center;gap:.75rem;
+  width:100%;max-width:24rem;margin-top:.5rem;
+}
+.m-cta{
+  display:inline-flex;
+  align-items:center;justify-content:center;
+  gap:.75rem;
+  width:100%;
+  padding:1.1rem 1.75rem;
+  background:linear-gradient(180deg,#25D366 0%,#1DA851 100%);
+  color:#fff;
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:1rem;
+  letter-spacing:.01em;
+  border:none;
   border-radius:14px;
-  border:none;cursor:pointer;
-  box-shadow:0 10px 30px -8px rgba(37,211,102,.5), inset 0 1px 0 rgba(255,255,255,.15);
-  transition:transform .15s ease, box-shadow .15s ease;
+  cursor:pointer;
+  box-shadow:
+    0 14px 40px -12px rgba(37,211,102,.55),
+    inset 0 1px 0 rgba(255,255,255,.2),
+    inset 0 -1px 0 rgba(0,0,0,.15);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.m-cta:hover{transform:translateY(-2px);box-shadow:0 20px 50px -10px rgba(37,211,102,.65), inset 0 1px 0 rgba(255,255,255,.2)}
+.m-cta:active{transform:translateY(0)}
+.m-cta svg{flex-shrink:0}
+
+.m-cta-note{
+  font-family:var(--font-body);
+  font-size:.78rem;
+  color:var(--color-text-faint);
+  letter-spacing:.03em;
+  margin:0;
+}
+
+/* Scroll hint */
+.m-scroll{
+  position:absolute;
+  bottom:1.5rem;left:50%;transform:translateX(-50%);
+  font-family:var(--font-body);
+  font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--color-text-faint);
+  writing-mode:vertical-lr;
+  display:flex;align-items:center;gap:.5rem;
+  opacity:.7;
+}
+.m-scroll::after{
+  content:"";display:block;
+  width:1px;height:1.5rem;
+  background:linear-gradient(180deg,var(--color-gold-dim),transparent);
+}
+@media(max-width:640px){.m-scroll{display:none}}
+
+/* ==========================================================
+   SECTION BASE (aligned with .section from style.css)
+   ========================================================== */
+.m-section{
+  padding:clamp(4rem,10vw,7rem) 1.5rem;
+  position:relative;
+}
+.m-section__wrap{
+  max-width:56rem;
+  margin-inline:auto;
   text-align:center;
 }
-.cta:hover{transform:translateY(-1px);box-shadow:0 14px 40px -8px rgba(37,211,102,.6), inset 0 1px 0 rgba(255,255,255,.15)}
-.cta:active{transform:translateY(0)}
-.cta svg{flex-shrink:0}
-.cta--secondary{
-  background:transparent;color:var(--gold-2);
-  border:1px solid var(--line);
-  box-shadow:none;
+.m-section__wrap--left{text-align:left}
+.m-section__label{
+  display:inline-block;
+  font-family:var(--font-body);
+  font-size:.72rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--color-gold);
+  margin-bottom:1rem;
+  padding-bottom:.5rem;
+  border-bottom:1px solid rgba(212,168,90,.25);
+}
+.m-section__title{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,6vw,3.25rem);
+  font-weight:600;
+  line-height:1.08;
+  letter-spacing:-.02em;
+  color:var(--color-cream);
+  margin:0 0 1.25rem;
+}
+.m-section__title em{
+  font-style:italic;
+  color:var(--color-gold-light);
   font-weight:500;
 }
-.cta--secondary:hover{background:rgba(212,175,122,.08);box-shadow:none}
-.cta-note{font-size:12px;color:var(--muted);margin-top:10px;letter-spacing:.02em}
-
-.hero__cta-wrap{margin-top:8px}
-
-/* === SECTIONS === */
-section{padding:56px 20px}
-section.tight{padding:40px 20px}
-.section__eyebrow{
-  font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
-  margin-bottom:14px;
+.m-section__lead{
+  font-family:var(--font-body);
+  font-size:clamp(.98rem,2vw,1.1rem);
+  line-height:1.65;
+  color:var(--color-text-muted);
+  max-width:44ch;
+  margin:0 auto 2.5rem;
 }
-.section__title{
-  font-size:clamp(28px,6.5vw,42px);
-  margin-bottom:12px;
-  line-height:1.1;
-}
-.section__lead{
-  font-size:16px;color:var(--ink-2);max-width:640px;margin-bottom:32px;line-height:1.65;
-}
+.m-section__wrap--left .m-section__lead{margin-inline:0}
 
-/* === OFERTA === */
-.oferta{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
-.oferta__card{
-  background:var(--card);
-  border:1px solid var(--line);
+/* ==========================================================
+   TV NOTE — small honesty band
+   ========================================================== */
+.m-tv{
+  background:linear-gradient(180deg, #0C0A08 0%, #14110D 100%);
+  padding:clamp(2.5rem,5vw,3.5rem) 1.5rem;
+  text-align:center;
+}
+.m-tv__inner{
+  max-width:36rem;margin:0 auto;
+  padding:1.75rem 1.5rem;
+  border:1px solid var(--color-border);
+  border-radius:14px;
+  background:linear-gradient(180deg, rgba(26,23,20,.6) 0%, rgba(18,16,14,.5) 100%);
+}
+.m-tv__icon{
+  display:inline-flex;
+  width:2.75rem;height:2.75rem;
+  align-items:center;justify-content:center;
+  border-radius:50%;
+  background:rgba(212,168,90,.1);
+  color:var(--color-gold-light);
+  margin-bottom:.9rem;
+}
+.m-tv p{
+  font-family:var(--font-body);
+  color:var(--color-cream-dim);
+  font-size:.98rem;line-height:1.65;margin:0;
+}
+.m-tv strong{color:var(--color-gold-light);font-weight:600}
+
+/* ==========================================================
+   OFERTA — hero-style card
+   ========================================================== */
+.m-oferta{
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(212,168,90,.06), transparent 60%),
+    var(--color-bg);
+}
+.m-oferta__card{
+  max-width:38rem;
+  margin:0 auto;
+  padding:clamp(2rem,5vw,3rem) clamp(1.5rem,4vw,2.5rem);
+  border:1px solid var(--color-border);
   border-radius:20px;
-  padding:32px 24px;
+  background:
+    linear-gradient(180deg, rgba(26,23,20,.7) 0%, rgba(18,16,14,.5) 100%);
   position:relative;
   overflow:hidden;
+  text-align:center;
+  box-shadow:0 30px 80px -30px rgba(0,0,0,.8);
 }
-.oferta__card::before{
-  content:"";position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent 0%, var(--gold) 50%, transparent 100%);
+.m-oferta__card::before{
+  content:"";position:absolute;top:0;left:15%;right:15%;height:1px;
+  background:linear-gradient(90deg,transparent, var(--color-gold) 50%, transparent);
   opacity:.5;
 }
-.oferta__price{
-  font-family:"Playfair Display",serif;
-  font-size:56px;font-weight:600;
-  background:linear-gradient(180deg,var(--gold-2) 0%,var(--gold) 100%);
+.m-oferta__price{
+  font-family:var(--font-display);
+  font-size:clamp(3.5rem,10vw,5rem);
+  font-weight:600;
+  line-height:1;
+  background:linear-gradient(180deg,#E7BE78 0%, #D4A85A 55%, #9E7B3A 100%);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  line-height:1;margin-bottom:6px;
+  margin-bottom:.35rem;
+  letter-spacing:-.02em;
 }
-.oferta__per{font-size:14px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px}
-.oferta__list{list-style:none;display:flex;flex-direction:column;gap:14px}
-.oferta__list li{
-  display:flex;align-items:flex-start;gap:14px;
-  padding:14px 0;border-bottom:1px dashed rgba(212,175,122,.15);
+.m-oferta__per{
+  font-family:var(--font-body);
+  font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--color-text-muted);
+  margin-bottom:2rem;
 }
-.oferta__list li:last-child{border-bottom:none;padding-bottom:0}
-.oferta__list .dot{
+.m-oferta__list{
+  list-style:none;padding:0;margin:0;
+  display:flex;flex-direction:column;gap:0;
+  text-align:left;
+}
+.m-oferta__list li{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1rem 0;
+  border-bottom:1px dashed rgba(212,168,90,.15);
+  font-family:var(--font-body);
+  font-size:1rem;
+  line-height:1.55;
+  color:var(--color-cream-dim);
+}
+.m-oferta__list li:last-child{border-bottom:0;padding-bottom:0}
+.m-oferta__list li:first-child{padding-top:0}
+.m-oferta__dot{
   flex-shrink:0;
-  width:8px;height:8px;border-radius:50%;
-  background:var(--gold);margin-top:8px;
-  box-shadow:0 0 12px rgba(212,175,122,.6);
+  width:.55rem;height:.55rem;border-radius:50%;
+  background:var(--color-gold);
+  margin-top:.55rem;
+  box-shadow:0 0 12px rgba(212,168,90,.5);
 }
-.oferta__list strong{color:var(--gold-2);font-weight:600;font-size:16px}
-.oferta__list span{color:var(--ink-2);font-size:15px}
+.m-oferta__list strong{color:var(--color-gold-light);font-weight:600}
 
-/* === MESAS === */
-.mesas{background:var(--bg-2)}
-.mesas__grid{display:grid;grid-template-columns:1fr;gap:12px}
-.mesa-row{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:18px 20px;
-  background:var(--card);
-  border:1px solid var(--line);
+/* ==========================================================
+   MESAS
+   ========================================================== */
+.m-mesas{background:linear-gradient(180deg,var(--color-bg) 0%, #14110D 100%)}
+.m-mesas__grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:.75rem;
+  max-width:42rem;
+  margin:0 auto;
+}
+.m-mesa{
+  display:flex;align-items:center;
+  padding:1.15rem 1.5rem;
+  gap:1.25rem;
+  border:1px solid var(--color-border);
   border-radius:14px;
-  transition:border-color .2s ease;
+  background:linear-gradient(180deg, rgba(26,23,20,.6) 0%, rgba(18,16,14,.4) 100%);
+  transition:border-color .25s ease, transform .25s ease;
+  cursor:pointer;
+  text-align:left;
 }
-.mesa-row:hover{border-color:rgba(212,175,122,.4)}
-.mesa-row__count{
-  font-family:"Playfair Display",serif;font-size:28px;color:var(--gold-2);
-  font-weight:600;line-height:1;min-width:44px;text-align:center;
+.m-mesa:hover{
+  border-color:rgba(212,168,90,.45);
+  transform:translateY(-1px);
 }
-.mesa-row__label{flex:1;padding:0 16px;font-size:15px;color:var(--ink)}
-.mesa-row__label small{display:block;color:var(--muted);font-size:12px;letter-spacing:.05em;margin-top:2px}
-.mesa-row__cta{
-  font-size:13px;color:var(--gold);letter-spacing:.05em;
-  border:1px solid var(--line);border-radius:100px;padding:6px 12px;
-  white-space:nowrap;
+.m-mesa__num{
+  font-family:var(--font-display);
+  font-size:clamp(1.75rem,4vw,2.15rem);
+  font-weight:600;
+  color:var(--color-gold-light);
+  line-height:1;min-width:2.5rem;text-align:center;
 }
+.m-mesa__body{flex:1;min-width:0}
+.m-mesa__label{
+  font-family:var(--font-body);
+  font-size:.98rem;
+  color:var(--color-cream);
+  font-weight:500;
+  letter-spacing:.01em;
+  line-height:1.3;
+}
+.m-mesa__sub{
+  font-family:var(--font-body);
+  font-size:.78rem;
+  color:var(--color-text-faint);
+  letter-spacing:.05em;
+  margin-top:.2rem;
+  line-height:1.4;
+}
+.m-mesa__arrow{
+  flex-shrink:0;
+  color:var(--color-gold);
+  opacity:.6;
+  transition:transform .25s ease, opacity .25s ease;
+}
+.m-mesa:hover .m-mesa__arrow{transform:translateX(3px);opacity:1}
 
-.mesas__note{
-  margin-top:24px;padding:20px;
-  background:rgba(160,21,28,.08);
-  border-left:2px solid var(--red-glow);
-  border-radius:8px;
-  font-size:14px;color:var(--ink-2);line-height:1.6;
+.m-mesas__note{
+  margin:2rem auto 0;
+  max-width:42rem;
+  padding:1.25rem 1.5rem;
+  border-left:2px solid var(--color-gold);
+  background:linear-gradient(90deg, rgba(212,168,90,.08) 0%, transparent 100%);
+  border-radius:0 8px 8px 0;
+  font-family:var(--font-body);
+  font-size:.92rem;
+  line-height:1.6;
+  color:var(--color-cream-dim);
+  text-align:left;
 }
-.mesas__note strong{color:var(--ink);font-weight:600}
+.m-mesas__note strong{color:var(--color-cream);font-weight:600}
 
-/* === TV DISCLAIMER === */
-.tv-note{
-  background:var(--bg);
-  padding:40px 20px;
+/* ==========================================================
+   CONDICIONES
+   ========================================================== */
+.m-cond{background:#14110D}
+.m-cond__grid{
+  display:grid;grid-template-columns:1fr;gap:1rem;
+  max-width:48rem;margin:0 auto;
+}
+@media(min-width:768px){
+  .m-cond__grid{grid-template-columns:1fr 1fr}
+}
+.m-cond__block{
+  padding:1.75rem 1.5rem;
+  background:linear-gradient(180deg, rgba(26,23,20,.65) 0%, rgba(18,16,14,.4) 100%);
+  border:1px solid var(--color-border);
+  border-radius:14px;
+  text-align:left;
+}
+.m-cond__title{
+  font-family:var(--font-display);
+  font-size:1.15rem;font-weight:600;
+  color:var(--color-gold-light);
+  margin:0 0 1rem;
+  display:flex;align-items:center;gap:.6rem;
+  letter-spacing:.005em;
+}
+.m-cond__icon{
+  display:inline-flex;width:1.75rem;height:1.75rem;
+  align-items:center;justify-content:center;
+  border-radius:50%;
+  background:rgba(212,168,90,.12);
+  color:var(--color-gold);
+  flex-shrink:0;
+}
+.m-cond__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}
+.m-cond__list li{
+  padding-left:1rem;position:relative;
+  font-family:var(--font-body);
+  font-size:.93rem;line-height:1.55;
+  color:var(--color-cream-dim);
+}
+.m-cond__list li::before{
+  content:"";position:absolute;left:0;top:.65em;
+  width:6px;height:1px;background:var(--color-gold);opacity:.7;
+}
+.m-cond__list strong{color:var(--color-cream);font-weight:600}
+
+/* ==========================================================
+   FINAL CTA
+   ========================================================== */
+.m-final{
+  padding:clamp(4rem,10vw,7rem) 1.5rem clamp(5rem,10vw,7rem);
   text-align:center;
-}
-.tv-note__inner{
-  max-width:640px;margin:0 auto;
-  padding:24px;
-  border:1px solid var(--line);border-radius:14px;
-  background:var(--card);
-}
-.tv-note svg{margin:0 auto 12px;display:block;color:var(--gold)}
-.tv-note p{color:var(--ink-2);font-size:15px;line-height:1.6}
-.tv-note strong{color:var(--gold-2);font-weight:600}
-
-/* === CONDICIONES === */
-.condiciones{background:var(--bg-2)}
-.cond-block{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:24px;
-  margin-bottom:16px;
-}
-.cond-block h3{
-  font-size:18px;color:var(--gold-2);margin-bottom:12px;
-  display:flex;align-items:center;gap:10px;
-}
-.cond-block h3::before{
-  content:"";display:inline-block;
-  width:6px;height:6px;border-radius:50%;background:var(--gold);
-  box-shadow:0 0 10px rgba(212,175,122,.5);
-}
-.cond-block ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.cond-block li{
-  padding-left:18px;position:relative;
-  font-size:15px;color:var(--ink-2);line-height:1.6;
-}
-.cond-block li::before{
-  content:"";position:absolute;left:0;top:11px;
-  width:8px;height:1px;background:var(--gold);opacity:.6;
-}
-.cond-block li strong{color:var(--ink);font-weight:600}
-
-/* === CTA FINAL === */
-.final-cta{
   background:
-    radial-gradient(80% 80% at 50% 50%, rgba(200,32,42,.15), transparent 60%),
-    linear-gradient(180deg,var(--bg) 0%, #131624 100%);
-  text-align:center;
-  padding:64px 20px 80px;
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(212,168,90,.1) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 60% at 50% 100%, rgba(170,21,27,.08) 0%, transparent 70%),
+    linear-gradient(180deg,#0C0A08 0%, #17130E 100%);
+  position:relative;
+  isolation:isolate;
 }
-.final-cta h2{
-  font-size:clamp(28px,6.5vw,44px);
-  margin-bottom:14px;line-height:1.1;
+.m-final h2{
+  font-family:var(--font-display);
+  font-size:clamp(2.25rem,6.5vw,3.5rem);
+  font-weight:600;
+  line-height:1.05;
+  letter-spacing:-.02em;
+  color:var(--color-cream);
+  margin:0 0 1rem;
 }
-.final-cta h2 em{
+.m-final h2 em{
   font-style:italic;
-  background:linear-gradient(180deg,var(--gold-2),var(--gold));
+  background:linear-gradient(180deg,#E7BE78 0%,#D4A85A 60%,#9E7B3A 100%);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  font-weight:500;
 }
-.final-cta p{color:var(--ink-2);margin-bottom:28px;font-size:16px;max-width:540px;margin-left:auto;margin-right:auto}
-.final-cta .cta{margin:0 auto}
-
-/* === FOOTER === */
-footer{
-  background:#080a10;padding:32px 20px 40px;text-align:center;
-  border-top:1px solid rgba(255,255,255,.04);
+.m-final p{
+  font-family:var(--font-body);
+  color:var(--color-cream-dim);
+  font-size:1rem;line-height:1.65;
+  max-width:34rem;margin:0 auto 2rem;
 }
-footer p{font-size:12px;color:var(--muted);line-height:1.6;margin:0 auto;max-width:560px}
-footer a{color:var(--gold);letter-spacing:.02em}
-footer .footer__brand{color:var(--gold-2);letter-spacing:.15em;text-transform:uppercase;font-size:13px;margin-bottom:8px;display:block}
+.m-final .m-cta-wrap{margin:0 auto}
+.m-final__phone{
+  margin-top:1.5rem;
+  font-size:.85rem;
+  color:var(--color-text-muted);
+}
+.m-final__phone a{color:var(--color-gold-light);letter-spacing:.02em}
 
-/* === STICKY MOBILE CTA === */
-.sticky-cta{
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+.m-footer{
+  background:#080604;
+  padding:2.5rem 1.5rem 3rem;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.03);
+}
+.m-footer__brand{
+  display:block;
+  font-family:var(--font-body);
+  font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--color-gold);
+  margin-bottom:.85rem;
+}
+.m-footer p{
+  font-family:var(--font-body);
+  font-size:.82rem;color:var(--color-text-faint);
+  line-height:1.7;margin:0 auto;max-width:36rem;
+}
+.m-footer a{color:var(--color-gold-light)}
+.m-footer__legal{
+  margin-top:1.25rem;font-size:.72rem;opacity:.75;
+}
+
+/* ==========================================================
+   STICKY MOBILE CTA
+   ========================================================== */
+.m-sticky{
   position:fixed;bottom:0;left:0;right:0;
-  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
-  background:linear-gradient(180deg,transparent 0%, rgba(11,13,20,.9) 30%, var(--bg) 100%);
+  padding:.85rem 1rem calc(.85rem + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,transparent 0%, rgba(12,10,8,.8) 30%, rgba(12,10,8,.98) 100%);
   z-index:100;
   transform:translateY(120%);
-  transition:transform .3s ease;
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
   pointer-events:none;
 }
-.sticky-cta.visible{transform:translateY(0);pointer-events:auto}
-.sticky-cta .cta{max-width:none;width:100%}
-
-/* Desktop: hide sticky */
-@media(min-width:768px){
-  .hero{padding:48px 40px 60px;min-height:auto}
-  .hero__center{padding:60px 0 40px}
-  section{padding:80px 40px}
-  .oferta__card{padding:48px 40px}
-  .mesa-row{padding:22px 28px}
-  .mesa-row__count{font-size:32px}
-  .cond-block{padding:32px}
-  .sticky-cta{display:none}
-}
-
-/* Anchor scroll offset */
-[id]{scroll-margin-top:20px}
+.m-sticky.visible{transform:translateY(0);pointer-events:auto}
+.m-sticky .m-cta{max-width:none;width:100%;padding:.95rem 1.5rem;font-size:.95rem}
+@media(min-width:900px){.m-sticky{display:none}}
 
 /* Selection */
-::selection{background:var(--gold);color:#000}
+::selection{background:var(--color-gold);color:#000}
+
+/* Scroll margins */
+[id]{scroll-margin-top:1rem}
 </style>
 </head>
 <body>
 
-<!-- ========== HERO ========== -->
-<header class="hero">
-  <div class="hero__top">
-    <span class="brand">Miles · Cocktail Lounge</span>
-    <span class="hero__date">Dom 19 · Jul · 2026</span>
+<main class="mundial">
+
+<!-- =========================== HERO =========================== -->
+<header class="m-hero" id="top">
+  <div class="m-hero__top">
+    <a href="/" class="m-brand" aria-label="Volver a Miles Cocktail Lounge">Miles · Cocktail Lounge</a>
+    <span class="m-date-chip">Dom 19 · Jul · 2026</span>
   </div>
 
-  <div class="hero__center">
-    <span class="eyebrow">Final de la Copa del Mundo</span>
-    <h1>Una final de <em>ensueño</em>,<br>vivida como se merece.</h1>
-    <p class="hero__lead">
-      El mejor equipo de Europa frente al mejor de América Latina. Un cartel de leyenda para decidir quién será rey del mundo. Desde aquel primer título español en 2010, la historia espera una nueva página. ¿Volverá España a hacernos vibrar?
+  <div class="m-hero__inner">
+    <span class="m-hero__eyebrow">La Final de la Copa del Mundo</span>
+
+    <div class="m-vs" role="img" aria-label="España contra Argentina">
+      <span class="m-vs__team"><span class="m-vs__flag m-vs__flag--esp" aria-hidden="true"></span>España</span>
+      <span class="m-vs__dash">vs</span>
+      <span class="m-vs__team">Argentina<span class="m-vs__flag m-vs__flag--arg" aria-hidden="true"></span></span>
+    </div>
+
+    <h1>Europa contra América.<br>Una noche que <em>no se repetirá</em>.</h1>
+
+    <p class="m-hero__lead">
+      Desde aquel primer título en 2010, España espera. Argentina llega a defender su leyenda. Un solo partido decide quién será rey del mundo — y tú eliges dónde vivirlo.
     </p>
 
-    <div class="price-badge">
-      <span class="price-badge__amount">19,99 €</span>
-      <span class="price-badge__unit">por persona · 3 consumiciones incluidas</span>
+    <div class="m-hero__price">
+      <span class="m-hero__price-amount">19,99&nbsp;€</span>
+      <span class="m-hero__price-unit">por persona · 3 consumiciones</span>
     </div>
 
-    <div class="hero__cta-wrap">
-      <a class="cta" href="https://wa.me/34932472654?text=Hola%2C%20he%20le%C3%ADdo%20las%20condiciones%20de%20reserva%20para%20la%20final%20en%20Miles%20y%20me%20gustar%C3%ADa%20solicitar%20una%20mesa%20para%20%5BX%5D%20personas.">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Solicitar reserva por WhatsApp
+    <div class="m-cta-wrap">
+      <a class="m-cta" href="https://wa.me/34932472654?text=Hola%2C%20he%20le%C3%ADdo%20las%20condiciones%20de%20reserva%20para%20la%20final%20en%20Miles%20y%20me%20gustar%C3%ADa%20solicitar%20una%20mesa%20para%20%5BX%5D%20personas.">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Reservar por WhatsApp
       </a>
-      <p class="cta-note">Respuesta rápida · Confirmación con anticipo del 25%</p>
+      <p class="m-cta-note">Respuesta rápida · Anticipo del 25%</p>
     </div>
   </div>
+
+  <div class="m-scroll" aria-hidden="true">Scroll</div>
 </header>
 
-<!-- ========== TV / HONESTIDAD ========== -->
-<section class="tv-note tight">
-  <div class="tv-note__inner">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
-    <p>El partido se retransmitirá en <strong>4 televisores</strong> repartidos por el bar, para que cada rincón disfrute de una buena visibilidad. Sin pantallas gigantes: solo la mejor atmósfera para vivir la final.</p>
+
+<!-- =========================== TV =========================== -->
+<section class="m-tv">
+  <div class="m-tv__inner">
+    <span class="m-tv__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+    </span>
+    <p>Retransmisión en <strong>4 televisores</strong> repartidos por el bar. Sin pantallas gigantes: solo la mejor atmósfera para vivir la final, un cóctel en la mano.</p>
   </div>
 </section>
 
-<!-- ========== OFERTA ========== -->
-<section class="oferta" id="oferta">
-  <div class="wrap">
-    <div class="section__eyebrow">La oferta</div>
-    <h2 class="section__title">Una fórmula sencilla,<br>pensada para la noche.</h2>
 
-    <div class="oferta__card">
-      <div class="oferta__price">19,99&nbsp;€</div>
-      <div class="oferta__per">Precio único · por persona</div>
+<!-- =========================== OFERTA =========================== -->
+<section class="m-section m-oferta" id="oferta">
+  <div class="m-section__wrap">
+    <span class="m-section__label">La fórmula</span>
+    <h2 class="m-section__title">Una noche redonda,<br><em>sin sorpresas.</em></h2>
+    <p class="m-section__lead">Precio único, mesa reservada, tres consumiciones por persona. Llegas, te sientas, disfrutas.</p>
 
-      <ul class="oferta__list">
+    <div class="m-oferta__card">
+      <div class="m-oferta__price">19,99&nbsp;€</div>
+      <div class="m-oferta__per">Por persona</div>
+
+      <ul class="m-oferta__list">
         <li>
-          <span class="dot"></span>
+          <span class="m-oferta__dot"></span>
           <span><strong>3 tickets de consumición</strong> incluidos por persona.</span>
         </li>
         <li>
-          <span class="dot"></span>
-          <span><strong>1 ticket</strong> = una cerveza, una copa de vino o un refresco.</span>
+          <span class="m-oferta__dot"></span>
+          <span><strong>1 ticket</strong> — una cerveza, una copa de vino o un refresco.</span>
         </li>
         <li>
-          <span class="dot"></span>
-          <span><strong>2 tickets</strong> = un cubata.</span>
+          <span class="m-oferta__dot"></span>
+          <span><strong>2 tickets</strong> — un cubata.</span>
         </li>
         <li>
-          <span class="dot"></span>
-          <span>Los tickets se entregan a la llegada, tras el pago del importe restante. Se canjean en la barra.</span>
+          <span class="m-oferta__dot"></span>
+          <span>Tickets entregados a la llegada, tras el pago del importe restante. Se canjean en la barra.</span>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ========== MESAS ========== -->
-<section class="mesas" id="mesas">
-  <div class="wrap">
-    <div class="section__eyebrow">Mesas reservables</div>
-    <h2 class="section__title">Elige tu mesa según<br>el tamaño del grupo.</h2>
-    <p class="section__lead">Las mesas se reservan por adelantado según su capacidad. Un formato por grupo, sin elegir zonas: nuestro equipo te asignará el mejor sitio disponible al llegar.</p>
 
-    <div class="mesas__grid">
-      <div class="mesa-row">
-        <div class="mesa-row__count">5</div>
-        <div class="mesa-row__label">Mesas de 2 personas<small>Ideal para parejas o dúos</small></div>
-        <div class="mesa-row__cta">Solicitar</div>
-      </div>
-      <div class="mesa-row">
-        <div class="mesa-row__count">5</div>
-        <div class="mesa-row__label">Mesas de 4 personas<small>Grupo íntimo</small></div>
-        <div class="mesa-row__cta">Solicitar</div>
-      </div>
-      <div class="mesa-row">
-        <div class="mesa-row__count">2</div>
-        <div class="mesa-row__label">Mesas de 5 personas<small>Grupo medio</small></div>
-        <div class="mesa-row__cta">Solicitar</div>
-      </div>
-      <div class="mesa-row">
-        <div class="mesa-row__count">3</div>
-        <div class="mesa-row__label">Mesas de 6 personas<small>Cena entre amigos</small></div>
-        <div class="mesa-row__cta">Solicitar</div>
-      </div>
-      <div class="mesa-row">
-        <div class="mesa-row__count">1</div>
-        <div class="mesa-row__label">Mesa de 10 personas<small>Gran grupo · Única disponible</small></div>
-        <div class="mesa-row__cta">Solicitar</div>
-      </div>
+<!-- =========================== MESAS =========================== -->
+<section class="m-section m-mesas" id="mesas">
+  <div class="m-section__wrap">
+    <span class="m-section__label">Mesas reservables</span>
+    <h2 class="m-section__title">Elige el <em>formato</em><br>de tu grupo.</h2>
+    <p class="m-section__lead">Las mesas se reservan por adelantado según su capacidad. Nuestro equipo te asignará la mejor ubicación disponible a la llegada.</p>
+
+    <div class="m-mesas__grid">
+
+      <button class="m-mesa" data-target="reservar" type="button">
+        <span class="m-mesa__num">5</span>
+        <span class="m-mesa__body">
+          <span class="m-mesa__label">Mesas de 2 personas</span>
+          <span class="m-mesa__sub">Ideal para parejas o dúos</span>
+        </span>
+        <span class="m-mesa__arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </button>
+
+      <button class="m-mesa" data-target="reservar" type="button">
+        <span class="m-mesa__num">5</span>
+        <span class="m-mesa__body">
+          <span class="m-mesa__label">Mesas de 4 personas</span>
+          <span class="m-mesa__sub">Grupo íntimo</span>
+        </span>
+        <span class="m-mesa__arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </button>
+
+      <button class="m-mesa" data-target="reservar" type="button">
+        <span class="m-mesa__num">2</span>
+        <span class="m-mesa__body">
+          <span class="m-mesa__label">Mesas de 5 personas</span>
+          <span class="m-mesa__sub">Grupo medio</span>
+        </span>
+        <span class="m-mesa__arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </button>
+
+      <button class="m-mesa" data-target="reservar" type="button">
+        <span class="m-mesa__num">3</span>
+        <span class="m-mesa__body">
+          <span class="m-mesa__label">Mesas de 6 personas</span>
+          <span class="m-mesa__sub">Cena entre amigos</span>
+        </span>
+        <span class="m-mesa__arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </button>
+
+      <button class="m-mesa" data-target="reservar" type="button">
+        <span class="m-mesa__num">1</span>
+        <span class="m-mesa__body">
+          <span class="m-mesa__label">Mesa de 10 personas</span>
+          <span class="m-mesa__sub">Gran grupo · única disponible</span>
+        </span>
+        <span class="m-mesa__arrow" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </button>
+
     </div>
 
-    <div class="mesas__note">
-      <strong>Sin mesa reservada, también eres bienvenido.</strong><br>
-      El bar ofrece también asientos sin mesa, disponibles únicamente <strong>la noche del evento, según orden de llegada</strong> y sujetos a disponibilidad. Solo las mesas de arriba se pueden reservar por adelantado.
-    </div>
-  </div>
-</section>
-
-<!-- ========== CONDICIONES ========== -->
-<section class="condiciones" id="condiciones">
-  <div class="wrap">
-    <div class="section__eyebrow">Condiciones de reserva</div>
-    <h2 class="section__title">Lo importante,<br>en pocas líneas.</h2>
-    <p class="section__lead">Reglas claras para que la noche sea perfecta para todos. Léelas con calma antes de solicitar tu reserva.</p>
-
-    <div class="cond-block">
-      <h3>Llegada y puntualidad</h3>
-      <ul>
-        <li>Las reservas deberán ser atendidas a las <strong>19:45</strong>.</li>
-        <li>Se admitirá un <strong>retraso máximo de 15 minutos</strong>.</li>
-        <li>Si el cliente no se presenta antes de las <strong>20:00</strong>, la reserva se considerará cancelada.</li>
-      </ul>
-    </div>
-
-    <div class="cond-block">
-      <h3>Anticipo y cancelación</h3>
-      <ul>
-        <li>Para confirmar la reserva se solicitará un <strong>anticipo del 25% del importe total</strong>.</li>
-        <li>El cliente puede cancelar con derecho a reembolso del anticipo <strong>hasta 24 horas antes del evento</strong>.</li>
-        <li>A partir de ese momento, <strong>no se efectuarán reembolsos</strong> en caso de cancelación, no presentación o llegada después del tiempo de cortesía.</li>
-        <li>En caso de cancelación por parte del establecimiento, cualquier anticipo abonado será <strong>reembolsado íntegramente</strong>.</li>
-      </ul>
-    </div>
-
-    <div class="cond-block">
-      <h3>Grupo y mesa</h3>
-      <ul>
-        <li>La reserva se realiza para un <strong>número exacto de personas</strong>.</li>
-        <li>La mesa solicitada debe corresponder al número de personas de la reserva.</li>
-        <li>En caso de grupo incompleto o incumplimiento de las condiciones, el establecimiento podrá <strong>adaptar o cancelar la reserva</strong>.</li>
-      </ul>
-    </div>
-
-    <div class="cond-block">
-      <h3>Pago y consumiciones</h3>
-      <ul>
-        <li>El importe restante deberá abonarse <strong>a la llegada, en un solo pago</strong>.</li>
-        <li>No se aceptarán pagos fraccionados.</li>
-        <li>Tras el pago se entregarán los <strong>tickets de bebida</strong>.</li>
-        <li>Las consumiciones se servirán en la barra mediante presentación de dichos tickets.</li>
-      </ul>
+    <div class="m-mesas__note">
+      <strong>Sin mesa reservada, también eres bienvenido.</strong>
+      Hay asientos sin mesa disponibles <strong>únicamente la noche del evento, por orden de llegada</strong> y sujetos a disponibilidad. Solo las mesas de arriba se pueden reservar por adelantado.
     </div>
   </div>
 </section>
 
-<!-- ========== CTA FINAL ========== -->
-<section class="final-cta" id="reservar">
+
+<!-- =========================== CONDICIONES =========================== -->
+<section class="m-section m-cond" id="condiciones">
+  <div class="m-section__wrap">
+    <span class="m-section__label">Condiciones de reserva</span>
+    <h2 class="m-section__title">Lo importante,<br><em>en pocas líneas.</em></h2>
+    <p class="m-section__lead">Reglas claras para que la noche sea perfecta para todos.</p>
+
+    <div class="m-cond__grid">
+
+      <div class="m-cond__block">
+        <h3 class="m-cond__title">
+          <span class="m-cond__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+          Llegada y puntualidad
+        </h3>
+        <ul class="m-cond__list">
+          <li>Las reservas deberán ser atendidas a las <strong>19:45</strong>.</li>
+          <li>Se admitirá un <strong>retraso máximo de 15 minutos</strong>.</li>
+          <li>Si el cliente no se presenta antes de las <strong>20:00</strong>, la reserva se considerará cancelada.</li>
+        </ul>
+      </div>
+
+      <div class="m-cond__block">
+        <h3 class="m-cond__title">
+          <span class="m-cond__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+          Anticipo y cancelación
+        </h3>
+        <ul class="m-cond__list">
+          <li>Para confirmar la reserva se solicitará un <strong>anticipo del 25%</strong> del importe total.</li>
+          <li>Reembolso del anticipo <strong>hasta 24 h antes</strong> del evento.</li>
+          <li>Después, <strong>no se efectuarán reembolsos</strong> en caso de cancelación o no presentación.</li>
+          <li>Si el establecimiento cancela: reembolso <strong>íntegro</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="m-cond__block">
+        <h3 class="m-cond__title">
+          <span class="m-cond__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          Grupo y mesa
+        </h3>
+        <ul class="m-cond__list">
+          <li>Reserva para un <strong>número exacto de personas</strong>.</li>
+          <li>La mesa solicitada debe corresponder al número de personas.</li>
+          <li>En caso de grupo incompleto, el establecimiento puede <strong>adaptar o cancelar</strong> la reserva.</li>
+        </ul>
+      </div>
+
+      <div class="m-cond__block">
+        <h3 class="m-cond__title">
+          <span class="m-cond__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>
+          Pago y consumiciones
+        </h3>
+        <ul class="m-cond__list">
+          <li>Importe restante a abonar <strong>a la llegada</strong>, en un solo pago.</li>
+          <li><strong>No se aceptan pagos fraccionados</strong>.</li>
+          <li>Tras el pago se entregan los <strong>tickets de bebida</strong>.</li>
+          <li>Consumiciones servidas en la barra al presentar el ticket.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================== FINAL CTA =========================== -->
+<section class="m-final" id="reservar">
   <h2>Reserva tu mesa,<br><em>y que empiece la final.</em></h2>
   <p>Escríbenos por WhatsApp con el número de personas. Te confirmamos disponibilidad y anticipo en pocos minutos.</p>
-  <a class="cta" href="https://wa.me/34932472654?text=Hola%2C%20he%20le%C3%ADdo%20las%20condiciones%20de%20reserva%20para%20la%20final%20en%20Miles%20y%20me%20gustar%C3%ADa%20solicitar%20una%20mesa%20para%20%5BX%5D%20personas.">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Solicitar reserva por WhatsApp
-  </a>
-  <p class="cta-note">O llámanos al <a href="tel:+34932472654" style="color:var(--gold-2)">+34 932 472 654</a></p>
+
+  <div class="m-cta-wrap">
+    <a class="m-cta" href="https://wa.me/34932472654?text=Hola%2C%20he%20le%C3%ADdo%20las%20condiciones%20de%20reserva%20para%20la%20final%20en%20Miles%20y%20me%20gustar%C3%ADa%20solicitar%20una%20mesa%20para%20%5BX%5D%20personas.">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Reservar por WhatsApp
+    </a>
+    <p class="m-cta-note">Respuesta rápida · Anticipo del 25%</p>
+  </div>
+
+  <div class="m-final__phone">
+    O llámanos al <a href="tel:+34932472654">+34 932 472 654</a>
+  </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
-<footer>
-  <span class="footer__brand">Miles · Cocktail Lounge</span>
-  <p>Calle Aribau · Eixample, Barcelona · Metro Universitat<br>
-  <a href="/">Volver a la página principal</a></p>
-  <p style="margin-top:16px;font-size:11px;opacity:.6">El establecimiento se reserva el derecho de cancelar cualquier reserva en cualquier momento, sin obligación de justificar los motivos de dicha cancelación.</p>
+
+<!-- =========================== FOOTER =========================== -->
+<footer class="m-footer">
+  <span class="m-footer__brand">Miles · Cocktail Lounge</span>
+  <p>
+    Carrer de la Diputació, 215 · Eixample, Barcelona · Metro Universitat<br>
+    <a href="/">Volver a la página principal</a>
+  </p>
+  <p class="m-footer__legal">
+    El establecimiento se reserva el derecho de cancelar cualquier reserva en cualquier momento, sin obligación de justificar los motivos de dicha cancelación.
+  </p>
 </footer>
 
-<!-- ========== STICKY MOBILE CTA ========== -->
-<div class="sticky-cta" id="stickyCta">
-  <a class="cta" href="https://wa.me/34932472654?text=Hola%2C%20he%20le%C3%ADdo%20las%20condiciones%20de%20reserva%20para%20la%20final%20en%20Miles%20y%20me%20gustar%C3%ADa%20solicitar%20una%20mesa%20para%20%5BX%5D%20personas.">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</main>
+
+
+<!-- =========================== STICKY MOBILE CTA =========================== -->
+<div class="m-sticky" id="mSticky">
+  <a class="m-cta" href="https://wa.me/34932472654?text=Hola%2C%20he%20le%C3%ADdo%20las%20condiciones%20de%20reserva%20para%20la%20final%20en%20Miles%20y%20me%20gustar%C3%ADa%20solicitar%20una%20mesa%20para%20%5BX%5D%20personas.">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Reservar por WhatsApp
   </a>
 </div>
 
 <script>
-  // Show sticky CTA after hero
-  (function(){
-    var sticky = document.getElementById('stickyCta');
-    var hero = document.querySelector('.hero');
-    if(!sticky || !hero) return;
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){ sticky.classList.remove('visible'); }
-        else{ sticky.classList.add('visible'); }
+(function(){
+  // Sticky CTA appears after hero
+  var sticky=document.getElementById('mSticky');
+  var hero=document.querySelector('.m-hero');
+  if(sticky && hero && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){sticky.classList.remove('visible')}
+        else{sticky.classList.add('visible')}
       });
-    }, {threshold:0.1});
-    observer.observe(hero);
-
-    // Click on mesa-row scrolls to CTA
-    document.querySelectorAll('.mesa-row').forEach(function(row){
-      row.style.cursor='pointer';
-      row.addEventListener('click', function(){
-        document.getElementById('reservar').scrollIntoView({behavior:'smooth'});
-      });
+    },{threshold:.08});
+    io.observe(hero);
+  }
+  // Mesa buttons scroll to reservar
+  document.querySelectorAll('.m-mesa').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var t=document.getElementById(btn.dataset.target||'reservar');
+      if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
     });
-  })();
+  });
+})();
 </script>
 
 <!-- JSON-LD Event -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"Event",
-  "name":"Final de la Copa del Mundo 2026 en Miles Cocktail Lounge",
+  "@type":"SportsEvent",
+  "name":"Final de la Copa del Mundo 2026 · España vs Argentina · Miles Barcelona",
   "startDate":"2026-07-19T19:45:00+02:00",
   "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
   "eventStatus":"https://schema.org/EventScheduled",
@@ -597,7 +990,7 @@ footer .footer__brand{color:var(--gold-2);letter-spacing:.15em;text-transform:up
     "name":"Miles Cocktail Lounge",
     "address":{
       "@type":"PostalAddress",
-      "streetAddress":"Calle Aribau",
+      "streetAddress":"Carrer de la Diputació, 215",
       "addressLocality":"Barcelona",
       "addressRegion":"Cataluña",
       "postalCode":"08011",
