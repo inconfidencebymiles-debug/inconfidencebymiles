@@ -1,3 +1,7 @@
+# Force apex (non-www) — SEO consolidation
+https://www.inconfidencebymiles.com/*  https://inconfidencebymiles.com/:splat  301!
+
+# Language aliases
 /en  /en.html  200
 /ca  /ca.html  200
 /fr  /fr.html  200
