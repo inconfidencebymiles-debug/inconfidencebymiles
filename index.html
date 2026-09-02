@@ -1100,7 +1100,11 @@ document.addEventListener("keydown",function(e){
 </div>
 <script>
 function setCookieConsent(v){document.cookie="cookie_consent="+v+";path=/;max-age=31536000;SameSite=Lax";document.getElementById("cookieBanner").style.display="none"}
-if(!document.cookie.includes("cookie_consent=")){document.getElementById("cookieBanner").style.display="block"}
+if(!document.cookie.includes("cookie_consent=")){document.getElementById("cookieBanner").style.display="block";
+  // Auto-minimize on scroll (mobile UX)
+  var _cbScrollHandler=function(){if(window.scrollY>200){var b=document.getElementById("cookieBanner");if(b&&b.style.display!=="none"){b.style.opacity="0.55";b.style.pointerEvents="auto";}}};
+  window.addEventListener("scroll",_cbScrollHandler,{passive:true});
+}
 </script>
 <script>
 (function() {

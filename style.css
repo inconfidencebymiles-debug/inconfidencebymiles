@@ -1552,3 +1552,48 @@ img {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+/* ============================================
+   Cookie banner: compact on mobile, no CTA occlusion
+   Added 2026-09-03 (audit fix E)
+   ============================================ */
+@media (max-width: 640px) {
+  #cookieBanner {
+    padding: 10px 14px !important;
+    font-size: 12px !important;
+    max-height: 30vh;
+    overflow-y: auto;
+  }
+  #cookieBanner p {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+  }
+  #cookieBanner button {
+    padding: 6px 14px !important;
+    font-size: 11px !important;
+  }
+  /* Push sticky CTAs above cookie banner while it's visible */
+  body:has(#cookieBanner[style*="block"]) .btn--primary[href*="wa.me"] {
+    margin-bottom: 100px;
+  }
+}
+
+/* ============================================
+   Menu desktop tablet range (1024-1200 px)
+   Fix chevauchement RESERVAR/langues (audit fix F)
+   ============================================ */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .nav__cta a {
+    padding: 8px 14px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.04em !important;
+  }
+  .nav__lang {
+    gap: 8px !important;
+  }
+  .nav__lang a {
+    font-size: 11px !important;
+    padding: 4px 6px !important;
+  }
+}
