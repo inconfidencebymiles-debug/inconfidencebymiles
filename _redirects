@@ -12,3 +12,7 @@ https://www.inconfidencebymiles.com/*  https://inconfidencebymiles.com/:splat  3
 /opiniones     /resenas.html  200
 /reviews       /resenas.html  200
 /opinions      /resenas.html  200
+
+# Video page
+/video         /video.html    200
+/v%C3%ADdeo    /video.html    200

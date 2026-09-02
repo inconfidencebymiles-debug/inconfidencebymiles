@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miles en vídeo · MILES Cocktail Lounge Barcelona</title>
+<meta name="description" content="Miles Cocktail Lounge Barcelona en vídeo: ambiente, cócteles y la sala privatizable In Confidence. 30 segundos.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://inconfidencebymiles.com/video">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="Miles Cocktail Lounge Barcelona · en vídeo">
+<meta property="og:description" content="30 segundos de ambiente Miles: cócteles, bar y la sala privatizable In Confidence.">
+<meta property="og:url" content="https://inconfidencebymiles.com/video">
+<meta property="og:image" content="https://inconfidencebymiles.com/assets/video/miles-ambiance-poster.jpg">
+<meta property="og:video" content="https://inconfidencebymiles.com/assets/video/miles-ambiance.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="720">
+<meta property="og:video:height" content="1280">
+
+<style>
+:root {
+  --color-bg: #0C0A08;
+  --color-red: #A0151C;
+  --color-gold: #D4A85A;
+  --color-gold-light: #E7BE78;
+  --color-cream: #E8E0D0;
+  --color-cream-dim: rgba(232, 224, 208, 0.65);
+  --font-display: 'Zodiak', 'Georgia', serif;
+  --font-body: 'General Sans', 'Helvetica Neue', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+}
+
+/* Ambient background glow */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(160, 21, 28, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  max-width: 720px;
+  width: 100%;
+}
+
+.back-link {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  color: var(--color-cream-dim);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+  z-index: 10;
+}
+.back-link:hover { color: var(--color-gold); }
+
+.brand {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--color-cream);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.brand__accent {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-cream-dim);
+  text-align: center;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 9 / 16;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 0 0 1px rgba(212, 168, 90, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 80px rgba(160, 21, 28, 0.2);
+}
+
+.video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn--primary {
+  background: var(--color-gold);
+  color: #020202;
+}
+.btn--primary:hover {
+  background: var(--color-gold-light);
+  transform: translateY(-1px);
+}
+.btn--ghost {
+  color: var(--color-cream);
+  border-color: rgba(232, 224, 208, 0.3);
+}
+.btn--ghost:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.foot {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: rgba(232, 224, 208, 0.4);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .back-link { top: 1rem; left: 1rem; }
+  .video-wrap { max-width: 320px; }
+}
+</style>
+</head>
+<body>
+
+<a href="/" class="back-link">&larr; Volver al inicio</a>
+
+<div class="container">
+  <div>
+    <div class="brand">MILES <span class="brand__accent">en vídeo</span></div>
+    <div class="subtitle" style="margin-top: 0.4rem;">Barcelona Eixample · 30 segundos</div>
+  </div>
+
+  <div class="video-wrap">
+    <video
+      controls
+      playsinline
+      preload="metadata"
+      poster="./assets/video/miles-ambiance-poster.jpg"
+      autoplay
+      muted
+      loop>
+      <source src="./assets/video/miles-ambiance.mp4" type="video/mp4">
+      <source src="./assets/video/miles-ambiance-sd.mp4" type="video/mp4">
+      Tu navegador no soporta este vídeo.
+    </video>
+  </div>
+
+  <div class="cta-row">
+    <a href="https://wa.me/34932472654?text=Hola%20Miles%2C%20quer%C3%ADa%20reservar%20mesa." class="btn btn--primary" target="_blank" rel="noopener noreferrer">Reservar por WhatsApp</a>
+    <a href="/eventos" class="btn btn--ghost">Privatizar la sala</a>
+  </div>
+
+  <div class="foot">
+    Carrer de la Diputació 215 · Barcelona 08011 · Metro Universitat
+  </div>
+</div>
+
+</body>
+</html>
