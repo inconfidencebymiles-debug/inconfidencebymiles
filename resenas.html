@@ -183,6 +183,66 @@ a:hover { color: var(--color-gold-light); }
   margin-top: 0.35rem;
 }
 
+/* --- Sub-scores (Manejo / Local / Servicios) --- */
+.subscores {
+  max-width: 720px;
+  margin: -1.5rem auto 3rem;
+  padding: 0 1.5rem;
+}
+.subscores__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-cream);
+  text-align: center;
+  margin: 0 0 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.subscores__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+.subscore {
+  padding: 1rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg-elev);
+  text-align: center;
+}
+.subscore__val {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--color-gold);
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.subscore__val .max { opacity: 0.5; font-size: 0.65em; }
+.subscore__lbl {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+.subscore__bar {
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  margin-top: 0.7rem;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.subscore__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+  display: block;
+}
+@media (max-width: 600px) {
+  .subscores__grid { grid-template-columns: 1fr; gap: 0.5rem; }
+  .subscore { padding: 0.85rem 0.75rem; }
+}
+
 /* --- Filters --- */
 .filters {
   max-width: 1180px;
@@ -389,7 +449,7 @@ a:hover { color: var(--color-gold-light); }
 <header class="hero">
   <div class="hero__eyebrow">Opiniones de clientes · Barcelona Eixample</div>
   <h1 class="hero__title">Lo que dicen <span class="num">nuestros clientes</span></h1>
-  <p class="hero__sub">Cumpleaños, despedidas, afterworks, fiestas privadas y eventos de empresa organizados en MILES entre <strong>julio 2024 y abril 2026</strong>. Nota media <strong>4,9/5</strong> sobre <strong>81 opiniones verificadas</strong>. Cada testimonio, en su idioma original.</p>
+  <p class="hero__sub">Cumpleaños, despedidas, afterworks, fiestas privadas y eventos de empresa organizados en MILES entre <strong>julio 2024 y abril 2026</strong>. Nota media <strong>4,9/5</strong> sobre <strong>81 opiniones verificadas</strong>. Aquí abajo se muestran los <strong>74 testimonios con comentario detallado</strong>, en su idioma original.</p>
 </header>
 
 <section class="stats" aria-label="Estadísticas globales">
@@ -405,6 +465,27 @@ a:hover { color: var(--color-gold-light); }
   <div class="stat">
     <div class="stat__val">259</div>
     <div class="stat__lbl">Eventos organizados</div>
+  </div>
+</section>
+
+<section class="subscores" aria-label="Puntuación detallada por criterio">
+  <h2 class="subscores__title">Puntuación detallada por criterio</h2>
+  <div class="subscores__grid">
+    <div class="subscore">
+      <div class="subscore__val">4,9<span class="max">/5</span></div>
+      <div class="subscore__lbl">Reserva y recepción</div>
+      <div class="subscore__bar"><span class="subscore__bar-fill" style="width:98%"></span></div>
+    </div>
+    <div class="subscore">
+      <div class="subscore__val">4,9<span class="max">/5</span></div>
+      <div class="subscore__lbl">Local y ambiente</div>
+      <div class="subscore__bar"><span class="subscore__bar-fill" style="width:98%"></span></div>
+    </div>
+    <div class="subscore">
+      <div class="subscore__val">5,0<span class="max">/5</span></div>
+      <div class="subscore__lbl">Servicios en el lugar</div>
+      <div class="subscore__bar"><span class="subscore__bar-fill" style="width:100%"></span></div>
+    </div>
   </div>
 </section>
 
