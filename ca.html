@@ -594,6 +594,27 @@ img { max-width: 100%; height: auto; }
   .trophy-left { height: 140px !important; margin: 0 auto !important; display: block !important; }
   .trophy-text { text-align: center !important; margin-top: 20px !important; max-width: 100% !important; }
 }
+
+/* --- Hero proof link (opens /resenas) --- */
+.hero__proof-link,
+.hero__proof-link:link,
+.hero__proof-link:visited,
+.lp-hero__proof-link,
+.lp-hero__proof-link:link,
+.lp-hero__proof-link:visited {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 168, 90, 0.4);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color .2s, text-decoration-color .2s;
+}
+.hero__proof-link:hover,
+.lp-hero__proof-link:hover {
+  color: #D4A85A;
+  text-decoration-color: #D4A85A;
+}
+
 </style>
 </head>
 <body>
@@ -649,7 +670,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="hero__proof">
       <span class="hero__proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <span class="hero__proof-text">4,9/5 &middot; 81 ressenyes &middot; 259 esdeveniments</span>
+      <span class="hero__proof-text">4,9/5 &middot; <a href="/resenas" class="hero__proof-link">81 ressenyes</a> &middot; 259 esdeveniments</span>
     </div>
   </div>
   <div class="hero__scroll" aria-hidden="true">

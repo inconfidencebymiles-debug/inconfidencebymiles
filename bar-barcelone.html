@@ -544,6 +544,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .header-logo-video::-webkit-media-controls {
   display: none !important;
 }
+
+/* --- Hero proof link (opens /resenas) --- */
+.hero__proof-link,
+.hero__proof-link:link,
+.hero__proof-link:visited,
+.lp-hero__proof-link,
+.lp-hero__proof-link:link,
+.lp-hero__proof-link:visited {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 168, 90, 0.4);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color .2s, text-decoration-color .2s;
+}
+.hero__proof-link:hover,
+.lp-hero__proof-link:hover {
+  color: #D4A85A;
+  text-decoration-color: #D4A85A;
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -618,7 +639,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="lp-hero__proof">
       <span class="lp-hero__proof-stars">★★★★★</span>
-      <span class="lp-hero__proof-text">4.9/5 · 75 avis · 253 événements privés</span>
+      <span class="lp-hero__proof-text">4,9/5 · <a href="/resenas" class="lp-hero__proof-link">81 avis</a> · 259 événements privés</span>
     </div>
   </div>
 </section>

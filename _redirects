@@ -5,3 +5,10 @@ https://www.inconfidencebymiles.com/*  https://inconfidencebymiles.com/:splat  3
 /en  /en.html  200
 /ca  /ca.html  200
 /fr  /fr.html  200
+
+# Opinions/reviews page
+/resenas       /resenas.html  200
+/rese%C3%B1as  /resenas.html  301!
+/opiniones     /resenas.html  301!
+/reviews       /resenas.html  301!
+/opinions      /resenas.html  301!
