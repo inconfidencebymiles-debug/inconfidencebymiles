@@ -8,7 +8,7 @@ https://www.inconfidencebymiles.com/*  https://inconfidencebymiles.com/:splat  3
 
 # Opinions/reviews page (canonical /resenas, plus aliases)
 /resenas       /resenas.html  200
-/rese%C3%B1as  /resenas       301!
-/opiniones     /resenas       301!
-/reviews       /resenas       301!
-/opinions      /resenas       301!
+/rese%C3%B1as  /resenas.html  200
+/opiniones     /resenas.html  200
+/reviews       /resenas.html  200
+/opinions      /resenas.html  200
