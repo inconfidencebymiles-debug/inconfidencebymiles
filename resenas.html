@@ -102,11 +102,25 @@ a:hover { color: var(--color-gold-light); }
 }
 .topbar__brand {
   font-family: var(--font-display);
-  font-size: 1.1rem;
   color: var(--color-gold);
   letter-spacing: 0.05em;
+  line-height: 1.15;
 }
-.topbar__brand a { color: var(--color-gold); }
+.topbar__brand a { color: var(--color-gold); display: inline-block; }
+.topbar__brand-name {
+  display: block;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+.topbar__brand-tagline {
+  display: block;
+  font-family: var(--font-body, 'General Sans', sans-serif);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-cream-dim, rgba(232, 224, 208, 0.55));
+  margin-top: 2px;
+}
 .topbar__back {
   font-size: 0.85rem;
   color: var(--color-text-muted);
@@ -442,12 +456,12 @@ a:hover { color: var(--color-gold-light); }
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8GPQRKP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="topbar">
-  <div class="topbar__brand"><a href="/">MILES · Cocktail Lounge</a></div>
+  <div class="topbar__brand"><a href="/"><span class="topbar__brand-name">MILES</span><span class="topbar__brand-tagline">Gastro Cocktail Bar</span></a></div>
   <a href="/" class="topbar__back">← Volver al inicio</a>
 </nav>
 
 <header class="hero">
-  <div class="hero__eyebrow">Opiniones de clientes · Barcelona Eixample</div>
+  <div class="hero__eyebrow">Opiniones de clientes</div>
   <h1 class="hero__title">Lo que dicen <span class="num">nuestros clientes</span></h1>
   <p class="hero__sub">Cumpleaños, despedidas, afterworks, fiestas privadas y eventos de empresa organizados en MILES entre <strong>julio 2024 y abril 2026</strong>. Nota media <strong>4,9/5</strong> sobre <strong>81 opiniones verificadas</strong>. Aquí abajo se muestran los <strong>74 testimonios con comentario detallado</strong>, en su idioma original.</p>
 </header>
