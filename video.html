@@ -123,6 +123,55 @@ body::before {
   display: block;
 }
 
+/* Overlay 'Activer le son' */
+.sound-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, rgba(12,10,8,0.15) 0%, rgba(12,10,8,0.35) 70%, rgba(12,10,8,0.55) 100%);
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
+.sound-overlay:hover .sound-overlay__pill {
+  background: var(--color-gold);
+  color: #020202;
+  border-color: var(--color-gold);
+  transform: scale(1.03);
+}
+.sound-overlay.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.sound-overlay__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(12, 10, 8, 0.75);
+  border: 1px solid rgba(212, 168, 90, 0.5);
+  color: var(--color-cream);
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 40px rgba(160, 21, 28, 0.2);
+  transition: all 0.25s ease;
+}
+.sound-overlay__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .cta-row {
   display: flex;
   gap: 0.75rem;
@@ -188,6 +237,7 @@ body::before {
 
   <div class="video-wrap">
     <video
+      id="milesVideo"
       controls
       playsinline
       preload="metadata"
@@ -199,6 +249,16 @@ body::before {
       <source src="./assets/video/miles-ambiance-sd.mp4" type="video/mp4">
       Tu navegador no soporta este vídeo.
     </video>
+    <button type="button" id="soundOverlay" class="sound-overlay" aria-label="Activar sonido">
+      <span class="sound-overlay__pill">
+        <svg class="sound-overlay__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5 6 9H2v6h4l5 4V5z"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        </svg>
+        Activar sonido
+      </span>
+    </button>
   </div>
 
   <div class="cta-row">
@@ -211,5 +271,29 @@ body::before {
   </div>
 </div>
 
+<script>
+  (function () {
+    var video = document.getElementById('milesVideo');
+    var overlay = document.getElementById('soundOverlay');
+    if (!video || !overlay) return;
+
+    function enableSound() {
+      video.muted = false;
+      video.volume = 1;
+      var p = video.play();
+      if (p && typeof p.catch === 'function') { p.catch(function(){}); }
+      overlay.classList.add('is-hidden');
+      setTimeout(function () {
+        if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+      }, 500);
+    }
+
+    overlay.addEventListener('click', enableSound);
+    // Si l'utilisateur clique directement sur les contrôles natifs, on retire aussi l'overlay
+    video.addEventListener('volumechange', function () {
+      if (!video.muted) overlay.classList.add('is-hidden');
+    });
+  })();
+</script>
 </body>
 </html>
