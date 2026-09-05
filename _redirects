@@ -16,3 +16,8 @@ https://www.inconfidencebymiles.com/*  https://inconfidencebymiles.com/:splat  3
 # Video page
 /video         /video.html    200
 /v%C3%ADdeo    /video.html    200
+
+# FAQ page
+/faq           /faq.html      200
+/preguntas     /faq.html      200
+/preguntas-frecuentes  /faq.html  200
